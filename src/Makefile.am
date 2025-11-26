@@ -1,13 +1,7 @@
 # Process this file with automake to produce a Makefile.in file
 EXTRA_DIST =	\
-	binreloc.cxx	\
-	binreloc.h	\
-	AmoebaxMain.h	\
-	AmoebaxMain.m	\
 	OSXOptions.cxx	\
 	OSXOptions.h	\
-	TwoGP2XPlayersState.cxx	\
-	TwoGP2XPlayersState.h	\
 	UnixOptions.cxx	\
 	UnixOptions.h	\
 	Win32Options.cxx	\
@@ -16,8 +10,6 @@ EXTRA_DIST =	\
 
 if IS_OSX_HOST
 OSXSOURCES =	\
-	AmoebaxMain.h	\
-	AmoebaxMain.m	\
 	OSXOptions.cxx	\
 	OSXOptions.h
 else # !IS_OSX_HOST
@@ -39,22 +31,13 @@ else # !IS_WIN32_HOST
 UNIXCFLAGS = -DDATADIR=\"$(pkgdatadir)\"
 
 UNIXSOURCES =	\
-	binreloc.cxx	\
-	binreloc.h	\
 	UnixOptions.cxx	\
 	UnixOptions.h
 endif # IS_WIN32_HOST
 endif # IS_OSX_HOST
 
-if IS_GP2X_HOST
-GP2XSOURCES =	\
-	TwoGP2XPlayersState.cxx	\
-	TwoGP2XPlayersState.h
-endif # IS_GP2X_HOST
-
 bin_PROGRAMS = amoebax
 amoebax_SOURCES =	\
-	$(GP2XSOURCES)	\
 	$(OSXSOURCES)	\
 	$(UNIXSOURCES)	\
 	$(WIN32SOURCES)	\
@@ -155,7 +138,6 @@ amoebax_SOURCES =	\
 amoebax_CXXFLAGS =	\
 	$(UNIXCFLAGS)	\
 	$(WIN32CFLAGS)	\
-	$(BINRELOC_CFLAGS)	\
 	$(SDL_CFLAGS)	\
 	$(SDL_IMAGE_CFLAGS)	\
 	$(SDL_MIXER_CFLAGS)
@@ -167,7 +149,6 @@ amoebax_OBJCFLAGS =	\
 
 amoebax_LDADD =	\
 	$(WIN32LDADD)	\
-	$(BINRELOC_LIBS)	\
 	$(SDL_LIBS)	\
 	$(SDL_IMAGE_LIBS)	\
 	$(SDL_MIXER_LIBS)

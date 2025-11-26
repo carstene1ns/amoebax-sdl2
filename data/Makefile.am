@@ -1,5 +1,5 @@
 # Process this file with automake to produce a Makefile.in file
-SUBDIRS = AmoebaxMain.nib dlls fonts graphics music sfx
+SUBDIRS = AmoebaxMain.nib fonts graphics music sfx
 EXTRA_DIST =	\
 	amoebax.desktop	\
 	Amoebax.icns	\

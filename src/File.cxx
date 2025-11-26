@@ -30,44 +30,6 @@
 
 using namespace Amoebax;
 
-#if !defined (IS_WIN32_HOST) && !defined (IS_GP2X_HOST) && !defined (IS_OSX_HOST)
-#include "binreloc.h"
-
-///
-/// \brief Tries to locate the correct data directory.
-///
-/// \return The data directory to use.
-///
-const char *
-locateDataDir (void)
-{
-    static char *dataDir = 0;
-    static bool firstTime = true;
-
-    if ( firstTime )
-    {
-        firstTime = false;
-        std::string dir (DATADIR);
-        BrInitError error;
-        if ( br_init (&error) == 0 && error != BR_INIT_ERROR_DISABLED )
-        {
-            // Nothing to do, set hardcoded path.
-        }
-        else
-        {
-            dir = br_find_data_dir(DATADIR);
-            if (dir != DATADIR )
-            {
-                dir += "/amoebax";
-            }
-        }
-        dataDir = strdup (dir.c_str ());
-    }
-
-    return dataDir;
-}
-#endif // !IS_WIN32_HOST && !IS_GP2X_HOST && !IS_OSX_HOST
-
 #if defined (IS_WIN32_HOST)
 static const char *k_DirectorySeparator = "\\";
 #else // !IS_WIN32_HOST
@@ -77,7 +39,7 @@ static const char *k_DirectorySeparator = "/";
 #if defined (IS_WIN32_HOST) || defined (IS_GP2X_HOST) || defined (IS_OSX_HOST)
 static const char *k_DataDirectory = ".";
 #else // !IS_WIN32_HOST && !IS_GP2X_HOST && !IS_OSX_HOST
-static const char *k_DataDirectory = locateDataDir ();
+static const char *k_DataDirectory = DATADIR;
 #endif // IS_WIN32_HOST || IS_GP2X_HOST || IS_OSX_HOST
 
 

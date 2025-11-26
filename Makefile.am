@@ -1,13 +1,9 @@
 # Process this file with automake to produce a Makefile.in file
-SUBDIRS = autopackage data doc m4 src
-
-ACLOCAL_AMFLAGS = -I m4
+SUBDIRS = data doc src
 
 EXTRA_DIST =	\
 	COPYING.GPL	\
-	COPYING.LAL	\
-	README.GP2X
-
+	COPYING.LAL
 if IS_WIN32_HOST
 
 if build_win32_msi

@@ -1,6 +1,4 @@
 # Process this file with automake to produce a Makefile.in file
-SUBDIRS = gp2x
-
 graphicsdir = $(pkgdatadir)/graphics
 dist_graphics_DATA =	\
 	amoebas.png	\
