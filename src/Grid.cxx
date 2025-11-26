@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <algorithm>
 #include <assert.h>
 #include <cmath>
@@ -426,7 +423,7 @@ Grid::clearDyingAmoebas (void)
 
     // Activates all chain label.
     std::for_each (getChainLabels ().begin (), getChainLabels ().end (),
-                   std::mem_fun (&ChainLabel::activate));
+                   std::mem_fn (&ChainLabel::activate));
 
     // Increment the score based on the number of non-ghost amoebas erased
     // and the current step chain (starting from 0.)

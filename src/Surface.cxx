@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <assert.h>
 #include <math.h>
 #include <SDL.h>
@@ -61,7 +58,7 @@ Surface::Surface (const Surface &surface):
     if ( 0 != surface.m_SDLSurface )
     {
         SDL_Surface *tempSDLSurface =
-            SDL_CreateRGBSurface (surface.m_SDLSurface->flags | SDL_SRCALPHA,
+            SDL_CreateRGBSurface (0,
                                   surface.m_SDLSurface->w,
                                   surface.m_SDLSurface->h,
                                   surface.m_SDLSurface->format->BitsPerPixel,
@@ -238,14 +235,15 @@ Surface::fromFile (std::string fileName)
     {
         throw std::runtime_error (IMG_GetError ());
     }
-    SDL_Surface *optimizedSurface = SDL_DisplayFormatAlpha (loadedSurface);
-    SDL_FreeSurface (loadedSurface);
-    if ( NULL == optimizedSurface )
+    // FIXME: hardcoding RGBA order
+    SDL_Surface *convertedSurface =
+        SDL_ConvertSurfaceFormat ( loadedSurface, SDL_PIXELFORMAT_RGBA32, 0 );
+    SDL_FreeSurface ( loadedSurface );
+    if ( NULL == convertedSurface )
     {
         throw std::runtime_error (SDL_GetError ());
     }
-
-    return new Surface (optimizedSurface);
+    return new Surface (convertedSurface);
 }
 
 ///
@@ -257,15 +255,14 @@ Surface *
 Surface::fromScreen (void)
 {
     SDL_Surface *screen = System::getInstance ().getScreenSDLSurface ();
+    // FIXME: hardcoding RGBA order
     SDL_Surface *copy =
-        SDL_CreateRGBSurface (SDL_SWSURFACE | SDL_SRCALPHA,
-                              screen->w, screen->h,
-                              screen->format->BitsPerPixel,
-                              screen->format->Rmask, screen->format->Gmask,
-                              screen->format->Bmask, screen->format->Amask);
+        SDL_CreateRGBSurfaceWithFormat (0,
+                                        screen->w, screen->h, 32,
+                                        SDL_PIXELFORMAT_RGBA32);
     if ( 0 == copy )
     {
-        throw std::runtime_error (IMG_GetError ());
+        throw std::runtime_error (SDL_GetError ());
     }
     SDL_BlitSurface (screen, NULL, copy, NULL);
 
@@ -294,9 +291,6 @@ Surface::operator= (const Surface &surface)
 void
 Surface::resize (float scaleFactor)
 {
-    // In GP2X we use already scaled graphics. No need to scale them
-    // by software (too slow.)
-#if !defined (IS_GP2X_HOST)
     // Can only resize 32-bit surfaces.
     assert ( 0 != m_SDLSurface && "Tried to resize an unloaded surface" );
     assert ( 32 == m_SDLSurface->format->BitsPerPixel &&
@@ -416,7 +410,6 @@ Surface::resize (float scaleFactor)
     // Done. Swap the surfaces and free the original surface.
     std::swap (m_SDLSurface, scaledSDLSurface);
     SDL_FreeSurface (scaledSDLSurface);
-#endif // !IS_GP2X_HOST
 }
 
 ///
@@ -427,7 +420,7 @@ Surface::resize (float scaleFactor)
 void
 Surface::setAlpha (uint8_t alpha)
 {
-    SDL_SetAlpha (toSDLSurface (), SDL_SRCALPHA, alpha);
+    SDL_SetSurfaceAlphaMod (toSDLSurface (), alpha);
 }
 
 ///
@@ -438,7 +431,7 @@ Surface::setAlpha (uint8_t alpha)
 void
 Surface::setColorKey (uint32_t colorKey)
 {
-    SDL_SetColorKey (m_SDLSurface, SDL_SRCCOLORKEY, colorKey);
+    SDL_SetColorKey (m_SDLSurface, SDL_TRUE, colorKey);
 }
 
 ///

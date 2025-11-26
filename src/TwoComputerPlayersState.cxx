@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <cassert>
 #include <SDL.h>
 #include "AIPlayerFactory.h"
@@ -41,7 +38,7 @@ TwoComputerPlayersState::TwoComputerPlayersState (uint8_t leftPlayerLevel,
                                                   uint8_t rightPlayerLevel,
                                                   IMatchObserver *observer):
     IState (),
-    m_Background (0),
+    m_Background (nullptr),
     m_Observer (observer),
     m_ObserverNotified (false),
     m_StateAlreadyRemoved (false),
@@ -78,6 +75,7 @@ TwoComputerPlayersState::activate (void)
 void
 TwoComputerPlayersState::checkForRemoveStateKey (uint32_t key)
 {
+    //TODO: maybe split for joy and key
     if ( !m_StateAlreadyRemoved &&
 #if defined IS_GP2X_HOST
         (key == GP2X_BUTTON_START ||
@@ -147,7 +145,7 @@ TwoComputerPlayersState::joyMotion (uint8_t joystick, uint8_t axis,
 }
 
 void
-TwoComputerPlayersState::joyDown (uint8_t joystick, uint8_t button)
+TwoComputerPlayersState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
 #if defined (IS_GP2X_HOST)
     checkForRemoveStateKey (static_cast<uint32_t>(button));
@@ -155,11 +153,10 @@ TwoComputerPlayersState::joyDown (uint8_t joystick, uint8_t button)
 }
 
 void
-TwoComputerPlayersState::joyUp (uint8_t joystick, uint8_t button)
+TwoComputerPlayersState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 TwoComputerPlayersState::keyDown (uint32_t key)
 {
@@ -170,7 +167,6 @@ void
 TwoComputerPlayersState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphical resources.
@@ -184,14 +180,14 @@ TwoComputerPlayersState::loadGraphicsResources (void)
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> winner (
+        std::unique_ptr<Surface> winner (
                 Surface::fromFile (File::getGraphicsFilePath (getWinnerName () + ".png")));
         uint16_t winnerY = m_Background->getHeight () / 2 -
                            winner->getHeight () / 2;
         winner->blit (m_Background->getWidth () / 2 - winner->getWidth () / 2,
                       winnerY, m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> YouWin (
+        std::unique_ptr<Surface> YouWin (
                 Surface::fromFile (File::getGraphicsFilePath ("winner.png")));
 
         YouWin->blit (m_Background->getWidth () / 2 - YouWin->getWidth () / 2,
@@ -206,17 +202,13 @@ TwoComputerPlayersState::loadGraphicsResources (void)
     }
     m_Background->resize (screenScale);
     {
-        std::auto_ptr<Font> font (
+        std::unique_ptr<Font> font (
                 Font::fromFile (File::getFontFilePath ("fontMenu")));
 
         font->write (getWinnerName (),
                      m_Background->getWidth () / 2 -
                      font->getTextWidth (getWinnerName ()) / 2,
-#if defined (IS_GP2X_HOST)
-                     static_cast<uint16_t> (nameY),
-#else // !IS_GP2X_HOST
                      static_cast<uint16_t> (nameY * screenScale),
-#endif // IS_GP2X_HOST
                      m_Background->toSDLSurface ());
     }
 }

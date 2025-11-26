@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <sstream>
 #include "File.h"
 #include "System.h"
@@ -57,15 +54,15 @@ static const int32_t k_TimeToWait = 2500;
 ///
 TournamentSetupState::TournamentSetupState (uint8_t players):
     IState (),
-    m_Background (0),
+    m_Background (nullptr),
     m_CurrentPlayer (0),
-    m_Font (0),
+    m_Font (nullptr),
     m_NumPlayers (players),
     m_Characters (),
     m_SelectedCharacters (),
     m_SelectedCol (0),
     m_SelectedRow (0),
-    m_Selection (0),
+    m_Selection (nullptr),
     m_TimeToWait (k_TimeToWait)
 {
     m_Characters[0].name = "Kim";
@@ -229,46 +226,43 @@ TournamentSetupState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-TournamentSetupState::joyDown (uint8_t joystick, uint8_t button)
+TournamentSetupState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
             selectCharacter ();
             break;
 
-        case GP2X_BUTTON_DOWN:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
             selectNextRow ();
             break;
 
-        case GP2X_BUTTON_LEFT:
+        case SDL_CONTROLLER_BUTTON_DPAD_LEFT:
             selectPreviousCol ();
             break;
 
-        case GP2X_BUTTON_RIGHT:
+        case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
             selectNextCol ();
             break;
 
-        case GP2X_BUTTON_UP:
+        case SDL_CONTROLLER_BUTTON_DPAD_UP:
             selectPreviousRow ();
             break;
 
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_B:
             deselectCharacter ();
             break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-TournamentSetupState::joyUp (uint8_t joystick, uint8_t button)
+TournamentSetupState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 TournamentSetupState::keyDown (uint32_t key)
 {
@@ -304,7 +298,6 @@ void
 TournamentSetupState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Gets the currently selected column.
@@ -357,19 +350,13 @@ void
 TournamentSetupState::loadGraphicResources (void)
 {
     const float screenScale = System::getInstance ().getScreenScaleFactor ();
-#if defined (IS_GP2X_HOST)
-    const float originalScale = screenScale;
-    const uint16_t faceHeight = static_cast<uint16_t>(k_FaceHeight * screenScale);
-    const uint16_t faceWidth = static_cast<uint16_t>(k_FaceWidth * screenScale);
-#else // !IS_GP2X_HOST
     const float originalScale = 1.0f;
     const uint16_t faceHeight = k_FaceHeight;
     const uint16_t faceWidth =  k_FaceWidth ;
-#endif // IS_GP2X_HOST
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> faces (
+        std::unique_ptr<Surface> faces (
                 Surface::fromFile (File::getGraphicsFilePath ("faces.png")));
         for ( uint16_t currentCharacter = 0 ; currentCharacter < 4 ;
               currentCharacter++ )
@@ -410,7 +397,7 @@ TournamentSetupState::loadGraphicResources (void)
         }
     }
     {
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath ("humanplayers.png")));
         title->blit (static_cast<uint16_t> (k_FaceStartX * originalScale),
                      static_cast<uint16_t> (k_HumanCharactersLabelY *
@@ -418,7 +405,7 @@ TournamentSetupState::loadGraphicResources (void)
                      m_Background->toSDLSurface ());
     }
     {
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath ("computerplayers.png")));
         title->blit (static_cast<uint16_t> (k_FaceStartX * originalScale),
                      static_cast<uint16_t> (k_ComputerCharactersLabelY *
@@ -426,7 +413,7 @@ TournamentSetupState::loadGraphicResources (void)
                      m_Background->toSDLSurface ());
     }
     {
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath ("tournament.png")));
         title->blit (m_Background->getWidth () / 2 -
                      title->getWidth () / 2, 0, m_Background->toSDLSurface ());

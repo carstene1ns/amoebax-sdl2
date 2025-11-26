@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #if defined (IS_WIN32_HOST)
 #include <dirent.h>
 #else // !IS_WIN32_HOST
@@ -36,11 +33,12 @@ static const char *k_DirectorySeparator = "\\";
 static const char *k_DirectorySeparator = "/";
 #endif // IS_WIN32_HOST
 
-#if defined (IS_WIN32_HOST) || defined (IS_GP2X_HOST) || defined (IS_OSX_HOST)
+#if defined (IS_WIN32_HOST) || defined (IS_OSX_HOST)
 static const char *k_DataDirectory = ".";
-#else // !IS_WIN32_HOST && !IS_GP2X_HOST && !IS_OSX_HOST
-static const char *k_DataDirectory = DATADIR;
-#endif // IS_WIN32_HOST || IS_GP2X_HOST || IS_OSX_HOST
+#else // !IS_WIN32_HOST && !IS_OSX_HOST
+//static const char *k_DataDirectory = DATADIR;
+static const char *k_DataDirectory = "data"; //ct
+#endif // IS_WIN32_HOST || IS_OSX_HOST
 
 
 ///

@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // !HAVE_CONFIG_H
 #include <cstdlib>
 #include "Joystick.h"
 
@@ -49,7 +46,7 @@ Joystick::Joystick (void):
 /// \return The action that happened from the game's POV.
 ///
 Joystick::Action
-Joystick::down (uint8_t joystick, uint8_t button)
+Joystick::down (uint8_t joystick, SDL_GameControllerButton button)
 {
     Action action = Nothing;
 
@@ -188,7 +185,7 @@ Joystick::motion (uint8_t joystick, uint8_t axis, int16_t value)
 /// \return The action that happened from the game's POV.
 ///
 Joystick::Action
-Joystick::up (uint8_t joystick, uint8_t button)
+Joystick::up (uint8_t joystick, SDL_GameControllerButton button)
 {
     Action action = Nothing;
 

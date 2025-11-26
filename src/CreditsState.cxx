@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include <sstream>
 #include "CreditsState.h"
@@ -36,9 +33,9 @@ using namespace Amoebax;
 ///
 CreditsState::CreditsState (void):
     IState (),
-    m_Background (0),
-    m_NamesFont (0),
-    m_SectionsFont (0),
+    m_Background (nullptr),
+    m_NamesFont (nullptr),
+    m_SectionsFont (nullptr),
     m_StateRemoved (false)
 {
     loadGraphicResources ();
@@ -50,17 +47,16 @@ CreditsState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-CreditsState::joyDown (uint8_t joystick, uint8_t button)
+CreditsState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     removeCreditsState ();
 }
 
 void
-CreditsState::joyUp (uint8_t joystick, uint8_t button)
+CreditsState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 CreditsState::keyDown (uint32_t key)
 {
@@ -71,7 +67,6 @@ void
 CreditsState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -83,7 +78,7 @@ CreditsState::loadGraphicResources (void)
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath("credits.png")));
         title->blit (m_Background->getWidth () / 2 -
                      title->getWidth () / 2, 0, m_Background->toSDLSurface ());

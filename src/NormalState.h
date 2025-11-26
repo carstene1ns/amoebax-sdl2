@@ -44,12 +44,10 @@ namespace Amoebax
                                      uint32_t rightPlayerScore);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
@@ -71,9 +69,9 @@ namespace Amoebax
             /// The current human's score.
             uint32_t m_CurrentScore;
             /// The sound of when you lose.
-            std::auto_ptr<Sound> m_SoundLose;
+            std::unique_ptr<Sound> m_SoundLose;
             /// The sound of when you win.
-            std::auto_ptr<Sound> m_SoundWin;
+            std::unique_ptr<Sound> m_SoundWin;
             /// Tells if we need to ask the user to try again.
             bool m_TryAgain;
             /// The winner of a match.

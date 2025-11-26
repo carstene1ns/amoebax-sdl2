@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <cassert>
 #include <SDL.h>
 #include <sstream>
@@ -52,27 +49,27 @@ TwoPlayersState::TwoPlayersState (IPlayer *leftPlayer, IPlayer *rightPlayer,
                                   uint32_t rightPlayerScore,
                                   IMatchObserver *observer):
     IState (),
-    m_Amoebas (0),
+    m_Amoebas (nullptr),
     m_AmoebasSize (k_MaxAmoebasSize),
-    m_Background (0),
+    m_Background (nullptr),
     m_BackgroundFileName (backgroundFileName),
-    m_BackgroundMusic (0),
-    m_ChainLabel (0),
+    m_BackgroundMusic (nullptr),
+    m_ChainLabel (nullptr),
     m_GameIsOver (false),
     m_Generator (new PairGenerator ()),
-    m_Go (0),
+    m_Go (nullptr),
     m_GoTime (k_DefaultGoTime),
     m_LeftPlayer (leftPlayer),
     m_Observer(observer),
-    m_Ready (0),
+    m_Ready (nullptr),
     m_ReadyTime (k_DefaultGoTime * 2),
     m_RightPlayer (rightPlayer),
-    m_ScoreFont (0),
+    m_ScoreFont (nullptr),
     m_SilhouetteBorder (k_SilhouetteBorder),
-    m_Silhouettes (0),
+    m_Silhouettes (nullptr),
     m_StateAlreadyRemoved (false),
-    m_YouLose (0),
-    m_YouWin (0),
+    m_YouLose (nullptr),
+    m_YouWin (nullptr),
     m_Winner (IPlayer::RightSide)
 {
     assert ( 0 < getAmoebasSize () && "The amoebas' size is invalid." );
@@ -144,6 +141,8 @@ TwoPlayersState::checkForRemoveStateKey (uint32_t key)
         Options::getInstance ().getPlayerControls (IPlayer::LeftSide);
     Options::PlayerControls rightPlayer =
         Options::getInstance ().getPlayerControls (IPlayer::RightSide);
+
+    //TODO: split joy/key
 
     if ( gameIsOver () && !m_StateAlreadyRemoved &&
 #if defined IS_GP2X_HOST
@@ -292,7 +291,7 @@ TwoPlayersState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-TwoPlayersState::joyDown (uint8_t joystick, uint8_t button)
+TwoPlayersState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     if ( gameIsOver () )
     {
@@ -300,13 +299,11 @@ TwoPlayersState::joyDown (uint8_t joystick, uint8_t button)
         checkForRemoveStateKey (static_cast<uint32_t>(button));
 #endif // IS_GP2X_HOST
     }
-#if defined (IS_GP2X_HOST)
-    else if ( button == GP2X_BUTTON_START ||
-              button == GP2X_BUTTON_X )
+    else if ( button == SDL_CONTROLLER_BUTTON_START ||
+              button == SDL_CONTROLLER_BUTTON_B )
     {
         System::getInstance ().pause ();
     }
-#endif // IS_GP2X_HOST
     else
     {
         getLeftPlayer ()->joyDown (joystick, button);
@@ -315,7 +312,7 @@ TwoPlayersState::joyDown (uint8_t joystick, uint8_t button)
 }
 
 void
-TwoPlayersState::joyUp (uint8_t joystick, uint8_t button)
+TwoPlayersState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
     if ( !gameIsOver () )
     {
@@ -324,7 +321,6 @@ TwoPlayersState::joyUp (uint8_t joystick, uint8_t button)
     }
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 TwoPlayersState::keyDown (uint32_t key)
 {
@@ -352,7 +348,6 @@ TwoPlayersState::keyUp (uint32_t key)
         getLeftPlayer ()->keyUp (key);
     }
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphical resources.
@@ -370,7 +365,7 @@ TwoPlayersState::loadGraphicsResources (void)
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath (m_BackgroundFileName)));
     {
-        std::auto_ptr<Surface> gridBackground (
+        std::unique_ptr<Surface> gridBackground (
             Surface::fromFile (File::getGraphicsFilePath ("twoplayers.png")));
         gridBackground->blit (m_Background->toSDLSurface ());
     }

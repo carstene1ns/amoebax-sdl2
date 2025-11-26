@@ -35,12 +35,10 @@ namespace Amoebax
             virtual void activate (void);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
@@ -125,11 +123,11 @@ namespace Amoebax
             void selectPreviousMenuOption (void);
 
             /// Pause background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// Menu's font.
-            std::auto_ptr<Font> m_Font;
+            std::unique_ptr<Font> m_Font;
             /// Menu's font for selected items.
-            std::auto_ptr<Font> m_FontSelected;
+            std::unique_ptr<Font> m_FontSelected;
             /// Menu Options.
             std::vector<IOption *> m_MenuOptions;
             /// Current selected option.

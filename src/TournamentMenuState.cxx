@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <sstream>
 #include "File.h"
 #include "Options.h"
@@ -63,38 +60,35 @@ TournamentMenuState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-TournamentMenuState::joyDown (uint8_t joystick, uint8_t button)
+TournamentMenuState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
             activateMenuOption ();
         break;
 
-        case GP2X_BUTTON_DOWN:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
             selectNextMenuOption ();
         break;
 
-        case GP2X_BUTTON_UP:
+        case SDL_CONTROLLER_BUTTON_DPAD_UP:
             selectPreviousMenuOption ();
         break;
 
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_B:
             System::getInstance ().returnToMainMenu ();
         break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-TournamentMenuState::joyUp (uint8_t joystick, uint8_t button)
+TournamentMenuState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 TournamentMenuState::keyDown (uint32_t key)
 {
@@ -122,7 +116,6 @@ void
 TournamentMenuState::keyUp (uint32_t key)
 {
 }
-#endif //!IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -134,7 +127,7 @@ TournamentMenuState::loadGraphicResources (void)
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath ("tournament.png")));
         title->blit (m_Background->getWidth () / 2 -
                      title->getWidth () / 2, 0, m_Background->toSDLSurface ());

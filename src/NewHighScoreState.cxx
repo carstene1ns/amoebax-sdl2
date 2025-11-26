@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include <sstream>
 #include "File.h"
@@ -36,20 +33,17 @@ using namespace Amoebax;
 ///
 NewHighScoreState::NewHighScoreState (uint32_t score):
     IState (),
-    m_Background (0),
+    m_Background (nullptr),
     m_BackgroundMusic (Music::fromFile (File::getMusicFilePath ("Congratulations.ogg"))),
     m_CursorValueIndex (0),
     m_CursorValues ("ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!?*-_. "),
     m_CursorVisible (true),
     m_CursorVisibleTime (k_CursorVisibleTime),
-    m_HighLightFont (0),
+    m_HighLightFont (nullptr),
     m_Name (""),
-    m_NameFont (0),
+    m_NameFont (nullptr),
     m_Score (score)
 {
-#if !defined (IS_GP2X_HOST)
-    System::getInstance ().enableUnicodeTranslation (true);
-#endif // !IS_GP2X_HOST
     loadGraphicResources ();
 }
 
@@ -58,9 +52,6 @@ NewHighScoreState::NewHighScoreState (uint32_t score):
 ///
 NewHighScoreState::~NewHighScoreState (void)
 {
-#if !defined (IS_GP2X_HOST)
-    System::getInstance ().enableUnicodeTranslation (false);
-#endif // !IS_GP2X_HOST
 }
 
 ///
@@ -163,42 +154,40 @@ NewHighScoreState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-NewHighScoreState::joyDown (uint8_t joystick, uint8_t button)
+NewHighScoreState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_RIGHT:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
             addNewCharacter ();
             break;
 
-        case GP2X_BUTTON_DOWN:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
             selectNextCursorValue ();
             break;
 
-        case GP2X_BUTTON_LEFT:
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_DPAD_LEFT:
+        case SDL_CONTROLLER_BUTTON_B:
             removePreviousCharacter ();
             break;
 
-        case GP2X_BUTTON_START:
+        case SDL_CONTROLLER_BUTTON_START:
             acceptName ();
             break;
 
-        case GP2X_BUTTON_UP:
+        case SDL_CONTROLLER_BUTTON_DPAD_UP:
             selectPreviousCursorValue ();
             break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-NewHighScoreState::joyUp (uint8_t joystick, uint8_t button)
+NewHighScoreState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 NewHighScoreState::keyDown (uint32_t key)
 {
@@ -229,13 +218,28 @@ NewHighScoreState::keyDown (uint32_t key)
             selectPreviousCursorValue ();
             break;
     }
+
+// TODO: old unicode stuff
+#if 0
+    // FIXME: We are only interessted with ASCII values.
+    if ( 0 == (code & 0xff80) )
+    {
+        char character[2] = {toupper (static_cast<char>(code & 0x7f)), '\0'};
+        std::string::size_type characterPos =
+            m_CursorValues.find (std::string (character));
+        if ( std::string::npos != characterPos )
+        {
+            m_CursorValueIndex = characterPos;
+            addNewCharacter ();
+        }
+    }
+#endif
 }
 
 void
 NewHighScoreState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphics resources.
@@ -388,23 +392,6 @@ void
 NewHighScoreState::setCursorVisibleTime (int32_t time)
 {
     m_CursorVisibleTime = time;
-}
-
-void
-NewHighScoreState::unicodeCharacterPressed (uint16_t code)
-{
-    // FIXME: We are only interessted with ASCII values.
-    if ( 0 == (code & 0xff80) )
-    {
-        char character[2] = {toupper (static_cast<char>(code & 0x7f)), '\0'};
-        std::string::size_type characterPos =
-            m_CursorValues.find (std::string (character));
-        if ( std::string::npos != characterPos )
-        {
-            m_CursorValueIndex = characterPos;
-            addNewCharacter ();
-        }
-    }
 }
 
 void

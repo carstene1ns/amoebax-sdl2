@@ -37,12 +37,10 @@ namespace Amoebax
             virtual void activate (void);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             inline virtual bool shouldBePaused (void) { return true; }
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
@@ -97,47 +95,47 @@ namespace Amoebax
             void setSilhouetteBorder (uint8_t border);
 
             /// Amoebas sprites.
-            std::auto_ptr<Surface> m_Amoebas;
+            std::unique_ptr<Surface> m_Amoebas;
             /// The amoebas' size in pixels. Amoebas are squared.
             uint8_t m_AmoebasSize;
             /// Training background
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// Background music.
-            std::auto_ptr<Music> m_BackgroundMusic;
+            std::unique_ptr<Music> m_BackgroundMusic;
             /// The chain label image.
-            std::auto_ptr<Surface> m_ChainLabel;
+            std::unique_ptr<Surface> m_ChainLabel;
             /// The current level.
             uint8_t m_CurrentLevel;
             /// The game over text.
-            std::auto_ptr<Surface> m_GameOver;
+            std::unique_ptr<Surface> m_GameOver;
             /// The generator of amoeba pairs.
-            std::auto_ptr<PairGenerator> m_Generator;
+            std::unique_ptr<PairGenerator> m_Generator;
             /// The "Go!!" label.
-            std::auto_ptr<Surface> m_Go;
+            std::unique_ptr<Surface> m_Go;
             /// The time the "Go!!" label is displayed.
             int32_t m_GoTime;
             /// The "Level Up!" label.
-            std::auto_ptr<Surface> m_LevelUp;
+            std::unique_ptr<Surface> m_LevelUp;
             /// The vertical possition of the "Level Up!" label.
             float m_LevelUpPosition;
             /// The "Level Up!" sound.
-            std::auto_ptr<Sound> m_LevelUpSound;
+            std::unique_ptr<Sound> m_LevelUpSound;
             /// The time to show the "Level Up!" label.
             int32_t m_LevelUpTime;
             /// The only player.
-            std::auto_ptr<IPlayer> m_Player;
+            std::unique_ptr<IPlayer> m_Player;
             /// The "Ready?" label.
-            std::auto_ptr<Surface> m_Ready;
+            std::unique_ptr<Surface> m_Ready;
             /// The time the "Ready?" label is displayed.
             int32_t m_ReadyTime;
             /// The score and level's font.
-            std::auto_ptr<Font> m_ScoreFont;
+            std::unique_ptr<Font> m_ScoreFont;
             /// The border size of the silhouettes.
             uint8_t m_SilhouetteBorder;
             /// The silhouettes image.
-            std::auto_ptr<Surface> m_Silhouettes;
+            std::unique_ptr<Surface> m_Silhouettes;
             /// The sound of when you lose.
-            std::auto_ptr<Sound> m_SoundLose;
+            std::unique_ptr<Sound> m_SoundLose;
     };
 }
 

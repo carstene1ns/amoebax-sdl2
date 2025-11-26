@@ -25,9 +25,6 @@
 #include "Music.h"
 #include "Sound.h"
 #include "Surface.h"
-#if defined (IS_GP2X_HOST)
-#include "gp2x.h"
-#endif // IS_GP2X_HOST
 
 // Forward declarations.
 #if !defined (_SDL_video_h)
@@ -88,7 +85,7 @@ namespace Amoebax
             /// \param joystick The joystick index that caused the event.
             /// \param button The button that was pressed.
             ///
-            virtual void joyDown (uint8_t joystick, uint8_t button) = 0;
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button) = 0;
 
             ///
             /// \brief A joystick button was released.
@@ -96,9 +93,8 @@ namespace Amoebax
             /// \param joystick The joysticj index that caused the event.
             /// \param button The button that was released.
             ///
-            virtual void joyUp (uint8_t joystick, uint8_t button) = 0;
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button) = 0;
 
-#if !defined (IS_GP2X_HOST)
             ///
             /// \brief A key down event was received.
             ///
@@ -114,7 +110,6 @@ namespace Amoebax
             ///            See SDLKey for possible values.
             ///
             virtual void keyUp (uint32_t key) = 0;
-#endif // !IS_GP2X_HOST
 
             ///
             /// \brief Redraw a part of the background.
@@ -142,23 +137,6 @@ namespace Amoebax
             ///         active and the system must pause, \a false otherwise.
             ///
             inline virtual bool shouldBePaused (void) { return false; }
-
-            ///
-            /// \brief A key was converted to an unicode code.
-            ///
-            /// This is called by the System class when a \a true
-            /// is passed to enableUnicodeTranslation() member function
-            /// of System.
-            ///
-            /// When a key press could be transformed to a unicode code
-            /// successfully, this function is called with the code.
-            ///
-            /// \note Translating to unicode incurs an overhead per key press,
-            ///       so use with care.
-            ///
-            /// \param code The unicode character of the key pressed.
-            ///
-            virtual void unicodeCharacterPressed (uint16_t code) { }
 
             ///
             /// \brief The state should update its logic.

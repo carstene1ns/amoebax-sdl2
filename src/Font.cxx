@@ -19,9 +19,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <numeric>
 #include <SDL.h>
 #include <algorithm>
@@ -34,7 +31,7 @@ using namespace Amoebax;
 /// \brief Font's default constructor.
 ///
 Font::Font (void):
-    m_FontSurface (0)
+    m_FontSurface (nullptr)
 {
 }
 
@@ -81,9 +78,8 @@ Font::getTextWidth (const std::string &text) const
 Font *
 Font::fromFile (const std::string &fileName)
 {
-    std::auto_ptr<Surface> newFontSurface (Surface::fromFile (fileName));
     Font *newFont = new Font ();
-    newFont->m_FontSurface = newFontSurface;
+    newFont->m_FontSurface.reset(Surface::fromFile (fileName));
     newFont->init ();
 
     return newFont;

@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // !HAVE_CONFIG_H
 #include "File.h"
 #include "Font.h"
 #include "System.h"
@@ -34,7 +31,7 @@ using namespace Amoebax;
 VideoErrorState::VideoErrorState (IState *activeState):
     IState (),
     m_ActiveState (activeState),
-    m_Background (0),
+    m_Background (nullptr),
     m_StateRemoved (false)
 {
 }
@@ -51,7 +48,7 @@ VideoErrorState::activate (void)
     m_ActiveState->redrawBackground (&region, m_Background->toSDLSurface ());
 
     SDL_Surface *blackBox =
-        SDL_CreateRGBSurface (SDL_SWSURFACE | SDL_SRCALPHA,
+        SDL_CreateRGBSurface (0,
                               m_Background->getWidth (),
                               m_Background->getHeight (),
                               m_Background->toSDLSurface ()->format->BitsPerPixel,
@@ -60,10 +57,10 @@ VideoErrorState::activate (void)
                               m_Background->toSDLSurface ()->format->Bmask,
                               m_Background->toSDLSurface ()->format->Amask);
     SDL_FillRect (blackBox, NULL, SDL_MapRGB (blackBox->format, 0, 0, 0));
-    SDL_SetAlpha (blackBox, SDL_SRCALPHA, 128);
+    SDL_SetSurfaceAlphaMod (blackBox, 128);
     SDL_BlitSurface (blackBox, NULL, m_Background->toSDLSurface (), NULL);
 
-    std::auto_ptr<Font> font (Font::fromFile (File::getFontFilePath ("fontMenu")));
+    std::unique_ptr<Font> font (Font::fromFile (File::getFontFilePath ("fontMenu")));
     font->write ("there was an error setting the video mode",
                  m_Background->getHeight () / 2 - 3 * font->getHeight (),
                  m_Background->toSDLSurface ());
@@ -81,17 +78,16 @@ VideoErrorState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-VideoErrorState::joyDown (uint8_t joystick, uint8_t button)
+VideoErrorState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     removeState ();
 }
 
 void
-VideoErrorState::joyUp (uint8_t joystick, uint8_t button)
+VideoErrorState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 VideoErrorState::keyDown (uint32_t key)
 {
@@ -102,7 +98,6 @@ void
 VideoErrorState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 void
 VideoErrorState::redrawBackground (SDL_Rect *region, SDL_Surface *screen)

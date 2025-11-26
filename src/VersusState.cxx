@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include "File.h"
 #include "Font.h"
 #include "System.h"
@@ -40,8 +37,8 @@ static const uint16_t k_PlayersSeparation = 200;
 ///
 VersusState::VersusState(const std::string &player,
                          const std::string &opponent):
-    m_Background (0),
-    m_BackgroundMusic (0),
+    m_Background (nullptr),
+    m_BackgroundMusic (nullptr),
     m_End (false),
     m_Opponent (opponent),
     m_Player (player),
@@ -106,17 +103,16 @@ VersusState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-VersusState::joyDown (uint8_t joystick, uint8_t button)
+VersusState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     endVersusState ();
 }
 
 void
-VersusState::joyUp (uint8_t joystick, uint8_t button)
+VersusState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 VersusState::keyDown (uint32_t key)
 {
@@ -127,7 +123,6 @@ void
 VersusState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphical resources.
@@ -136,20 +131,15 @@ void
 VersusState::loadGraphicResources (void)
 {
     const float screenScale = System::getInstance ().getScreenScaleFactor ();
-#if defined (IS_GP2X_HOST)
-    uint16_t playersSeparation = static_cast<uint16_t> (k_PlayersSeparation *
-                                                        screenScale);
-#else // !IS_GP2X_HOST
     uint16_t playersSeparation = k_PlayersSeparation;
-#endif // IS_GP2X_HOST
 
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
 
-    std::auto_ptr<Font> font (
+    std::unique_ptr<Font> font (
             Font::fromFile (File::getFontFilePath ("fontMenu")));
     {
-        std::auto_ptr<Surface> player (
+        std::unique_ptr<Surface> player (
                 Surface::fromFile (
                     File::getGraphicsFilePath (getPlayerName () + ".png")));
         int16_t x = m_Background->getWidth () / 2 + playersSeparation;
@@ -161,7 +151,7 @@ VersusState::loadGraphicResources (void)
         font->write (getPlayerName (), x, y, m_Background->toSDLSurface ());
     }
     {
-        std::auto_ptr<Surface> opponent (
+        std::unique_ptr<Surface> opponent (
                 Surface::fromFile (
                     File::getGraphicsFilePath (getOpponentName () + ".png")));
         int16_t x = m_Background->getWidth () / 2 - playersSeparation -
@@ -175,7 +165,7 @@ VersusState::loadGraphicResources (void)
         font->write (getOpponentName (), x, y, m_Background->toSDLSurface ());
     }
     {
-        std::auto_ptr<Surface> versus (
+        std::unique_ptr<Surface> versus (
                 Surface::fromFile (File::getGraphicsFilePath ("versus.png")));
         versus->blit (m_Background->getWidth () / 2 - versus->getWidth () / 2,
                       m_Background->getHeight () / 2 - versus->getHeight () / 2,

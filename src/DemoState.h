@@ -40,12 +40,10 @@ namespace Amoebax
                                      uint32_t rightPlayerScore);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
@@ -62,7 +60,7 @@ namespace Amoebax
             /// The time the demo has to run.
             int32_t m_DemoTime;
             /// The two players mode that will show the match.
-            std::auto_ptr<TwoPlayersState> m_Match;
+            std::unique_ptr<TwoPlayersState> m_Match;
             /// Tells if the state was already removed.
             bool m_StateRemoved;
     };

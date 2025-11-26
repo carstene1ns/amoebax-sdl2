@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include <sstream>
 #include "File.h"
@@ -35,9 +32,9 @@ using namespace Amoebax;
 ///
 HighScoreState::HighScoreState (int32_t scoreToHighLight):
     IState (),
-    m_Background (0),
-    m_Font (0),
-    m_FontHighLight (0),
+    m_Background (nullptr),
+    m_Font (nullptr),
+    m_FontHighLight (nullptr),
     m_ScoreToHighLight (scoreToHighLight),
     m_StateRemoved (false)
 {
@@ -61,17 +58,16 @@ HighScoreState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-HighScoreState::joyDown (uint8_t joystick, uint8_t button)
+HighScoreState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     removeHighScoreState ();
 }
 
 void
-HighScoreState::joyUp (uint8_t joystick, uint8_t button)
+HighScoreState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 HighScoreState::keyDown (uint32_t key)
 {
@@ -82,7 +78,6 @@ void
 HighScoreState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads graphic resources.
@@ -96,7 +91,7 @@ HighScoreState::loadGraphicResources (void)
     m_Background->resize (screenScale);
     {
 
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath ("highscores.png")));
         title->resize (screenScale);
         title->blit (Options::getInstance ().getScreenWidth () / 2 -

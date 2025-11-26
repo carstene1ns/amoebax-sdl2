@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // !HAVE_CONFIG_H
 #include "FadeInState.h"
 #include "System.h"
 
@@ -33,7 +30,7 @@ using namespace Amoebax;
 FadeInState::FadeInState (IState *nextState, uint32_t fadeTime):
     IState (),
     m_Alpha (0),
-    m_Background (0),
+    m_Background (nullptr),
     m_FadeTime (fadeTime),
     m_NextState (nextState)
 {

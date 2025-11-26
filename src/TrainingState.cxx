@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <algorithm>
 #include <cassert>
 #include <SDL.h>
@@ -82,26 +79,26 @@ const static uint8_t k_NumLevels = sizeof (k_Levels) / sizeof (k_Levels[0]);
 ///
 TrainingState::TrainingState (void):
     IState (),
-    m_Amoebas (0),
+    m_Amoebas (nullptr),
     m_AmoebasSize (k_MaxAmoebasSize),
-    m_Background (0),
+    m_Background (nullptr),
     m_BackgroundMusic (Music::fromFile (File::getMusicFilePath ("training.ogg"))),
-    m_ChainLabel (0),
+    m_ChainLabel (nullptr),
     m_CurrentLevel (1),
-    m_GameOver (0),
+    m_GameOver (nullptr),
     m_Generator (new PairGenerator ()),
-    m_Go (0),
+    m_Go (nullptr),
     m_GoTime (k_LevelUpTime / 4),
-    m_LevelUp (0),
+    m_LevelUp (nullptr),
     m_LevelUpPosition (0.0f),
     m_LevelUpSound (Sound::fromFile (File::getSoundFilePath ("levelup.wav"))),
     m_LevelUpTime (0),
     m_Player (new HumanPlayer (IPlayer::RightSide)),
-    m_Ready (0),
+    m_Ready (nullptr),
     m_ReadyTime (k_LevelUpTime / 2),
-    m_ScoreFont (0),
+    m_ScoreFont (nullptr),
     m_SilhouetteBorder (k_SilhouetteBorder),
-    m_Silhouettes (0),
+    m_Silhouettes (nullptr),
     m_SoundLose (Sound::fromFile (File::getSoundFilePath ("youlose.wav")))
 {
     loadGraphicResources ();
@@ -278,13 +275,12 @@ TrainingState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-TrainingState::joyDown (uint8_t joystick, uint8_t button)
+TrainingState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_START:
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
+        case SDL_CONTROLLER_BUTTON_B:
             pauseOrEndGame ();
         break;
 
@@ -292,19 +288,18 @@ TrainingState::joyDown (uint8_t joystick, uint8_t button)
             getPlayer ()->joyDown (joystick, button);
         break;
     }
-#else // !IS_GP2X_HOST
+
+    // TODO
     getPlayer ()->joyDown (joystick, button);
-#endif // IS_GP2X_HOST
 
 }
 
 void
-TrainingState::joyUp (uint8_t joystick, uint8_t button)
+TrainingState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
     getPlayer ()->joyUp (joystick, button);
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 TrainingState::keyDown (uint32_t key)
 {
@@ -327,7 +322,6 @@ TrainingState::keyUp (uint32_t key)
 {
     getPlayer ()->keyUp (key);
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -344,7 +338,7 @@ TrainingState::loadGraphicResources (void)
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> gridBackground (
+        std::unique_ptr<Surface> gridBackground (
                 Surface::fromFile (File::getGraphicsFilePath ("training.png")));
         gridBackground->blit (m_Background->toSDLSurface ());
     }

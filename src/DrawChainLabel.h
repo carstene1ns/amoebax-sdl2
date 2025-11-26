@@ -34,7 +34,7 @@ namespace Amoebax
     /// This struct is intended to be used as a parameter to std::for_each()
     /// while trying to draw the list of chain labels from a Grid.
     ///
-    struct DrawChainLabel: public std::unary_function<ChainLabel *, void>
+    struct DrawChainLabel
     {
         /// The surface to get the chain label's images.
         Surface *chainLabelImage;

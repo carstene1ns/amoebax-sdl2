@@ -20,6 +20,7 @@
 #define AMOEBAX_IPLAYER_H
 
 #include <memory>
+#include <SDL.h>
 #include "Grid.h"
 
 namespace Amoebax
@@ -49,7 +50,7 @@ namespace Amoebax
             /// \param side The side the player will control.
             ///
             explicit IPlayer (IPlayer::PlayerSide side):
-                m_Grid (0),
+                m_Grid (nullptr),
                 m_Side (side)
             { }
 
@@ -85,7 +86,7 @@ namespace Amoebax
             /// \param joystick The joystick index that caused the event.
             /// \param button The button that was pressed.
             ///
-            virtual void joyDown (uint8_t joystick, uint8_t button) = 0;
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button) = 0;
 
             ///
             /// \brief A joystick button was released.
@@ -93,9 +94,8 @@ namespace Amoebax
             /// \param joystick The joysticj index that caused the event.
             /// \param button The button that was released.
             ///
-            virtual void joyUp (uint8_t joystick, uint8_t button) = 0;
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button) = 0;
 
-#if !defined (IS_GP2X_HOST)
             ///
             /// \brief A key down event was received.
             ///
@@ -111,7 +111,6 @@ namespace Amoebax
             ///            See SDLKey for possible values.
             ///
             virtual void keyUp (uint32_t key) = 0;
-#endif // !IS_GP2X_HOST
 
             ///
             /// \brief Loads the player's options.
@@ -162,7 +161,7 @@ namespace Amoebax
 
         private:
             /// The player's grid.
-            std::auto_ptr<Grid> m_Grid;
+            std::unique_ptr<Grid> m_Grid;
             /// The player's side.
             IPlayer::PlayerSide m_Side;
     };

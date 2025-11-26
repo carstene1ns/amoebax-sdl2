@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include "File.h"
 #include "Font.h"
 #include "NewHighScoreState.h"
@@ -39,7 +36,7 @@ static uint16_t k_PlayerVerticalPosition = 524;
 ///
 CongratulationsState::CongratulationsState (const std::string &playerName,
                                             uint32_t playerScore):
-    m_Background (0),
+    m_Background (nullptr),
     m_BackgroundMusic (Music::fromFile (File::getMusicFilePath ("Congratulations.ogg"))),
     m_End (false),
     m_PlayerName (playerName),
@@ -103,17 +100,16 @@ CongratulationsState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-CongratulationsState::joyDown (uint8_t joystick, uint8_t button)
+CongratulationsState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     endCongratulationsState ();
 }
 
 void
-CongratulationsState::joyUp (uint8_t joystick, uint8_t button)
+CongratulationsState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 CongratulationsState::keyDown (uint32_t key)
 {
@@ -124,7 +120,6 @@ void
 CongratulationsState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphical resources.
@@ -133,22 +128,18 @@ void
 CongratulationsState::loadGraphicResources (void)
 {
     const float screenScale = System::getInstance ().getScreenScaleFactor ();
-#if defined (IS_GP2X_HOST)
-    const float originalScale = screenScale;
-#else // !IS_GP2X_HOST
     const float originalScale = 1.0f;
-#endif // IS_GP2X_HOST
 
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> podium (
+        std::unique_ptr<Surface> podium (
                 Surface::fromFile (File::getGraphicsFilePath ("congratulationsPodium.png")));
         podium->blit (m_Background->getWidth () / 2 - podium->getWidth () / 2,
                       m_Background->getHeight () - podium->getHeight (),
                       m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> player (
+        std::unique_ptr<Surface> player (
                 Surface::fromFile (File::getGraphicsFilePath (getPlayerName () + ".png")));
         player->blit (m_Background->getWidth () / 2 - player->getWidth () / 2,
                       static_cast<uint16_t> (k_PlayerVerticalPosition *
@@ -156,7 +147,7 @@ CongratulationsState::loadGraphicResources (void)
                       player->getHeight (),
                       m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> congratulations (
+        std::unique_ptr<Surface> congratulations (
                 Surface::fromFile (File::getGraphicsFilePath ("congratulations.png")));
         congratulations->blit (m_Background->getWidth () / 2 -
                               congratulations->getWidth () / 2, 0,

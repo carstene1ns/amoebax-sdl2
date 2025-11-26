@@ -35,12 +35,10 @@ namespace Amoebax
 
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
@@ -51,11 +49,11 @@ namespace Amoebax
             void loadGraphicResources (void);
 
             /// The menu's background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// The font to use to draw the people's name.
-            std::auto_ptr<Font> m_NamesFont;
+            std::unique_ptr<Font> m_NamesFont;
             /// The font to use to draw the different development areas.
-            std::auto_ptr<Font> m_SectionsFont;
+            std::unique_ptr<Font> m_SectionsFont;
             /// Tells if the state was already removed or not.
             bool m_StateRemoved;
     };

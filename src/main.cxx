@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <cstdlib>
 #include <iomanip>
 #include <iostream>
@@ -27,13 +24,9 @@
 #include "MainMenuState.h"
 #include "Options.h"
 #include "System.h"
-#if defined (IS_GP2X_HOST)
-#include "UnixOptions.h"
-#endif // IS_GP2X_HOST
 
 using namespace Amoebax;
 
-static void endGame (void);
 static void parseCommandLine (int argc, char **argv);
 static void showUsage (void);
 static void showVersion (void);
@@ -52,34 +45,9 @@ main (int argc, char **argv)
     catch (std::exception &e)
     {
         System::showFatalError (e.what ());
-        endGame ();
         return EXIT_FAILURE;
     }
-    endGame ();
     return EXIT_SUCCESS;
-}
-
-///
-/// \brief Frees resources and executes the main menu.
-///
-/// This is only used on the GP2X. On the GP2X if we just
-/// return from main() the console would look like it was
-/// hung. Instead, we free SDL resources and execute the menu
-/// at /usr/gp2x.
-/// For all other platforms, this is just a no operation
-/// function.
-///
-void
-endGame (void)
-{
-#if defined (IS_GP2X_HOST)
-    UnixOptions &options = static_cast<UnixOptions &>(Options::getInstance ());
-    options.flush ();
-
-    SDL_Quit ();
-    chdir ("/usr/gp2x");
-    execl ("/usr/gp2x/gp2xmenu", "/usr/gp2x/gp2xmenu", NULL);
-#endif // IS_GP2X_HOST
 }
 
 ///

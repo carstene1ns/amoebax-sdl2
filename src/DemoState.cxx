@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // !HAVE_CONFIG_H
 #include "AIPlayerFactory.h"
 #include "DemoState.h"
 #include "System.h"
@@ -32,7 +29,7 @@ DemoState::DemoState (void):
     IState (),
     IMatchObserver (),
     m_DemoTime (k_DemoTime),
-    m_Match (0),
+    m_Match (nullptr),
     m_StateRemoved (false)
 {
     uint8_t leftPlayerLevel = rand () % AIPlayerFactory::k_MaxPlayerLevel;
@@ -83,17 +80,16 @@ DemoState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-DemoState::joyDown (uint8_t joystick, uint8_t button)
+DemoState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     removeState ();
 }
 
 void
-DemoState::joyUp (uint8_t joystick, uint8_t button)
+DemoState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 DemoState::keyDown (uint32_t key)
 {
@@ -104,7 +100,6 @@ void
 DemoState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 void
 DemoState::redrawBackground (SDL_Rect *region, SDL_Surface *screen)

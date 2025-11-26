@@ -45,12 +45,10 @@ namespace Amoebax
             virtual void activate (void);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             inline virtual bool shouldBePaused (void) { return true; }
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
@@ -117,47 +115,47 @@ namespace Amoebax
             void setSilhouetteBorder (uint8_t border);
 
             /// Amoebas's sprites.
-            std::auto_ptr<Surface> m_Amoebas;
+            std::unique_ptr<Surface> m_Amoebas;
             /// The amoebas' size in pixels. Amoebas are squared.
             uint8_t m_AmoebasSize;
             /// Two players mode's background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// The file name to use to get the background image.
             std::string m_BackgroundFileName;
             /// Background music.
-            std::auto_ptr<Music> m_BackgroundMusic;
+            std::unique_ptr<Music> m_BackgroundMusic;
             /// The chain label image.
-            std::auto_ptr<Surface> m_ChainLabel;
+            std::unique_ptr<Surface> m_ChainLabel;
             /// Tells if the game is over.
             bool m_GameIsOver;
             /// The generator of amoebas pairs.
-            std::auto_ptr<PairGenerator> m_Generator;
+            std::unique_ptr<PairGenerator> m_Generator;
             /// The "Go!!" label.
-            std::auto_ptr<Surface> m_Go;
+            std::unique_ptr<Surface> m_Go;
             /// The time the "Go!!" label is displayed.
             int32_t m_GoTime;
             /// Left player.
-            std::auto_ptr<IPlayer> m_LeftPlayer;
+            std::unique_ptr<IPlayer> m_LeftPlayer;
             /// Observer for the end of match.
             IMatchObserver *m_Observer;
             /// The "Ready?" label.
-            std::auto_ptr<Surface> m_Ready;
+            std::unique_ptr<Surface> m_Ready;
             /// The time the "Ready?" label is displayed.
             int32_t m_ReadyTime;
             /// Right player.
-            std::auto_ptr<IPlayer> m_RightPlayer;
+            std::unique_ptr<IPlayer> m_RightPlayer;
             /// The score font.
-            std::auto_ptr<Font> m_ScoreFont;
+            std::unique_ptr<Font> m_ScoreFont;
             /// The border size of the silhouettes.
             uint8_t m_SilhouetteBorder;
             /// The silhouettes image.
-            std::auto_ptr<Surface> m_Silhouettes;
+            std::unique_ptr<Surface> m_Silhouettes;
             /// Tells if the state was already removed.
             bool m_StateAlreadyRemoved;
             /// The loser's text.
-            std::auto_ptr<Surface> m_YouLose;
+            std::unique_ptr<Surface> m_YouLose;
             /// The winner's text.
-            std::auto_ptr<Surface> m_YouWin;
+            std::unique_ptr<Surface> m_YouWin;
             /// The winner's side.
             IPlayer::PlayerSide m_Winner;
     };

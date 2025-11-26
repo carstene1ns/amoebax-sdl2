@@ -64,10 +64,10 @@ namespace Amoebax
             static const int16_t k_DeadZone = 10000;
 
             Joystick (void);
-            Action down (uint8_t joystick, uint8_t button);
+            Action down (uint8_t joystick, SDL_GameControllerButton button);
             Action motion (uint8_t joystick, uint8_t axis, int16_t value);
             void setControls (const Options::PlayerControls &controls);
-            Action up (uint8_t joystick, uint8_t button);
+            Action up (uint8_t joystick, SDL_GameControllerButton button);
 
         private:
             int8_t getAxisXDirection (void) const;

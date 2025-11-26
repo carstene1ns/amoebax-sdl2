@@ -42,7 +42,7 @@ namespace Amoebax
             /// \struct GeneratePair
             /// \brief Tells to the grid which pair to generate.
             ///
-            struct GeneratePair: public std::unary_function<Grid *, void>
+            struct GeneratePair
             {
                 /// The colour of the first amoeba.
                 Amoeba::Colour firstAmoebaColour;
@@ -77,22 +77,17 @@ namespace Amoebax
                 {
                     Amoeba *firstAmoeba = 0;
                     Amoeba *secondAmoeba = 0;
-#if !defined (IS_GP2X_HOST)
                     try
-#endif // !IS_GP2X_HOST
                     {
                         firstAmoeba = new Amoeba (firstAmoebaColour);
                         secondAmoeba = new Amoeba (secondAmoebaColour);
                     }
-#if !defined (IS_GP2X_HOST)
-                    // XXX: GP2X can't even start with this try catch block.
                     catch (std::exception e)
                     {
                         delete firstAmoeba;
                         delete secondAmoeba;
                         throw e;
                     }
-#endif // !IS_GP2X_HOST
                     grid->addNewPair (firstAmoeba, secondAmoeba);
                 }
             };

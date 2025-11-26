@@ -32,7 +32,7 @@ namespace Amoebax
     /// This struct is intended to be used as a parameter to std::for_each()
     /// while trying to draw the amoebas from a Grid.
     ///
-    struct DrawAmoeba: public std::unary_function<Amoeba *, void>
+    struct DrawAmoeba
     {
         /// The size (both width and height are the same) of a single amoeba.
         uint8_t amoebasSize;

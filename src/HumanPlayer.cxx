@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include "HumanPlayer.h"
 
 using namespace Amoebax;
@@ -66,36 +63,34 @@ HumanPlayer::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-HumanPlayer::joyDown (uint8_t joystick, uint8_t button)
+HumanPlayer::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_L:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
             getGrid ()->rotateCounterClockwise ();
         break;
 
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_R:
+        case SDL_CONTROLLER_BUTTON_B:
+        case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
             getGrid ()->rotateClockwise ();
         break;
 
-        case GP2X_BUTTON_DOWN:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
             getGrid ()->setMaxFallingSpeed ();
         break;
 
-        case GP2X_BUTTON_LEFT:
-        case GP2X_BUTTON_UPLEFT:
+        case SDL_CONTROLLER_BUTTON_DPAD_LEFT:
             getGrid ()->moveLeft ();
         break;
 
-        case GP2X_BUTTON_RIGHT:
-        case GP2X_BUTTON_UPRIGHT:
+        case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
             getGrid ()->moveRight ();
         break;
     }
-#else // !IS_GP2X_HOST
+
+    // TODO:
     switch ( m_Joystick.down (joystick, button) )
     {
         case Joystick::RotateCWPressed:
@@ -110,21 +105,17 @@ HumanPlayer::joyDown (uint8_t joystick, uint8_t button)
             // Do nothing.
             break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-HumanPlayer::joyUp (uint8_t joystick, uint8_t button)
+HumanPlayer::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
-    if ( GP2X_BUTTON_DOWN == button )
+    if ( SDL_CONTROLLER_BUTTON_DPAD_DOWN == button )
     {
         getGrid ()->setNormalFallingSpeed ();
     }
-#endif // IS_GP2X_HOST
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 HumanPlayer::keyDown (uint32_t key)
 {
@@ -162,7 +153,6 @@ HumanPlayer::keyUp (uint32_t key)
         getGrid ()->setNormalFallingSpeed ();
     }
 }
-#endif // !IS_GP2X_HOST
 
 void
 HumanPlayer::loadOptions (void)

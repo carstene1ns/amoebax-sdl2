@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // !HAVE_CONFIG_H
 #include <cassert>
 #include <limits>
 #include "AIPlayer.h"
@@ -455,18 +452,17 @@ AIPlayer::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-AIPlayer::joyDown (uint8_t joystick, uint8_t button)
+AIPlayer::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     // Computer players don't have joystick. Nothing to do.
 }
 
 void
-AIPlayer::joyUp (uint8_t joystick, uint8_t button)
+AIPlayer::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
     // Computer players don't have joystick. Nothing to do.
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 AIPlayer::keyDown (uint32_t key)
 {
@@ -478,7 +474,6 @@ AIPlayer::keyUp (uint32_t key)
 {
     // Computer players don't have keyboard. Nothing to do.
 }
-#endif // !IS_GP2X_HOST
 
 void
 AIPlayer::loadOptions (void)

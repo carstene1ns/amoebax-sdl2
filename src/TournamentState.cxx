@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <cassert>
 #include <sstream>
 #include "AIPlayerFactory.h"
@@ -30,9 +27,6 @@
 #include "TwoComputerPlayersState.h"
 #include "TwoPlayersState.h"
 #include "VersusState.h"
-#if defined (IS_GP2X_HOST)
-#include "TwoGP2XPlayersState.h"
-#endif // IS_GP2X_HOST
 
 using namespace Amoebax;
 
@@ -51,11 +45,11 @@ static const int32_t k_MatchStartTime = k_BlinkTime * 8;
 TournamentState::TournamentState (const std::vector<TournamentState::Player> &players):
     IState (),
     m_CurrentMatch (0),
-    m_Background (0),
-    m_BackgroundMusic (0),
+    m_Background (nullptr),
+    m_BackgroundMusic (nullptr),
     m_CurrentMatchBlinkTime (k_BlinkTime),
     m_CurrentMatchStartTime (k_MatchStartTime),
-    m_Faces (0),
+    m_Faces (nullptr),
     m_HorizontalOffset (),
     m_Matches (),
     m_NumPlayers (players.size ()),
@@ -284,16 +278,6 @@ TournamentState::getBestTwoPlayersState (const Player &leftCharacter,
                                          rightCharacter.computerPlayerLevel,
                                          this);
     }
-#if defined (IS_GP2X_HOST)
-    else if ( !leftCharacter.isComputerPlayer &&
-              !rightCharacter.isComputerPlayer )
-    {
-        twoPlayersState =
-            new TwoGP2XPlayersState (
-                    AIPlayerFactory::getRandomBackgroundFileName (),
-                    leftCharacter.score, rightCharacter.score, this);
-    }
-#endif // IS_GP2X_HOST
     else
     {
         IPlayer *leftPlayer = getMatchPlayer (leftCharacter, IPlayer::LeftSide);
@@ -373,31 +357,27 @@ TournamentState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-TournamentState::joyDown (uint8_t joystick, uint8_t button)
+TournamentState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
             startCurrentMatch ();
             break;
 
-        case GP2X_BUTTON_START:
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
+        case SDL_CONTROLLER_BUTTON_B:
             System::getInstance ().pause ();
             break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-TournamentState::joyUp (uint8_t joystick, uint8_t button)
+TournamentState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 TournamentState::keyDown (uint32_t key)
 {
@@ -417,7 +397,6 @@ void
 TournamentState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads graphic resources.
@@ -433,7 +412,7 @@ TournamentState::loadGraphicResources (void)
         fileName << "Tournament";
         fileName << m_NumPlayers;
         fileName << "p.png";
-        std::auto_ptr<Surface> grid (
+        std::unique_ptr<Surface> grid (
                 Surface::fromFile (File::getGraphicsFilePath (fileName.str ())));
         grid->blit (m_Background->getWidth () / 2 - grid->getWidth () / 2,
                     m_Background->getHeight () / 2 - grid->getHeight () / 2,

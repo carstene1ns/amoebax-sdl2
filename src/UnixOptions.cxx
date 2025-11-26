@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <cstdlib>
 #include <fstream>
 #include <libgen.h>
@@ -47,18 +44,6 @@ UnixOptions::~UnixOptions (void)
 {
     writeOptions ();
 }
-
-#if defined (IS_GP2X_HOST)
-///
-/// \brief Forces to write the current options to the file.
-///
-void
-UnixOptions::flush (void)
-{
-    writeOptions ();
-    sync ();
-}
-#endif // IS_GP2X_HOST
 
 bool
 UnixOptions::getBooleanValue (const std::string &section,
@@ -122,9 +107,6 @@ UnixOptions::getStringValue (const std::string &section,
 std::string
 UnixOptions::getOptionsDirectory (void)
 {
-#if defined (IS_GP2X_HOST)
-    return std::string (".");
-#else // IS_GP2X_HOST
     char *configHome = getenv ("XDG_CONFIG_HOME");
     std::string configDirectory (NULL == configHome ? "" : configHome);
     if ( 0 == configDirectory.length () )
@@ -136,7 +118,6 @@ UnixOptions::getOptionsDirectory (void)
     makeDirectory (configDirectory);
 
     return configDirectory;
-#endif // !IS_GP2X_HOST
 }
 
 ///

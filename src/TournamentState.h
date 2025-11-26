@@ -60,12 +60,10 @@ namespace Amoebax
                                      uint32_t rightPlayerScore);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual bool shouldBePaused (void) { return true; }
@@ -109,15 +107,15 @@ namespace Amoebax
             /// The current match.
             Match *m_CurrentMatch;
             /// The background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// The background music.
-            std::auto_ptr<Music> m_BackgroundMusic;
+            std::unique_ptr<Music> m_BackgroundMusic;
             /// The time for toggling the show current match.
             int32_t m_CurrentMatchBlinkTime;
             /// The time for starting the current match.
             int32_t m_CurrentMatchStartTime;
             /// The player's faces.
-            std::auto_ptr<Surface> m_Faces;
+            std::unique_ptr<Surface> m_Faces;
             /// Horizontal offset of players.
             std::vector<uint16_t> m_HorizontalOffset;
             /// The matches.
@@ -127,9 +125,9 @@ namespace Amoebax
             /// Tells if show the current match's opponents.
             bool m_ShowCurrentOpponents;
             /// The sound of when you lose.
-            std::auto_ptr<Sound> m_SoundLose;
+            std::unique_ptr<Sound> m_SoundLose;
             /// The sound of when you win.
-            std::auto_ptr<Sound> m_SoundWin;
+            std::unique_ptr<Sound> m_SoundWin;
             /// Vertical position of players.
             std::vector<uint16_t> m_VerticalPosition;
     };

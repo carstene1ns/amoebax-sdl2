@@ -35,13 +35,11 @@ namespace Amoebax
 
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
 
-#if !defined (IS_GP2X_HOST)
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
 
             virtual void redrawBackground (SDL_Rect *region,
                                            SDL_Surface *screen);
@@ -62,11 +60,11 @@ namespace Amoebax
             void removeHighScoreState (void);
 
             /// The background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// The font to use for regular scores.
-            std::auto_ptr<Font> m_Font;
+            std::unique_ptr<Font> m_Font;
             /// The font to use to highlight an score.
-            std::auto_ptr<Font> m_FontHighLight;
+            std::unique_ptr<Font> m_FontHighLight;
             /// The score to high light.
             int32_t m_ScoreToHighLight;
             /// Tells if the state was already removed from the system.

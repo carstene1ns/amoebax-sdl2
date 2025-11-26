@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <assert.h>
 #include <cstdlib>
 #include <iostream>
@@ -33,9 +30,6 @@
 #if defined (IS_WIN32_HOST)
 #include <windows.h>
 #endif // IS_WIN32_HOST
-#if defined (IS_OSX_HOST)
-extern "C" void OSXAlert (const char *title, const char *message);
-#endif // IS_OSX_HOST
 
 #include "FrameManager.h"
 #include "FadeInState.h"
@@ -50,11 +44,7 @@ extern "C" void OSXAlert (const char *title, const char *message);
 using namespace Amoebax;
 
 /// The buffer system to use for audio.
-#if defined (IS_GP2X_HOST)
-static const int k_AudioBuffers = 1024; // Otherwise it gets delayed.
-#else // !IS_GP2X_HOST
 static const int k_AudioBuffers = 4096;
-#endif // IS_GP2X_HOST
 /// The numnber of audio channels.
 static const int k_AudioChannels = 2;
 /// The audio format to use.
@@ -104,12 +94,11 @@ System::System (void):
     m_ActiveState (0),
     m_InvalidatedRegion (),
     m_PreviousActiveState (0),
-    m_Screen (0),
+    m_Window (0),
     m_ScreenScaleFactor (1.0f),
     m_SoundEnabled (false),
     m_States (0),
-    m_StatesToDelete (0),
-    m_UnicodeTranslationEnabled (false)
+    m_StatesToDelete (0)
 {
 }
 
@@ -183,23 +172,6 @@ System::changeVideoMode (void)
 }
 
 ///
-/// \brief Enables or disables unicode translations.
-///
-/// \param enabled If set to \a true, the unicode translation of key pressed
-///                is activated and send through calls to
-///                IState::unicodeCharacterPressed().
-///
-/// \note Enabling unicode translation can incur an overhead for each key
-///       pressed. So enable with care.
-///
-void
-System::enableUnicodeTranslation (bool enabled)
-{
-    SDL_EnableUNICODE (enabled ? 1 : 0);
-    m_UnicodeTranslationEnabled = enabled;
-}
-
-///
 /// \brief Gets the factor between the maxium screen resolution and the current.
 ///
 /// \return A factor between the maximum resolution and the current resolution.
@@ -218,7 +190,7 @@ System::getScreenScaleFactor (void)
 SDL_Surface *
 System::getScreenSDLSurface (void)
 {
-    return m_Screen;
+    return SDL_GetWindowSurface( m_Window );
 }
 
 ///
@@ -229,11 +201,6 @@ System::getScreenSDLSurface (void)
 void
 System::init (void)
 {
-#if defined (IS_OSX_HOST)
-    // Tell SDL to send key events to Cocoa, so shortcuts will work.
-    SDL_putenv ("SDL_ENABLEAPPEVENTS=1");
-#endif // IS_OSX_HOST
-
 #if defined (IS_WIN32_HOST)
     // When running under windows, set the current directory to be
     // the executable directory.
@@ -244,14 +211,14 @@ System::init (void)
     srand ( (unsigned)time (0));
 
     // Initialize SDL.
-    if ( SDL_Init (SDL_INIT_AUDIO | SDL_INIT_JOYSTICK | SDL_INIT_VIDEO) < 0 )
+    if ( SDL_Init (SDL_INIT_AUDIO | SDL_INIT_GAMECONTROLLER | SDL_INIT_VIDEO) < 0 )
     {
         throw std::runtime_error (SDL_GetError ());
     }
     // Sets the video mode from the configuration parameters.
     setVideoMode ();
     // Set the window's title for windowed modes.
-    SDL_WM_SetCaption (PACKAGE_NAME, PACKAGE_NAME);
+     SDL_SetWindowTitle(m_Window, PACKAGE_NAME);
     // Set the maximum frame rate.
     FrameManager::init (k_FrameRate);
     // Open the audio device, if enabled.
@@ -272,32 +239,6 @@ System::init (void)
         }
     }
 
-#if defined (IS_GP2X_HOST)
-    // When the program is launched from the GP2X main menu, it is possible
-    // that the SDL event queue registered the button down event of the
-    // "B" button. To prevent the game to think the user pressed the
-    // "B" button, I retrieve a single event from the event queue and
-    // just ignore it.
-    {
-        SDL_Event event;
-        SDL_PollEvent (&event);
-    }
-
-    // Open the only joystic.
-    SDL_Joystick *joystick = SDL_JoystickOpen (0);
-    if ( NULL == joystick )
-    {
-        throw std::runtime_error (SDL_GetError ());
-    }
-    m_Joysticks.push_back (joystick);
-
-    // Load the volume level display and gauge bar.
-    m_VolumeDisplay.reset (
-            Surface::fromFile (File::getGraphicsFilePath ("volume.png")));
-    m_VolumeLevel.reset (Surface::fromFile (
-                File::getGraphicsFilePath ("volume-level.png")));
-    m_VolumeDisplayTime = 0;
-#else // !IS_GP2X_HOST
     int numJoysticks = SDL_NumJoysticks ();
     for (int currentJoystick = 0 ; currentJoystick < numJoysticks ;
          ++currentJoystick )
@@ -314,7 +255,6 @@ System::init (void)
             }
         }
     }
-#endif // IS_GP2X_HOST
 }
 
 ///
@@ -355,17 +295,6 @@ bool
 System::isSoundEnabled (void)
 {
     return m_SoundEnabled;
-}
-
-///
-/// \brief Tells if unicode translation is enabled.
-///
-/// \return \a true if unicode translation is enabled, \a false otherwise.
-///
-bool
-System::isUnicodeTranslationEnabled (void) const
-{
-    return m_UnicodeTranslationEnabled;
 }
 
 ///
@@ -504,6 +433,7 @@ System::run (void)
             {
                 switch ( event.type )
                 {
+#if 0 // TODO
                     case SDL_JOYAXISMOTION:
                         m_ActiveState->joyMotion (event.jaxis.which,
                                                   event.jaxis.axis,
@@ -511,21 +441,6 @@ System::run (void)
                         break;
 
                     case SDL_JOYBUTTONDOWN:
-#if defined (IS_GP2X_HOST)
-                        if ( GP2X_BUTTON_VOLUP == event.jbutton.button )
-                        {
-                            Options::getInstance ().incrementVolume ();
-                            m_VolumeDisplayTime = k_VolumeDisplayTime;
-                            applyVolumeLevel ();
-                        }
-                        else if ( GP2X_BUTTON_VOLDOWN == event.jbutton.button )
-                        {
-                            Options::getInstance ().decrementVolume ();
-                            m_VolumeDisplayTime = k_VolumeDisplayTime;
-                            applyVolumeLevel ();
-                        }
-                        else
-#endif  // IS_GP2X_HOST
                         {
                             m_ActiveState->joyDown (event.jbutton.which,
                                                     event.jbutton.button);
@@ -536,17 +451,14 @@ System::run (void)
                         m_ActiveState->joyUp (event.jbutton.which,
                                               event.jbutton.button);
                         break;
+#endif
 
-#if !defined (IS_GP2X_HOST)
-                    case SDL_ACTIVEEVENT:
-                        if ( event.active.state & SDL_APPACTIVE )
+                    case SDL_WINDOWEVENT:
+                        if ( event.window.event == SDL_WINDOWEVENT_MINIMIZED )
                         {
                             // Window is minimized.
-                            if ( 0 == event.active.gain )
-                            {
-                                Music::pause ();
-                                pause ();
-                            }
+                            Music::pause ();
+                            pause ();
                         }
                         break;
 
@@ -561,19 +473,11 @@ System::run (void)
                         {
                             m_ActiveState->keyDown (event.key.keysym.sym);
                         }
-                        // Check if unicode translation is enabled
-                        // and send the unicode code if so.
-                        if ( isUnicodeTranslationEnabled () &&
-                             0 != event.key.keysym.unicode )
-                        {
-                            m_ActiveState->unicodeCharacterPressed (event.key.keysym.unicode);
-                        }
                         break;
 
                     case SDL_KEYUP:
                         m_ActiveState->keyUp (event.key.keysym.sym);
                         break;
-#endif // !IS_GP2X_HOST
                 }
             }
         }
@@ -591,52 +495,8 @@ System::run (void)
             m_ActiveState->render (getScreenSDLSurface ());
         }
 
-#if defined (IS_GP2X_HOST)
-        // Show the current volume level if it has been changed.
-        if ( m_VolumeDisplayTime > 0 )
-        {
-            // Remove any previously set clip rectangle.
-            SDL_SetClipRect (getScreenSDLSurface (), NULL);
-
-            // Show the display.
-            uint16_t x = Options::getInstance ().getScreenWidth () / 2 -
-                         m_VolumeDisplay->getWidth () / 2;
-            uint16_t y = Options::getInstance ().getScreenHeight () / 2 -
-                         m_VolumeDisplay->getHeight () / 2;
-            m_VolumeDisplay->blit (x, y, getScreenSDLSurface ());
-
-            // Show the current level in white (upper part of the
-            // image) and the remaining up to the maximum level
-            // in gray (lower part of the image.)
-            //uint8_t volumeLevel = Options::getVolumeLevel ();
-            uint16_t width = m_VolumeLevel->getWidth () *
-                             Options::getInstance ().getVolumeLevel () /
-                             Options::getMaxVolumeLevel ();
-            if ( !isSoundEnabled () )
-            {
-                width = 0;
-            }
-            x = Options::getInstance ().getScreenWidth () / 2 -
-                m_VolumeLevel->getWidth () / 2;
-            y += m_VolumeDisplay->getHeight () - 10 -
-                 m_VolumeLevel->getHeight () / 2;
-            m_VolumeLevel->blit (0, 0,
-                                 width, m_VolumeLevel->getHeight () / 2,
-                                 x, y, getScreenSDLSurface ());
-
-            x += width;
-            m_VolumeLevel->blit (width, m_VolumeLevel->getHeight () / 2,
-                                 m_VolumeLevel->getWidth () - width,
-                                 m_VolumeLevel->getHeight () / 2,
-                                 x, y, getScreenSDLSurface ());
-
-            // Update the time to show the display.
-            m_VolumeDisplayTime -= FrameManager::getElapsedTime ();
-        }
-#endif // IS_GP2X_HOST
-
         // Refresh the screen.
-        SDL_Flip (getScreenSDLSurface ());
+        SDL_UpdateWindowSurface ( m_Window );
 
         // Deletes the not longer used states.
         if ( !m_StatesToDelete.empty () )
@@ -687,14 +547,13 @@ System::setVideoMode (void)
     uint32_t videoFlags = SDL_SWSURFACE;
     if ( Options::getInstance ().isFullScreen () )
     {
-        videoFlags |= SDL_FULLSCREEN;
+        videoFlags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
     // Sets the video mode.
-    m_Screen = SDL_SetVideoMode (Options::getInstance ().getScreenWidth (),
-                                 Options::getInstance ().getScreenHeight (),
-                                 Options::getInstance ().getScreenDepth (),
-                                 videoFlags);
-    if ( 0 == m_Screen )
+    m_Window = SDL_CreateWindow (PACKAGE_NAME, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
+        Options::getInstance ().getScreenWidth (), Options::getInstance ().getScreenHeight (), videoFlags);
+    //FIXME: Options::getInstance ().getScreenDepth (), is gone
+    if ( 0 == m_Window )
     {
         // First check if the video settings are the defaults (which should
         // be the most secure) and if they aren't, reset back to them and
@@ -717,6 +576,7 @@ System::setVideoMode (void)
         }
     }
     // Get the current screen's scale factor.
+#if 0 //?? TODO
     // Take into consideration the "odd" factor we need to have when
     // using a 1024x768 screen resolution.
     if ( 1024 == m_Screen->w )
@@ -724,9 +584,13 @@ System::setVideoMode (void)
         m_ScreenScaleFactor = 0.75f;
     }
     else
+#endif
     {
-        m_ScreenScaleFactor = std::max (m_Screen->w / k_ScreenMaxWidth,
-                                        m_Screen->h / k_ScreenMaxHeight);
+        int w = 0;
+        int h = 0;
+        SDL_GetWindowSize ( m_Window, &w, &h);
+        m_ScreenScaleFactor = std::max (w / k_ScreenMaxWidth,
+                                        h / k_ScreenMaxHeight);
     }
     // Hide the cursor on the screen. Do only if the video mode is set
     // to full screen, otherwise it feels awkward to make the cursor desappear
@@ -752,15 +616,12 @@ System::showFatalError (const std::string &error)
     fullMessage << "attaching the following error message: " << std::endl;
     fullMessage << std::endl << error << std::endl;
 
-#if defined (IS_WIN32_HOST)
-    MessageBox (NULL, (title + "\r\n" + fullMessage.str ()).c_str (),
-                "Amoebax", MB_ICONERROR);
-#elif defined (IS_OSX_HOST)
-    OSXAlert (title.c_str (), fullMessage.str ().c_str ());
-#else
-    std::cerr << title << std::endl;
-    std::cerr << fullMessage.str () << std::endl;
-#endif
+    if(SDL_ShowSimpleMessageBox(SDL_MESSAGEBOX_ERROR, PACKAGE_NAME, 
+        (title + "\n" + fullMessage.str ()).c_str (), nullptr) != 0)
+    {
+        std::cerr << title << std::endl;
+        std::cerr << fullMessage.str () << std::endl;
+    }
 }
 
 ///

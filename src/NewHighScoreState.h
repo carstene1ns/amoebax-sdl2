@@ -36,15 +36,12 @@ namespace Amoebax
             virtual void activate (void);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
-            virtual void unicodeCharacterPressed (uint16_t code);
             virtual void update (uint32_t elapsedTime);
             virtual void videoModeChanged (void);
 
@@ -73,9 +70,9 @@ namespace Amoebax
             void setCursorVisibleTime (int32_t time);
 
             /// The background image.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// Background music.
-            std::auto_ptr<Music> m_BackgroundMusic;
+            std::unique_ptr<Music> m_BackgroundMusic;
             /// The current index of m_CursorValues.
             uint8_t m_CursorValueIndex;
             /// The possible values that the cursor can take.
@@ -85,11 +82,11 @@ namespace Amoebax
             /// The time the cursor should remain visible or invisible.
             int32_t m_CursorVisibleTime;
             /// The font to use to highlight.
-            std::auto_ptr<Font> m_HighLightFont;
+            std::unique_ptr<Font> m_HighLightFont;
             /// The name to set as the high score.
             std::string m_Name;
             /// The font to use to draw the currently entered name.
-            std::auto_ptr<Font> m_NameFont;
+            std::unique_ptr<Font> m_NameFont;
             /// The score to save.
             uint32_t m_Score;
     };

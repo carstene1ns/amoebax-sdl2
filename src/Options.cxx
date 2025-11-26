@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include <sstream>
 #include "Options.h"
@@ -227,11 +224,7 @@ Options::getPlayerControls (IPlayer::PlayerSide player)
 unsigned int
 Options::getScreenDepth (void)
 {
-#if defined (IS_GP2X_HOST)
-    return 16;
-#else   // IS_GP2X_HOST
     return getIntegerValue ("screen", "depth", k_ScreenDepth);
-#endif  // !IS_GP2X_HOST
 }
 
 ///
@@ -242,11 +235,7 @@ Options::getScreenDepth (void)
 unsigned int
 Options::getScreenHeight (void)
 {
-#if defined (IS_GP2X_HOST)
-    return 240;
-#else // IS_GP2X_HOST
     return getIntegerValue ("screen", "height", k_ScreenHeight);
-#endif // !IS_GP2X_HOST
 }
 
 ///
@@ -257,11 +246,7 @@ Options::getScreenHeight (void)
 unsigned int
 Options::getScreenWidth (void)
 {
-#if defined (IS_GP2X_HOST)
-    return 320;
-#else // IS_GP2X_HOST
     return getIntegerValue ("screen", "width", k_ScreenWidth);
-#endif // !IS_GP2X_HOST
 }
 
 ///
@@ -300,11 +285,7 @@ Options::incrementVolume (void)
 bool
 Options::isFullScreen (void)
 {
-#if defined (IS_GP2X_HOST)
-    return true;
-#else // IS_GP2X_HOST
     return getBooleanValue ("screen", "fullscreen", false);
-#endif // !IS_GP2X_HOST
 }
 
 ///

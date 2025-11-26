@@ -39,12 +39,10 @@ namespace Amoebax
             virtual void activate (void);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
@@ -60,7 +58,7 @@ namespace Amoebax
                 /// The character's name,
                 std::string name;
                 /// The character's avatar image.
-                std::auto_ptr<Surface> image;
+                std::unique_ptr<Surface> image;
             };
 
             ///
@@ -103,11 +101,11 @@ namespace Amoebax
             void setTimeToWait (int32_t timeToWait);
 
             /// The background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// The player that is selecting a character.
             uint8_t m_CurrentPlayer;
             /// The font used to draw all texts.
-            std::auto_ptr<Font> m_Font;
+            std::unique_ptr<Font> m_Font;
             /// The number of players.
             uint8_t m_NumPlayers;
             /// The faces' information.
@@ -119,7 +117,7 @@ namespace Amoebax
             /// The currently selected row.
             uint8_t m_SelectedRow;
             /// The current selection.
-            std::auto_ptr<Surface> m_Selection;
+            std::unique_ptr<Surface> m_Selection;
             /// The time to wait before changing to the tournament state.
             int32_t m_TimeToWait;
     };

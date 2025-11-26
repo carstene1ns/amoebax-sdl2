@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include "File.h"
 #include "Font.h"
@@ -63,39 +60,36 @@ PauseState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-PauseState::joyDown (uint8_t joystick, uint8_t button)
+PauseState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
             activateMenuOption ();
         break;
 
-        case GP2X_BUTTON_DOWN:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
             selectNextMenuOption ();
         break;
 
-        case GP2X_BUTTON_UP:
+        case SDL_CONTROLLER_BUTTON_DPAD_UP:
             selectPreviousMenuOption ();
         break;
 
-        // The X button resumes the game.
-        case GP2X_BUTTON_X:
+        // The B button resumes the game.
+        case SDL_CONTROLLER_BUTTON_B:
             removeState ();
         break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-PauseState::joyUp (uint8_t joystick, uint8_t button)
+PauseState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 PauseState::keyDown (uint32_t key)
 {
@@ -124,7 +118,6 @@ void
 PauseState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -136,7 +129,7 @@ PauseState::loadGraphicResources (void)
     // black surface.
     m_Background.reset (Surface::fromScreen ());
     SDL_Surface *blackBox =
-        SDL_CreateRGBSurface (SDL_SWSURFACE | SDL_SRCALPHA,
+        SDL_CreateRGBSurface (0,
                               m_Background->getWidth (),
                               m_Background->getHeight (),
                               m_Background->toSDLSurface ()->format->BitsPerPixel,
@@ -145,7 +138,7 @@ PauseState::loadGraphicResources (void)
                               m_Background->toSDLSurface ()->format->Bmask,
                               m_Background->toSDLSurface ()->format->Amask);
     SDL_FillRect (blackBox, NULL, SDL_MapRGB (blackBox->format, 0, 0, 0));
-    SDL_SetAlpha (blackBox, SDL_SRCALPHA, 128);
+    SDL_SetSurfaceAlphaMod (blackBox, 128);
     SDL_BlitSurface (blackBox, NULL, m_Background->toSDLSurface (), NULL);
 
     // Load fonts.

@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include <algorithm>
 #include "AdvancedAIPlayer.h"
@@ -47,10 +44,10 @@ using namespace Amoebax;
 ///
 MainMenuState::MainMenuState (void):
     IState (),
-    m_Background (0),
+    m_Background (nullptr),
     m_BackgroundMusic (Music::fromFile (File::getMusicFilePath ("menu.ogg"))),
-    m_Font (0),
-    m_FontSelected (0),
+    m_Font (nullptr),
+    m_FontSelected (nullptr),
     m_MenuOptions (),
     m_SelectedOption (m_MenuOptions.begin ()),
     m_TimeToDemo (k_TimeToDemo)
@@ -62,9 +59,7 @@ MainMenuState::MainMenuState (void):
     m_MenuOptions.push_back (new NormalOption ("normal"));
     m_MenuOptions.push_back (new TournamentOption ("tournament"));
     m_MenuOptions.push_back (new HighScoresOption ("high scores"));
-#if !defined (IS_GP2X_HOST)
     m_MenuOptions.push_back (new OptionsOption ("options"));
-#endif // !IS_GP2X_HOST
     m_MenuOptions.push_back (new CreditsOption ("credits"));
     m_MenuOptions.push_back (new ExitOption ("exit"));
     m_SelectedOption = m_MenuOptions.begin ();
@@ -114,41 +109,38 @@ MainMenuState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-MainMenuState::joyDown (uint8_t joystick, uint8_t button)
+MainMenuState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     resetTimeToDemo ();
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
             activateMenuOption ();
         break;
 
-        case GP2X_BUTTON_DOWN:
-        case GP2X_BUTTON_R:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
+        case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
             selectNextMenuOption ();
         break;
 
-        case GP2X_BUTTON_UP:
-        case GP2X_BUTTON_L:
+        case SDL_CONTROLLER_BUTTON_DPAD_UP:
+        case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
             selectPreviousMenuOption ();
         break;
 
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_B:
             selectExitOption ();
         break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-MainMenuState::joyUp (uint8_t joystick, uint8_t button)
+MainMenuState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 MainMenuState::keyDown (uint32_t key)
 {
@@ -177,7 +169,6 @@ void
 MainMenuState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -191,7 +182,7 @@ MainMenuState::loadGraphicResources (void)
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     m_Background->resize (screenScale);
     {
-        std::auto_ptr<Surface> title (
+        std::unique_ptr<Surface> title (
                 Surface::fromFile (File::getGraphicsFilePath ("amoebax.png")));
         title->resize (screenScale);
         title->blit (Options::getInstance ().getScreenWidth () / 2 -

@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include <sstream>
 #include <algorithm>
@@ -37,9 +34,9 @@ using namespace Amoebax;
 ///
 OptionsMenuState::OptionsMenuState (void):
     IState (),
-    m_Background (0),
-    m_Font (0),
-    m_FontSelected (0),
+    m_Background (nullptr),
+    m_Font (nullptr),
+    m_FontSelected (nullptr),
     m_LeftControls (Options::getInstance ().getPlayerControls (IPlayer::LeftSide)),
     m_MenuOptions (),
     m_RightControls (Options::getInstance ().getPlayerControls (IPlayer::RightSide)),
@@ -90,48 +87,45 @@ OptionsMenuState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-OptionsMenuState::joyDown (uint8_t joystick, uint8_t button)
+OptionsMenuState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
             activateMenuOption ();
         break;
 
-        case GP2X_BUTTON_DOWN:
-        case GP2X_BUTTON_R:
+        case SDL_CONTROLLER_BUTTON_DPAD_DOWN:
+        case SDL_CONTROLLER_BUTTON_RIGHTSHOULDER:
             selectNextMenuOption ();
         break;
 
-        case GP2X_BUTTON_LEFT:
+        case SDL_CONTROLLER_BUTTON_DPAD_LEFT:
             (*m_SelectedOption)->previous ();
         break;
 
-        case GP2X_BUTTON_RIGHT:
+        case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
             (*m_SelectedOption)->next ();
         break;
 
-        case GP2X_BUTTON_UP:
-        case GP2X_BUTTON_L:
+        case SDL_CONTROLLER_BUTTON_DPAD_UP:
+        case SDL_CONTROLLER_BUTTON_LEFTSHOULDER:
             selectPreviousMenuOption ();
         break;
 
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_B:
             selectBackOption ();
         break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-OptionsMenuState::joyUp (uint8_t joystick, uint8_t button)
+OptionsMenuState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 OptionsMenuState::keyDown (uint32_t key)
 {
@@ -167,7 +161,6 @@ void
 OptionsMenuState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -180,7 +173,7 @@ OptionsMenuState::loadGraphicResources (void)
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> title (Surface::fromFile (
+        std::unique_ptr<Surface> title (Surface::fromFile (
                     File::getGraphicsFilePath ("options.png")));
         title->blit (m_Background->getWidth () / 2 - title->getWidth () / 2,
                      0, m_Background->toSDLSurface ());
@@ -307,7 +300,7 @@ void
 OptionsMenuState::ApplyOption::operator () (void)
 {
     std::for_each (m_Options.begin (), m_Options.end (),
-                   std::mem_fun (&IOption::apply));
+                   std::mem_fn (&IOption::apply));
     System::getInstance ().applyVideoMode ();
 }
 

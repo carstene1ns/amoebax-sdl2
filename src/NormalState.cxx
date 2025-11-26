@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <SDL.h>
 #include "AIPlayerFactory.h"
 #include "CongratulationsState.h"
@@ -139,16 +136,15 @@ NormalState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-NormalState::joyDown (uint8_t joystick, uint8_t button)
+NormalState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
 void
-NormalState::joyUp (uint8_t joystick, uint8_t button)
+NormalState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 NormalState::keyDown (uint32_t key)
 {
@@ -158,7 +154,6 @@ void
 NormalState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphical resources.

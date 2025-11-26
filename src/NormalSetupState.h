@@ -38,12 +38,10 @@ namespace Amoebax
             virtual void activate (void);
             virtual void joyMotion (uint8_t joystick, uint8_t axis,
                                     int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void render (SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
@@ -60,11 +58,11 @@ namespace Amoebax
             void setSelectedCharacter (uint8_t character);
 
             /// The background.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// The font when the option is not selected.
-            std::auto_ptr<Font> m_FontNormal;
+            std::unique_ptr<Font> m_FontNormal;
             /// The font when the option is selected.
-            std::auto_ptr<Font> m_FontSelected;
+            std::unique_ptr<Font> m_FontSelected;
             /// The currently selected character.
             uint8_t m_SelectedCharacter;
             /// The state was already removed.

@@ -64,8 +64,7 @@ namespace Amoebax
             ///
             /// \brief Gets the width of a text using a given font.
             ///
-            struct TextWidth:
-                public std::binary_function<uint16_t, char, uint16_t>
+            struct TextWidth
             {
                 /// The font to use to calculate the text with.
                 const Font *currentFont;
@@ -113,7 +112,7 @@ namespace Amoebax
             ///
             /// \brief Writes a text, character by character, using a font.
             ///
-            struct TextWrite: public std::unary_function<char, void>
+            struct TextWrite
             {
                 /// The font to use to write the text.
                 const Font *currentFont;
@@ -190,7 +189,7 @@ namespace Amoebax
             /// Characters' space information.
             std::vector<Character> m_CharacterInformation;
             /// The actual font surface.
-            std::auto_ptr<Surface> m_FontSurface;
+            std::unique_ptr<Surface> m_FontSurface;
     };
 
     ///

@@ -33,9 +33,6 @@ namespace Amoebax
         public:
             UnixOptions (void);
             virtual ~UnixOptions (void);
-#if defined (IS_GP2X_HOST)
-            void flush (void);
-#endif // IS_GP2X_HOST
 
         protected:
             virtual bool getBooleanValue (const std::string &section,

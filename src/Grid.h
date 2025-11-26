@@ -224,7 +224,7 @@ namespace Amoebax
             /// The remaing degrees until the rotation is done.
             float m_DegreesUntilRotationDone;
             /// Dying sound.
-            std::auto_ptr<Sound> m_DieSound;
+            std::unique_ptr<Sound> m_DieSound;
             /// Dying amoebas.
             std::vector<FallingAmoeba> m_DyingAmoebas;
             /// Dying time.

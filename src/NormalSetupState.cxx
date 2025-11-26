@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // HAVE_CONFIG_H
 #include <sstream>
 #include "File.h"
 #include "System.h"
@@ -43,9 +40,9 @@ static const uint16_t k_SelectCharacterPositionY = 120;
 ///
 NormalSetupState::NormalSetupState (void):
     IState (),
-    m_Background (0),
-    m_FontNormal (0),
-    m_FontSelected (0),
+    m_Background (nullptr),
+    m_FontNormal (nullptr),
+    m_FontSelected (nullptr),
     m_SelectedCharacter (0),
     m_StateRemoved (false)
 {
@@ -85,38 +82,35 @@ NormalSetupState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-NormalSetupState::joyDown (uint8_t joystick, uint8_t button)
+NormalSetupState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
-#if defined (IS_GP2X_HOST)
     switch (button)
     {
-        case GP2X_BUTTON_A:
-        case GP2X_BUTTON_B:
-        case GP2X_BUTTON_CLICK:
+        case SDL_CONTROLLER_BUTTON_A:
+        case SDL_CONTROLLER_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_START:
             selectCharacter ();
             break;
 
-        case GP2X_BUTTON_LEFT:
+        case SDL_CONTROLLER_BUTTON_DPAD_LEFT:
             selectPreviousCharacter ();
             break;
 
-        case GP2X_BUTTON_RIGHT:
+        case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
             selectNextCharacter ();
             break;
 
-        case GP2X_BUTTON_X:
+        case SDL_CONTROLLER_BUTTON_B:
             removeState ();
             break;
     }
-#endif // IS_GP2X_HOST
 }
 
 void
-NormalSetupState::joyUp (uint8_t joystick, uint8_t button)
+NormalSetupState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 NormalSetupState::keyDown (uint32_t key)
 {
@@ -144,7 +138,6 @@ void
 NormalSetupState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads graphic resources.
@@ -153,15 +146,11 @@ void
 NormalSetupState::loadGraphicResources (void)
 {
     const float screenScale = System::getInstance ().getScreenScaleFactor ();
-#if defined (IS_GP2X_HOST)
-    const float originalScale = screenScale;
-#else // !IS_GP2X_HOST
     const float originalScale = 1.0f;
-#endif // IS_GP2X_HOST
     m_Background.reset (
             Surface::fromFile (File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> kim (Surface::fromFile (
+        std::unique_ptr<Surface> kim (Surface::fromFile (
                     File::getGraphicsFilePath ("Kim.png")));
         kim->blit (m_Background->getWidth () / 2 -
                    static_cast<uint16_t> (originalScale * k_CharacterSeparation) -
@@ -169,7 +158,7 @@ NormalSetupState::loadGraphicResources (void)
                    m_Background->getHeight () / 2 -
                    kim->getHeight () / 2, m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> tom (Surface::fromFile (
+        std::unique_ptr<Surface> tom (Surface::fromFile (
                     File::getGraphicsFilePath ("Tom.png")));
         tom->blit (m_Background->getWidth () / 2 +
                    static_cast<uint16_t> (originalScale * k_CharacterSeparation) -

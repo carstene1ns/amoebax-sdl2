@@ -39,12 +39,10 @@ namespace Amoebax
                                Options::PlayerControls &rightControls);
 
             virtual void joyMotion (uint8_t joystick, uint8_t axis, int16_t value);
-            virtual void joyDown (uint8_t joystick, uint8_t button);
-            virtual void joyUp (uint8_t joystick, uint8_t button);
-#if !defined (IS_GP2X_HOST)
+            virtual void joyDown (uint8_t joystick, SDL_GameControllerButton button);
+            virtual void joyUp (uint8_t joystick, SDL_GameControllerButton button);
             virtual void keyDown (uint32_t key);
             virtual void keyUp (uint32_t key);
-#endif // !IS_GP2X_HOST
             virtual void redrawBackground (SDL_Rect *region, SDL_Surface *screen);
             virtual void update (uint32_t elapsedTime);
             virtual void render (SDL_Surface *screen);
@@ -92,13 +90,13 @@ namespace Amoebax
             void setWaitingForInput (bool waiting);
 
             /// The background image.
-            std::auto_ptr<Surface> m_Background;
+            std::unique_ptr<Surface> m_Background;
             /// Tells if the current selected control is visible.
             bool m_CurrentControlVisible;
             /// The normal text font.
-            std::auto_ptr<Font> m_Font;
+            std::unique_ptr<Font> m_Font;
             /// The selected text font.
-            std::auto_ptr<Font> m_FontSelected;
+            std::unique_ptr<Font> m_FontSelected;
             /// All players joystick controls' pointers.
             std::vector<int16_t *> m_JoyControls;
             /// All players keyboard controls' pointers.

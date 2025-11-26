@@ -16,9 +16,6 @@
 // along with this program; if not, write to the Free Software
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
-#if defined (HAVE_CONFIG_H)
-#include <config.h>
-#endif // !HAVE_CONFIG_H
 #include <sstream>
 #include <cstdlib>
 #include "ControlSetupState.h"
@@ -65,10 +62,10 @@ static const uint16_t k_CancelControlIndex = k_AcceptControlIndex + 1;
 ControlSetupState::ControlSetupState (Options::PlayerControls &leftControls,
                                       Options::PlayerControls &rightControls):
     IState (),
-    m_Background (0),
+    m_Background (nullptr),
     m_CurrentControlVisible (true),
-    m_Font (0),
-    m_FontSelected (0),
+    m_Font (nullptr),
+    m_FontSelected (nullptr),
     m_JoyControls (0),
     m_KeyControls (0),
     m_LeftPlayerControls (leftControls),
@@ -275,7 +272,7 @@ ControlSetupState::drawKeyboardControl (uint32_t control, uint16_t x,
                                         uint16_t controlIndex, float scale,
                                         Font *font, SDL_Surface *screen)
 {
-    std::string keyName (SDL_GetKeyName (static_cast<SDLKey> (control)));
+    std::string keyName (SDL_GetKeyName (static_cast<SDL_Keycode> (control)));
     uint16_t textWidth = font->getTextWidth (keyName);
     uint16_t y = static_cast<uint16_t> (k_FirstControlY * scale) +
                  font->getHeight () * controlIndex;
@@ -459,7 +456,7 @@ ControlSetupState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
 }
 
 void
-ControlSetupState::joyDown (uint8_t joystick, uint8_t button)
+ControlSetupState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
 {
     if ( isWaitingForInput () && isWaitingJoystickInput () &&
          getSelectedControl () >= k_FirstJoystickButtonControlIndex &&
@@ -470,11 +467,10 @@ ControlSetupState::joyDown (uint8_t joystick, uint8_t button)
 }
 
 void
-ControlSetupState::joyUp (uint8_t joystick, uint8_t button)
+ControlSetupState::joyUp (uint8_t joystick, SDL_GameControllerButton button)
 {
 }
 
-#if !defined (IS_GP2X_HOST)
 void
 ControlSetupState::keyDown (uint32_t key)
 {
@@ -524,7 +520,6 @@ void
 ControlSetupState::keyUp (uint32_t key)
 {
 }
-#endif // !IS_GP2X_HOST
 
 ///
 /// \brief Loads all graphic resources.
@@ -536,22 +531,22 @@ ControlSetupState::loadGraphicResources (void)
     m_Background.reset (Surface::fromFile (
                 File::getGraphicsFilePath ("menuBackground.png")));
     {
-        std::auto_ptr<Surface> title (Surface::fromFile (
+        std::unique_ptr<Surface> title (Surface::fromFile (
                     File::getGraphicsFilePath ("playerscontrolsetup.png")));
         title->blit (m_Background->getWidth () / 2 - title->getWidth () / 2,
                      0, m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> controls (Surface::fromFile (
+        std::unique_ptr<Surface> controls (Surface::fromFile (
                     File::getGraphicsFilePath ("controls.png")));
         controls->blit (k_ControlTitlesX, k_FirstControlY,
                         m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> leftPlayer (Surface::fromFile (
+        std::unique_ptr<Surface> leftPlayer (Surface::fromFile (
                     File::getGraphicsFilePath ("leftplayer.png")));
         leftPlayer->blit (k_LeftPlayerControlsX - leftPlayer->getWidth (),
                           k_PlayersTitleY, m_Background->toSDLSurface ());
 
-        std::auto_ptr<Surface> rightPlayer (Surface::fromFile (
+        std::unique_ptr<Surface> rightPlayer (Surface::fromFile (
                     File::getGraphicsFilePath ("rightplayer.png")));
         rightPlayer->blit (k_RightPlayerControlsX - rightPlayer->getWidth (),
                           k_PlayersTitleY, m_Background->toSDLSurface ());

@@ -23,12 +23,8 @@
 #include <algorithm>
 #include <vector>
 
-#if !defined (_SDL_video_h)
 #include <SDL_video.h>
-#endif // !_SDL_video_h
-#if !defined (_SDL_joystick_h)
 #include <SDL_joystick.h>
-#endif // !_SDL_joystick_h
 
 namespace Amoebax
 {
@@ -46,7 +42,7 @@ namespace Amoebax
     /// created using the new[] operator.
     ///
     template <class T>
-    struct DeleteObject: std::unary_function <T, void>
+    struct DeleteObject
     {
         ///
         /// \brief Deletes an object.
@@ -78,7 +74,6 @@ namespace Amoebax
 
             void applyVideoMode (void);
             void applyVolumeLevel (void);
-            void enableUnicodeTranslation (bool enabled);
             static System &getInstance (void);
             float getScreenScaleFactor (void);
             SDL_Surface *getScreenSDLSurface (void);
@@ -102,13 +97,13 @@ namespace Amoebax
             struct Region
             {
                 /// The top-left X coordinate of the region.
-                int16_t x1;
+                int x1;
                 /// The top-left Y coordinate of the region.
-                int16_t y1;
+                int y1;
                 /// The bottom-right X coordinate of the region.
-                int16_t x2;
+                int x2;
                 /// The bottom-right Y coordinate of the region.
-                int16_t y2;
+                int y2;
 
                 ///
                 /// Default constructor.
@@ -145,7 +140,6 @@ namespace Amoebax
             System &operator= (const System &);
 
             void changeVideoMode (void);
-            bool isUnicodeTranslationEnabled (void) const;
             void invalidateWholeScreen (void);
             void redrawStateBackground (void);
             void setVideoMode (void);
@@ -159,8 +153,8 @@ namespace Amoebax
             std::vector<SDL_Joystick *> m_Joysticks;
             /// The previous active state.
             IState *m_PreviousActiveState;
-            /// The main window's screen.
-            SDL_Surface *m_Screen;
+            /// The main window.
+            SDL_Window *m_Window;
             /// The factor between the maximum screen size and the current size.
             float m_ScreenScaleFactor;
             /// Tells if the sound subsystem could be enabled.
@@ -171,16 +165,6 @@ namespace Amoebax
             std::vector<IState *> m_StatesToDelete;
             /// The only system instance.
             static System m_SystemInstance;
-            /// Tells if the unicode translation is enabled.
-            bool m_UnicodeTranslationEnabled;
-#if defined (IS_GP2X_HOST)
-            /// The image of the volume level display.
-            std::auto_ptr<Surface> m_VolumeDisplay;
-            /// The time to show the level display.
-            int32_t m_VolumeDisplayTime;
-            /// The volume level gauge bar.
-            std::auto_ptr<Surface> m_VolumeLevel;
-#endif // IS_GP2X_HOST
     };
 
     ///
@@ -211,11 +195,9 @@ namespace Amoebax
         m_InvalidatedRegion.x1 = std::min (m_InvalidatedRegion.x1, region->x);
         m_InvalidatedRegion.y1 = std::min (m_InvalidatedRegion.y1, region->y);
         m_InvalidatedRegion.x2 = std::max (m_InvalidatedRegion.x2,
-                                           static_cast<int16_t>(region->x +
-                                                                region->w));
+                                           region->x + region->w);
         m_InvalidatedRegion.y2 = std::max (m_InvalidatedRegion.y2,
-                                           static_cast<int16_t>(region->y +
-                                                                region->h));
+                                           region->y + region->h);
     }
 
 }
