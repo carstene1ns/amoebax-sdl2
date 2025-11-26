@@ -1,0 +1,1049 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCRIBUSUTF8NEW Version="1.3.4" >
+ <DOCUMENT HalfRes="1" MAGMAX="3200" TextPenShade="100" MAJGRID="100.001" ABSTSPALTEN="10.9984" dispX="10" ScratchBottom="10375.6" showBleed="1" AUTOCHECK="0" LANGUAGE="English" DPIn2="Adobe RGB (1998)" DPgam="0" HCMS="0" UnderlineWidth="-1" TabFill="" DGAP="0" ORIENTATION="0" dispY="10" PASPECT="1" WIDTH="1" POLYR="0" SHOWLINK="0" MINWORDLEN="3" DPIn3="Fogra27L CMYK Coated Press" UnderlinePos="-1" VTIEFSC="100" DOCLANGINFO="en-US" COMMENTS="" BleedBottom="0" AutoSaveTime="600000" POLYS="0" GuideRad="10" rulerMode="1" TITLE="Amoebax User's Manual" KEYWORDS="amoebax user manual match-3 game puzzle" TabWidth="36" DSIZE="12" AUTOSPALTEN="1" PAGESIZE="A5" STIL="1" TextBackGroundShade="100" PEN="Black" POLYC="4" SnapToGuides="0" DISc="1" GROUPC="1" DOCFORMAT="" DOCDATE="2007-08-11" BORDERTOP="40" currentProfile="PostScript" MARGC="#0000ff" EndArrow="0" SHOWBASE="0" SHOWGRID="0" SnapToGrid="0" GUIDELOCK="0" StrikeThruPos="-1" WIDTHLINE="1" TextStrokeShade="100" SHOWLAYERM="0" DPuse="0" DPSo="0" DOCSOURCE="" FIRSTNUM="1" BleedRight="0" GuideC="#000080" BRUSH="Black" StartArrow="0" ScratchRight="2834.65" POLYF="0.707107" SHOWMARGIN="1" DIIm="0" DPbla="1" StrikeThruWidth="-1" VHOCHSC="100" DOCTYPE="Manual" BORDERBOTTOM="40" BRUSHSHADE="100" StrokeText="Black" BASEGRID="14.4" VTIEF="33" DOCCONTRIB="" DOCRELATION="" PICTSCX="1" CPICT="None" PENLINE="Black" AutoSave="1" BASEO="0" DOCIDENT="" BOOK="1" constrain="15" PICTSCY="1" MAGSTEP="200" TextLineColor="None" ScratchTop="2834.65" POLYFD="0" DPSFo="0" AUTOL="20" PUBLISHER="" BleedTop="0" ANZPAGES="16" PSCALE="1" LINESHADE="100" HYCOUNT="2" AUTHOR="Emma's Software" UNITS="1" BleedLeft="0" BORDERRIGHT="40" RANDF="0" MAJORC="#00ff00" PENSHADE="100" PENTEXT="Black" GRAB="4" showcolborders="0" SHOWGUIDES="0" DPInCMYK="Fogra27L CMYK Coated Press" DPPr="Fogra27L CMYK Coated Press" DPMo="Adobe RGB (1998)" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" BACKG="1" GuideZ="10" TextBackGround="None" MINGRID="20.0013" VHOCH="33" DOCCOVER="" DCOL="1" EmbeddedPath="0" rulerYoffset="0" SHOWPICT="1" SHOWFRAME="1" AUTOMATIC="1" ALAYER="0" DOCRIGHTS="Copyright (c) 2007 Emma's Software" PICTSHADE="100" ScratchLeft="2834.65" rulerXoffset="0" showrulers="1" DPIn="Adobe RGB (1998)" VKAPIT="75" DFONT="Arial Regular" BORDERLEFT="40" PAGEC="#ffffff" BaseC="#c0c0c0" MINORC="#00ff00" MAGMIN="10" STILLINE="1" TextLineShade="100" SHOWControl="0" >
+  <CheckProfile checkTransparency="1" autoCheck="1" maxResolution="2400" minResolution="72" checkOverflow="1" ignoreErrors="0" checkRasterPDF="1" checkResolution="1" checkGlyphs="1" Name="PDF 1.3" checkAnnotations="0" checkPictures="1" checkForGIF="1" ignoreOffLayers="0" checkOrphans="1" />
+  <CheckProfile checkTransparency="0" autoCheck="1" maxResolution="2400" minResolution="72" checkOverflow="1" ignoreErrors="0" checkRasterPDF="1" checkResolution="1" checkGlyphs="1" Name="PDF 1.4" checkAnnotations="0" checkPictures="1" checkForGIF="1" ignoreOffLayers="0" checkOrphans="1" />
+  <CheckProfile checkTransparency="0" autoCheck="1" maxResolution="2400" minResolution="72" checkOverflow="1" ignoreErrors="0" checkRasterPDF="1" checkResolution="1" checkGlyphs="1" Name="PDF 1.5" checkAnnotations="0" checkPictures="1" checkForGIF="1" ignoreOffLayers="0" checkOrphans="1" />
+  <CheckProfile checkTransparency="1" autoCheck="1" maxResolution="2400" minResolution="144" checkOverflow="1" ignoreErrors="0" checkRasterPDF="1" checkResolution="1" checkGlyphs="1" Name="PDF/X-3" checkAnnotations="1" checkPictures="1" checkForGIF="1" ignoreOffLayers="0" checkOrphans="1" />
+  <CheckProfile checkTransparency="1" autoCheck="1" maxResolution="2400" minResolution="72" checkOverflow="1" ignoreErrors="0" checkRasterPDF="1" checkResolution="1" checkGlyphs="1" Name="PostScript" checkAnnotations="0" checkPictures="1" checkForGIF="1" ignoreOffLayers="0" checkOrphans="1" />
+  <COLOR Register="0" Spot="0" RGB="#f0f8ff" NAME="AliceBlue" />
+  <COLOR Register="0" Spot="0" RGB="#faebd7" NAME="AntiqueWhite" />
+  <COLOR Register="0" Spot="0" RGB="#ffefdb" NAME="AntiqueWhite1" />
+  <COLOR Register="0" Spot="0" RGB="#eedfcc" NAME="AntiqueWhite2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc0b0" NAME="AntiqueWhite3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8378" NAME="AntiqueWhite4" />
+  <COLOR Register="0" Spot="0" RGB="#7fffd4" NAME="Aquamarine" />
+  <COLOR Register="0" Spot="0" RGB="#7fffd4" NAME="Aquamarine1" />
+  <COLOR Register="0" Spot="0" RGB="#76eec6" NAME="Aquamarine2" />
+  <COLOR Register="0" Spot="0" RGB="#66cdaa" NAME="Aquamarine3" />
+  <COLOR Register="0" Spot="0" RGB="#458b74" NAME="Aquamarine4" />
+  <COLOR Register="0" Spot="0" RGB="#f0ffff" NAME="Azure" />
+  <COLOR Register="0" Spot="0" RGB="#f0ffff" NAME="Azure1" />
+  <COLOR Register="0" Spot="0" RGB="#e0eeee" NAME="Azure2" />
+  <COLOR Register="0" Spot="0" RGB="#c1cdcd" NAME="Azure3" />
+  <COLOR Register="0" Spot="0" RGB="#838b8b" NAME="Azure4" />
+  <COLOR Register="0" Spot="0" RGB="#f5f5dc" NAME="Beige" />
+  <COLOR Register="0" Spot="0" RGB="#ffe4c4" NAME="Bisque" />
+  <COLOR Register="0" Spot="0" RGB="#ffe4c4" NAME="Bisque1" />
+  <COLOR Register="0" Spot="0" RGB="#eed5b7" NAME="Bisque2" />
+  <COLOR Register="0" Spot="0" RGB="#cdb79e" NAME="Bisque3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7d6b" NAME="Bisque4" />
+  <COLOR Register="0" Spot="0" CMYK="#000000ff" NAME="Black" />
+  <COLOR Register="0" Spot="0" RGB="#ffebcd" NAME="BlanchedAlmond" />
+  <COLOR Register="0" Spot="0" RGB="#0000ff" NAME="Blue" />
+  <COLOR Register="0" Spot="0" RGB="#0000ff" NAME="Blue1" />
+  <COLOR Register="0" Spot="0" RGB="#0000ee" NAME="Blue2" />
+  <COLOR Register="0" Spot="0" RGB="#0000cd" NAME="Blue3" />
+  <COLOR Register="0" Spot="0" RGB="#00008b" NAME="Blue4" />
+  <COLOR Register="0" Spot="0" RGB="#8a2be2" NAME="BlueViolet" />
+  <COLOR Register="0" Spot="0" RGB="#a52a2a" NAME="Brown" />
+  <COLOR Register="0" Spot="0" RGB="#ff4040" NAME="Brown1" />
+  <COLOR Register="0" Spot="0" RGB="#ee3b3b" NAME="Brown2" />
+  <COLOR Register="0" Spot="0" RGB="#cd3333" NAME="Brown3" />
+  <COLOR Register="0" Spot="0" RGB="#8b2323" NAME="Brown4" />
+  <COLOR Register="0" Spot="0" RGB="#deb887" NAME="Burlywood" />
+  <COLOR Register="0" Spot="0" RGB="#ffd39b" NAME="Burlywood1" />
+  <COLOR Register="0" Spot="0" RGB="#eec591" NAME="Burlywood2" />
+  <COLOR Register="0" Spot="0" RGB="#cdaa7d" NAME="Burlywood3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7355" NAME="Burlywood4" />
+  <COLOR Register="0" Spot="0" RGB="#5f9ea0" NAME="CadetBlue" />
+  <COLOR Register="0" Spot="0" RGB="#98f5ff" NAME="CadetBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#8ee5ee" NAME="CadetBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#7ac5cd" NAME="CadetBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#53868b" NAME="CadetBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#7fff00" NAME="Chartreuse" />
+  <COLOR Register="0" Spot="0" RGB="#7fff00" NAME="Chartreuse1" />
+  <COLOR Register="0" Spot="0" RGB="#76ee00" NAME="Chartreuse2" />
+  <COLOR Register="0" Spot="0" RGB="#66cd00" NAME="Chartreuse3" />
+  <COLOR Register="0" Spot="0" RGB="#458b00" NAME="Chartreuse4" />
+  <COLOR Register="0" Spot="0" RGB="#d2691e" NAME="Chocolate" />
+  <COLOR Register="0" Spot="0" RGB="#ff7f24" NAME="Chocolate1" />
+  <COLOR Register="0" Spot="0" RGB="#ee7621" NAME="Chocolate2" />
+  <COLOR Register="0" Spot="0" RGB="#cd661d" NAME="Chocolate3" />
+  <COLOR Register="0" Spot="0" RGB="#8b4513" NAME="Chocolate4" />
+  <COLOR Register="0" Spot="0" RGB="#ff7f50" NAME="Coral" />
+  <COLOR Register="0" Spot="0" RGB="#ff7256" NAME="Coral1" />
+  <COLOR Register="0" Spot="0" RGB="#ee6a50" NAME="Coral2" />
+  <COLOR Register="0" Spot="0" RGB="#cd5b45" NAME="Coral3" />
+  <COLOR Register="0" Spot="0" RGB="#8b3e2f" NAME="Coral4" />
+  <COLOR Register="0" Spot="0" RGB="#6495ed" NAME="CornflowerBlue" />
+  <COLOR Register="0" Spot="0" RGB="#fff8dc" NAME="Cornsilk" />
+  <COLOR Register="0" Spot="0" RGB="#fff8dc" NAME="Cornsilk1" />
+  <COLOR Register="0" Spot="0" RGB="#eee8cd" NAME="Cornsilk2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc8b1" NAME="Cornsilk3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8878" NAME="Cornsilk4" />
+  <COLOR Register="0" Spot="0" RGB="#00ffff" NAME="Cyan" />
+  <COLOR Register="0" Spot="0" RGB="#00ffff" NAME="Cyan1" />
+  <COLOR Register="0" Spot="0" RGB="#00eeee" NAME="Cyan2" />
+  <COLOR Register="0" Spot="0" RGB="#00cdcd" NAME="Cyan3" />
+  <COLOR Register="0" Spot="0" RGB="#008b8b" NAME="Cyan4" />
+  <COLOR Register="0" Spot="0" RGB="#00008b" NAME="DarkBlue" />
+  <COLOR Register="0" Spot="0" RGB="#008b8b" NAME="DarkCyan" />
+  <COLOR Register="0" Spot="0" RGB="#b8860b" NAME="DarkGoldenrod" />
+  <COLOR Register="0" Spot="0" RGB="#ffb90f" NAME="DarkGoldenrod1" />
+  <COLOR Register="0" Spot="0" RGB="#eead0e" NAME="DarkGoldenrod2" />
+  <COLOR Register="0" Spot="0" RGB="#cd950c" NAME="DarkGoldenrod3" />
+  <COLOR Register="0" Spot="0" RGB="#8b6508" NAME="DarkGoldenrod4" />
+  <COLOR Register="0" Spot="0" RGB="#006400" NAME="DarkGreen" />
+  <COLOR Register="0" Spot="0" RGB="#a9a9a9" NAME="DarkGrey" />
+  <COLOR Register="0" Spot="0" RGB="#bdb76b" NAME="DarkKhaki" />
+  <COLOR Register="0" Spot="0" RGB="#8b008b" NAME="DarkMagenta" />
+  <COLOR Register="0" Spot="0" RGB="#556b2f" NAME="DarkOliveGreen" />
+  <COLOR Register="0" Spot="0" RGB="#caff70" NAME="DarkOliveGreen1" />
+  <COLOR Register="0" Spot="0" RGB="#bcee68" NAME="DarkOliveGreen2" />
+  <COLOR Register="0" Spot="0" RGB="#a2cd5a" NAME="DarkOliveGreen3" />
+  <COLOR Register="0" Spot="0" RGB="#6e8b3d" NAME="DarkOliveGreen4" />
+  <COLOR Register="0" Spot="0" RGB="#ff8c00" NAME="DarkOrange" />
+  <COLOR Register="0" Spot="0" RGB="#ff7f00" NAME="DarkOrange1" />
+  <COLOR Register="0" Spot="0" RGB="#ee7600" NAME="DarkOrange2" />
+  <COLOR Register="0" Spot="0" RGB="#cd6600" NAME="DarkOrange3" />
+  <COLOR Register="0" Spot="0" RGB="#8b4500" NAME="DarkOrange4" />
+  <COLOR Register="0" Spot="0" RGB="#9932cc" NAME="DarkOrchid" />
+  <COLOR Register="0" Spot="0" RGB="#bf3eff" NAME="DarkOrchid1" />
+  <COLOR Register="0" Spot="0" RGB="#b23aee" NAME="DarkOrchid2" />
+  <COLOR Register="0" Spot="0" RGB="#9a32cd" NAME="DarkOrchid3" />
+  <COLOR Register="0" Spot="0" RGB="#68228b" NAME="DarkOrchid4" />
+  <COLOR Register="0" Spot="0" RGB="#8b0000" NAME="DarkRed" />
+  <COLOR Register="0" Spot="0" RGB="#e9967a" NAME="DarkSalmon" />
+  <COLOR Register="0" Spot="0" RGB="#8fbc8f" NAME="DarkSeaGreen" />
+  <COLOR Register="0" Spot="0" RGB="#c1ffc1" NAME="DarkSeaGreen1" />
+  <COLOR Register="0" Spot="0" RGB="#b4eeb4" NAME="DarkSeaGreen2" />
+  <COLOR Register="0" Spot="0" RGB="#9bcd9b" NAME="DarkSeaGreen3" />
+  <COLOR Register="0" Spot="0" RGB="#698b69" NAME="DarkSeaGreen4" />
+  <COLOR Register="0" Spot="0" RGB="#483d8b" NAME="DarkSlateBlue" />
+  <COLOR Register="0" Spot="0" RGB="#2f4f4f" NAME="DarkSlateGrey" />
+  <COLOR Register="0" Spot="0" RGB="#97ffff" NAME="DarkSlateGrey1" />
+  <COLOR Register="0" Spot="0" RGB="#8deeee" NAME="DarkSlateGrey2" />
+  <COLOR Register="0" Spot="0" RGB="#79cdcd" NAME="DarkSlateGrey3" />
+  <COLOR Register="0" Spot="0" RGB="#528b8b" NAME="DarkSlateGrey4" />
+  <COLOR Register="0" Spot="0" RGB="#00ced1" NAME="DarkTurquoise" />
+  <COLOR Register="0" Spot="0" RGB="#9400d3" NAME="DarkViolet" />
+  <COLOR Register="0" Spot="0" RGB="#ff1493" NAME="DeepPink" />
+  <COLOR Register="0" Spot="0" RGB="#ff1493" NAME="DeepPink1" />
+  <COLOR Register="0" Spot="0" RGB="#ee1289" NAME="DeepPink2" />
+  <COLOR Register="0" Spot="0" RGB="#cd1076" NAME="DeepPink3" />
+  <COLOR Register="0" Spot="0" RGB="#8b0a50" NAME="DeepPink4" />
+  <COLOR Register="0" Spot="0" RGB="#00bfff" NAME="DeepSkyBlue" />
+  <COLOR Register="0" Spot="0" RGB="#00bfff" NAME="DeepSkyBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#00b2ee" NAME="DeepSkyBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#009acd" NAME="DeepSkyBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#00688b" NAME="DeepSkyBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#696969" NAME="DimGrey" />
+  <COLOR Register="0" Spot="0" RGB="#1e90ff" NAME="DodgerBlue" />
+  <COLOR Register="0" Spot="0" RGB="#1e90ff" NAME="DodgerBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#1c86ee" NAME="DodgerBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#1874cd" NAME="DodgerBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#104e8b" NAME="DodgerBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#b22222" NAME="Firebrick" />
+  <COLOR Register="0" Spot="0" RGB="#ff3030" NAME="Firebrick1" />
+  <COLOR Register="0" Spot="0" RGB="#ee2c2c" NAME="Firebrick2" />
+  <COLOR Register="0" Spot="0" RGB="#cd2626" NAME="Firebrick3" />
+  <COLOR Register="0" Spot="0" RGB="#8b1a1a" NAME="Firebrick4" />
+  <COLOR Register="0" Spot="0" RGB="#fffaf0" NAME="FloralWhite" />
+  <COLOR Register="0" Spot="0" RGB="#228b22" NAME="ForestGreen" />
+  <COLOR Register="0" Spot="0" RGB="#dcdcdc" NAME="Gainsboro" />
+  <COLOR Register="0" Spot="0" RGB="#f8f8ff" NAME="GhostWhite" />
+  <COLOR Register="0" Spot="0" RGB="#ffd700" NAME="Gold" />
+  <COLOR Register="0" Spot="0" RGB="#ffd700" NAME="Gold1" />
+  <COLOR Register="0" Spot="0" RGB="#eec900" NAME="Gold2" />
+  <COLOR Register="0" Spot="0" RGB="#cdad00" NAME="Gold3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7500" NAME="Gold4" />
+  <COLOR Register="0" Spot="0" RGB="#daa520" NAME="Goldenrod" />
+  <COLOR Register="0" Spot="0" RGB="#ffc125" NAME="Goldenrod1" />
+  <COLOR Register="0" Spot="0" RGB="#eeb422" NAME="Goldenrod2" />
+  <COLOR Register="0" Spot="0" RGB="#cd9b1d" NAME="Goldenrod3" />
+  <COLOR Register="0" Spot="0" RGB="#8b6914" NAME="Goldenrod4" />
+  <COLOR Register="0" Spot="0" RGB="#00ff00" NAME="Green" />
+  <COLOR Register="0" Spot="0" RGB="#00ff00" NAME="Green1" />
+  <COLOR Register="0" Spot="0" RGB="#00ee00" NAME="Green2" />
+  <COLOR Register="0" Spot="0" RGB="#00cd00" NAME="Green3" />
+  <COLOR Register="0" Spot="0" RGB="#008b00" NAME="Green4" />
+  <COLOR Register="0" Spot="0" RGB="#adff2f" NAME="GreenYellow" />
+  <COLOR Register="0" Spot="0" RGB="#bebebe" NAME="Grey" />
+  <COLOR Register="0" Spot="0" RGB="#000000" NAME="Grey0" />
+  <COLOR Register="0" Spot="0" RGB="#030303" NAME="Grey1" />
+  <COLOR Register="0" Spot="0" RGB="#1a1a1a" NAME="Grey10" />
+  <COLOR Register="0" Spot="0" RGB="#ffffff" NAME="Grey100" />
+  <COLOR Register="0" Spot="0" RGB="#1c1c1c" NAME="Grey11" />
+  <COLOR Register="0" Spot="0" RGB="#1f1f1f" NAME="Grey12" />
+  <COLOR Register="0" Spot="0" RGB="#212121" NAME="Grey13" />
+  <COLOR Register="0" Spot="0" RGB="#242424" NAME="Grey14" />
+  <COLOR Register="0" Spot="0" RGB="#262626" NAME="Grey15" />
+  <COLOR Register="0" Spot="0" RGB="#292929" NAME="Grey16" />
+  <COLOR Register="0" Spot="0" RGB="#2b2b2b" NAME="Grey17" />
+  <COLOR Register="0" Spot="0" RGB="#2e2e2e" NAME="Grey18" />
+  <COLOR Register="0" Spot="0" RGB="#303030" NAME="Grey19" />
+  <COLOR Register="0" Spot="0" RGB="#050505" NAME="Grey2" />
+  <COLOR Register="0" Spot="0" RGB="#333333" NAME="Grey20" />
+  <COLOR Register="0" Spot="0" RGB="#363636" NAME="Grey21" />
+  <COLOR Register="0" Spot="0" RGB="#383838" NAME="Grey22" />
+  <COLOR Register="0" Spot="0" RGB="#3b3b3b" NAME="Grey23" />
+  <COLOR Register="0" Spot="0" RGB="#3d3d3d" NAME="Grey24" />
+  <COLOR Register="0" Spot="0" RGB="#404040" NAME="Grey25" />
+  <COLOR Register="0" Spot="0" RGB="#424242" NAME="Grey26" />
+  <COLOR Register="0" Spot="0" RGB="#454545" NAME="Grey27" />
+  <COLOR Register="0" Spot="0" RGB="#474747" NAME="Grey28" />
+  <COLOR Register="0" Spot="0" RGB="#4a4a4a" NAME="Grey29" />
+  <COLOR Register="0" Spot="0" RGB="#080808" NAME="Grey3" />
+  <COLOR Register="0" Spot="0" RGB="#4d4d4d" NAME="Grey30" />
+  <COLOR Register="0" Spot="0" RGB="#4f4f4f" NAME="Grey31" />
+  <COLOR Register="0" Spot="0" RGB="#525252" NAME="Grey32" />
+  <COLOR Register="0" Spot="0" RGB="#545454" NAME="Grey33" />
+  <COLOR Register="0" Spot="0" RGB="#575757" NAME="Grey34" />
+  <COLOR Register="0" Spot="0" RGB="#595959" NAME="Grey35" />
+  <COLOR Register="0" Spot="0" RGB="#5c5c5c" NAME="Grey36" />
+  <COLOR Register="0" Spot="0" RGB="#5e5e5e" NAME="Grey37" />
+  <COLOR Register="0" Spot="0" RGB="#616161" NAME="Grey38" />
+  <COLOR Register="0" Spot="0" RGB="#636363" NAME="Grey39" />
+  <COLOR Register="0" Spot="0" RGB="#0a0a0a" NAME="Grey4" />
+  <COLOR Register="0" Spot="0" RGB="#666666" NAME="Grey40" />
+  <COLOR Register="0" Spot="0" RGB="#696969" NAME="Grey41" />
+  <COLOR Register="0" Spot="0" RGB="#6b6b6b" NAME="Grey42" />
+  <COLOR Register="0" Spot="0" RGB="#6e6e6e" NAME="Grey43" />
+  <COLOR Register="0" Spot="0" RGB="#707070" NAME="Grey44" />
+  <COLOR Register="0" Spot="0" RGB="#737373" NAME="Grey45" />
+  <COLOR Register="0" Spot="0" RGB="#757575" NAME="Grey46" />
+  <COLOR Register="0" Spot="0" RGB="#787878" NAME="Grey47" />
+  <COLOR Register="0" Spot="0" RGB="#7a7a7a" NAME="Grey48" />
+  <COLOR Register="0" Spot="0" RGB="#7d7d7d" NAME="Grey49" />
+  <COLOR Register="0" Spot="0" RGB="#0d0d0d" NAME="Grey5" />
+  <COLOR Register="0" Spot="0" RGB="#7f7f7f" NAME="Grey50" />
+  <COLOR Register="0" Spot="0" RGB="#828282" NAME="Grey51" />
+  <COLOR Register="0" Spot="0" RGB="#858585" NAME="Grey52" />
+  <COLOR Register="0" Spot="0" RGB="#878787" NAME="Grey53" />
+  <COLOR Register="0" Spot="0" RGB="#8a8a8a" NAME="Grey54" />
+  <COLOR Register="0" Spot="0" RGB="#8c8c8c" NAME="Grey55" />
+  <COLOR Register="0" Spot="0" RGB="#8f8f8f" NAME="Grey56" />
+  <COLOR Register="0" Spot="0" RGB="#919191" NAME="Grey57" />
+  <COLOR Register="0" Spot="0" RGB="#949494" NAME="Grey58" />
+  <COLOR Register="0" Spot="0" RGB="#969696" NAME="Grey59" />
+  <COLOR Register="0" Spot="0" RGB="#0f0f0f" NAME="Grey6" />
+  <COLOR Register="0" Spot="0" RGB="#999999" NAME="Grey60" />
+  <COLOR Register="0" Spot="0" RGB="#9c9c9c" NAME="Grey61" />
+  <COLOR Register="0" Spot="0" RGB="#9e9e9e" NAME="Grey62" />
+  <COLOR Register="0" Spot="0" RGB="#a1a1a1" NAME="Grey63" />
+  <COLOR Register="0" Spot="0" RGB="#a3a3a3" NAME="Grey64" />
+  <COLOR Register="0" Spot="0" RGB="#a6a6a6" NAME="Grey65" />
+  <COLOR Register="0" Spot="0" RGB="#a8a8a8" NAME="Grey66" />
+  <COLOR Register="0" Spot="0" RGB="#ababab" NAME="Grey67" />
+  <COLOR Register="0" Spot="0" RGB="#adadad" NAME="Grey68" />
+  <COLOR Register="0" Spot="0" RGB="#b0b0b0" NAME="Grey69" />
+  <COLOR Register="0" Spot="0" RGB="#121212" NAME="Grey7" />
+  <COLOR Register="0" Spot="0" RGB="#b3b3b3" NAME="Grey70" />
+  <COLOR Register="0" Spot="0" RGB="#b5b5b5" NAME="Grey71" />
+  <COLOR Register="0" Spot="0" RGB="#b8b8b8" NAME="Grey72" />
+  <COLOR Register="0" Spot="0" RGB="#bababa" NAME="Grey73" />
+  <COLOR Register="0" Spot="0" RGB="#bdbdbd" NAME="Grey74" />
+  <COLOR Register="0" Spot="0" RGB="#bfbfbf" NAME="Grey75" />
+  <COLOR Register="0" Spot="0" RGB="#c2c2c2" NAME="Grey76" />
+  <COLOR Register="0" Spot="0" RGB="#c4c4c4" NAME="Grey77" />
+  <COLOR Register="0" Spot="0" RGB="#c7c7c7" NAME="Grey78" />
+  <COLOR Register="0" Spot="0" RGB="#c9c9c9" NAME="Grey79" />
+  <COLOR Register="0" Spot="0" RGB="#141414" NAME="Grey8" />
+  <COLOR Register="0" Spot="0" RGB="#cccccc" NAME="Grey80" />
+  <COLOR Register="0" Spot="0" RGB="#cfcfcf" NAME="Grey81" />
+  <COLOR Register="0" Spot="0" RGB="#d1d1d1" NAME="Grey82" />
+  <COLOR Register="0" Spot="0" RGB="#d4d4d4" NAME="Grey83" />
+  <COLOR Register="0" Spot="0" RGB="#d6d6d6" NAME="Grey84" />
+  <COLOR Register="0" Spot="0" RGB="#d9d9d9" NAME="Grey85" />
+  <COLOR Register="0" Spot="0" RGB="#dbdbdb" NAME="Grey86" />
+  <COLOR Register="0" Spot="0" RGB="#dedede" NAME="Grey87" />
+  <COLOR Register="0" Spot="0" RGB="#e0e0e0" NAME="Grey88" />
+  <COLOR Register="0" Spot="0" RGB="#e3e3e3" NAME="Grey89" />
+  <COLOR Register="0" Spot="0" RGB="#171717" NAME="Grey9" />
+  <COLOR Register="0" Spot="0" RGB="#e5e5e5" NAME="Grey90" />
+  <COLOR Register="0" Spot="0" RGB="#e8e8e8" NAME="Grey91" />
+  <COLOR Register="0" Spot="0" RGB="#ebebeb" NAME="Grey92" />
+  <COLOR Register="0" Spot="0" RGB="#ededed" NAME="Grey93" />
+  <COLOR Register="0" Spot="0" RGB="#f0f0f0" NAME="Grey94" />
+  <COLOR Register="0" Spot="0" RGB="#f2f2f2" NAME="Grey95" />
+  <COLOR Register="0" Spot="0" RGB="#f5f5f5" NAME="Grey96" />
+  <COLOR Register="0" Spot="0" RGB="#f7f7f7" NAME="Grey97" />
+  <COLOR Register="0" Spot="0" RGB="#fafafa" NAME="Grey98" />
+  <COLOR Register="0" Spot="0" RGB="#fcfcfc" NAME="Grey99" />
+  <COLOR Register="0" Spot="0" RGB="#f0fff0" NAME="Honeydew" />
+  <COLOR Register="0" Spot="0" RGB="#f0fff0" NAME="Honeydew1" />
+  <COLOR Register="0" Spot="0" RGB="#e0eee0" NAME="Honeydew2" />
+  <COLOR Register="0" Spot="0" RGB="#c1cdc1" NAME="Honeydew3" />
+  <COLOR Register="0" Spot="0" RGB="#838b83" NAME="Honeydew4" />
+  <COLOR Register="0" Spot="0" RGB="#ff69b4" NAME="HotPink" />
+  <COLOR Register="0" Spot="0" RGB="#ff6eb4" NAME="HotPink1" />
+  <COLOR Register="0" Spot="0" RGB="#ee6aa7" NAME="HotPink2" />
+  <COLOR Register="0" Spot="0" RGB="#cd6090" NAME="HotPink3" />
+  <COLOR Register="0" Spot="0" RGB="#8b3a62" NAME="HotPink4" />
+  <COLOR Register="0" Spot="0" RGB="#cd5c5c" NAME="IndianRed" />
+  <COLOR Register="0" Spot="0" RGB="#ff6a6a" NAME="IndianRed1" />
+  <COLOR Register="0" Spot="0" RGB="#ee6363" NAME="IndianRed2" />
+  <COLOR Register="0" Spot="0" RGB="#cd5555" NAME="IndianRed3" />
+  <COLOR Register="0" Spot="0" RGB="#8b3a3a" NAME="IndianRed4" />
+  <COLOR Register="0" Spot="0" RGB="#fffff0" NAME="Ivory" />
+  <COLOR Register="0" Spot="0" RGB="#fffff0" NAME="Ivory1" />
+  <COLOR Register="0" Spot="0" RGB="#eeeee0" NAME="Ivory2" />
+  <COLOR Register="0" Spot="0" RGB="#cdcdc1" NAME="Ivory3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8b83" NAME="Ivory4" />
+  <COLOR Register="0" Spot="0" RGB="#f0e68c" NAME="Khaki" />
+  <COLOR Register="0" Spot="0" RGB="#fff68f" NAME="Khaki1" />
+  <COLOR Register="0" Spot="0" RGB="#eee685" NAME="Khaki2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc673" NAME="Khaki3" />
+  <COLOR Register="0" Spot="0" RGB="#8b864e" NAME="Khaki4" />
+  <COLOR Register="0" Spot="0" RGB="#e6e6fa" NAME="Lavender" />
+  <COLOR Register="0" Spot="0" RGB="#fff0f5" NAME="LavenderBlush" />
+  <COLOR Register="0" Spot="0" RGB="#fff0f5" NAME="LavenderBlush1" />
+  <COLOR Register="0" Spot="0" RGB="#eee0e5" NAME="LavenderBlush2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc1c5" NAME="LavenderBlush3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8386" NAME="LavenderBlush4" />
+  <COLOR Register="0" Spot="0" RGB="#7cfc00" NAME="LawnGreen" />
+  <COLOR Register="0" Spot="0" RGB="#fffacd" NAME="LemonChiffon" />
+  <COLOR Register="0" Spot="0" RGB="#fffacd" NAME="LemonChiffon1" />
+  <COLOR Register="0" Spot="0" RGB="#eee9bf" NAME="LemonChiffon2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc9a5" NAME="LemonChiffon3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8970" NAME="LemonChiffon4" />
+  <COLOR Register="0" Spot="0" RGB="#add8e6" NAME="LightBlue" />
+  <COLOR Register="0" Spot="0" RGB="#bfefff" NAME="LightBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#b2dfee" NAME="LightBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#9ac0cd" NAME="LightBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#68838b" NAME="LightBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#f08080" NAME="LightCoral" />
+  <COLOR Register="0" Spot="0" RGB="#e0ffff" NAME="LightCyan" />
+  <COLOR Register="0" Spot="0" RGB="#e0ffff" NAME="LightCyan1" />
+  <COLOR Register="0" Spot="0" RGB="#d1eeee" NAME="LightCyan2" />
+  <COLOR Register="0" Spot="0" RGB="#b4cdcd" NAME="LightCyan3" />
+  <COLOR Register="0" Spot="0" RGB="#7a8b8b" NAME="LightCyan4" />
+  <COLOR Register="0" Spot="0" RGB="#eedd82" NAME="LightGoldenrod" />
+  <COLOR Register="0" Spot="0" RGB="#ffec8b" NAME="LightGoldenrod1" />
+  <COLOR Register="0" Spot="0" RGB="#eedc82" NAME="LightGoldenrod2" />
+  <COLOR Register="0" Spot="0" RGB="#cdbe70" NAME="LightGoldenrod3" />
+  <COLOR Register="0" Spot="0" RGB="#8b814c" NAME="LightGoldenrod4" />
+  <COLOR Register="0" Spot="0" RGB="#fafad2" NAME="LightGoldenrodYellow" />
+  <COLOR Register="0" Spot="0" RGB="#90ee90" NAME="LightGreen" />
+  <COLOR Register="0" Spot="0" RGB="#d3d3d3" NAME="LightGrey" />
+  <COLOR Register="0" Spot="0" RGB="#ffb6c1" NAME="LightPink" />
+  <COLOR Register="0" Spot="0" RGB="#ffaeb9" NAME="LightPink1" />
+  <COLOR Register="0" Spot="0" RGB="#eea2ad" NAME="LightPink2" />
+  <COLOR Register="0" Spot="0" RGB="#cd8c95" NAME="LightPink3" />
+  <COLOR Register="0" Spot="0" RGB="#8b5f65" NAME="LightPink4" />
+  <COLOR Register="0" Spot="0" RGB="#ffa07a" NAME="LightSalmon" />
+  <COLOR Register="0" Spot="0" RGB="#ffa07a" NAME="LightSalmon1" />
+  <COLOR Register="0" Spot="0" RGB="#ee9572" NAME="LightSalmon2" />
+  <COLOR Register="0" Spot="0" RGB="#cd8162" NAME="LightSalmon3" />
+  <COLOR Register="0" Spot="0" RGB="#8b5742" NAME="LightSalmon4" />
+  <COLOR Register="0" Spot="0" RGB="#20b2aa" NAME="LightSeaGreen" />
+  <COLOR Register="0" Spot="0" RGB="#87cefa" NAME="LightSkyBlue" />
+  <COLOR Register="0" Spot="0" RGB="#b0e2ff" NAME="LightSkyBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#a4d3ee" NAME="LightSkyBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#8db6cd" NAME="LightSkyBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#607b8b" NAME="LightSkyBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#8470ff" NAME="LightSlateBlue" />
+  <COLOR Register="0" Spot="0" RGB="#778899" NAME="LightSlateGrey" />
+  <COLOR Register="0" Spot="0" RGB="#b0c4de" NAME="LightSteelBlue" />
+  <COLOR Register="0" Spot="0" RGB="#cae1ff" NAME="LightSteelBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#bcd2ee" NAME="LightSteelBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#a2b5cd" NAME="LightSteelBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#6e7b8b" NAME="LightSteelBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#ffffe0" NAME="LightYellow" />
+  <COLOR Register="0" Spot="0" RGB="#ffffe0" NAME="LightYellow1" />
+  <COLOR Register="0" Spot="0" RGB="#eeeed1" NAME="LightYellow2" />
+  <COLOR Register="0" Spot="0" RGB="#cdcdb4" NAME="LightYellow3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8b7a" NAME="LightYellow4" />
+  <COLOR Register="0" Spot="0" RGB="#32cd32" NAME="LimeGreen" />
+  <COLOR Register="0" Spot="0" RGB="#faf0e6" NAME="Linen" />
+  <COLOR Register="0" Spot="0" RGB="#ff00ff" NAME="Magenta" />
+  <COLOR Register="0" Spot="0" RGB="#ff00ff" NAME="Magenta1" />
+  <COLOR Register="0" Spot="0" RGB="#ee00ee" NAME="Magenta2" />
+  <COLOR Register="0" Spot="0" RGB="#cd00cd" NAME="Magenta3" />
+  <COLOR Register="0" Spot="0" RGB="#8b008b" NAME="Magenta4" />
+  <COLOR Register="0" Spot="0" RGB="#b03060" NAME="Maroon" />
+  <COLOR Register="0" Spot="0" RGB="#ff34b3" NAME="Maroon1" />
+  <COLOR Register="0" Spot="0" RGB="#ee30a7" NAME="Maroon2" />
+  <COLOR Register="0" Spot="0" RGB="#cd2990" NAME="Maroon3" />
+  <COLOR Register="0" Spot="0" RGB="#8b1c62" NAME="Maroon4" />
+  <COLOR Register="0" Spot="0" RGB="#66cdaa" NAME="MediumAquamarine" />
+  <COLOR Register="0" Spot="0" RGB="#0000cd" NAME="MediumBlue" />
+  <COLOR Register="0" Spot="0" RGB="#ba55d3" NAME="MediumOrchid" />
+  <COLOR Register="0" Spot="0" RGB="#e066ff" NAME="MediumOrchid1" />
+  <COLOR Register="0" Spot="0" RGB="#d15fee" NAME="MediumOrchid2" />
+  <COLOR Register="0" Spot="0" RGB="#b452cd" NAME="MediumOrchid3" />
+  <COLOR Register="0" Spot="0" RGB="#7a378b" NAME="MediumOrchid4" />
+  <COLOR Register="0" Spot="0" RGB="#9370db" NAME="MediumPurple" />
+  <COLOR Register="0" Spot="0" RGB="#ab82ff" NAME="MediumPurple1" />
+  <COLOR Register="0" Spot="0" RGB="#9f79ee" NAME="MediumPurple2" />
+  <COLOR Register="0" Spot="0" RGB="#8968cd" NAME="MediumPurple3" />
+  <COLOR Register="0" Spot="0" RGB="#5d478b" NAME="MediumPurple4" />
+  <COLOR Register="0" Spot="0" RGB="#3cb371" NAME="MediumSeaGreen" />
+  <COLOR Register="0" Spot="0" RGB="#7b68ee" NAME="MediumSlateBlue" />
+  <COLOR Register="0" Spot="0" RGB="#00fa9a" NAME="MediumSpringGreen" />
+  <COLOR Register="0" Spot="0" RGB="#48d1cc" NAME="MediumTurquoise" />
+  <COLOR Register="0" Spot="0" RGB="#c71585" NAME="MediumVioletRed" />
+  <COLOR Register="0" Spot="0" RGB="#191970" NAME="MidnightBlue" />
+  <COLOR Register="0" Spot="0" RGB="#f5fffa" NAME="MintCream" />
+  <COLOR Register="0" Spot="0" RGB="#ffe4e1" NAME="MistyRose" />
+  <COLOR Register="0" Spot="0" RGB="#ffe4e1" NAME="MistyRose1" />
+  <COLOR Register="0" Spot="0" RGB="#eed5d2" NAME="MistyRose2" />
+  <COLOR Register="0" Spot="0" RGB="#cdb7b5" NAME="MistyRose3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7d7b" NAME="MistyRose4" />
+  <COLOR Register="0" Spot="0" RGB="#ffe4b5" NAME="Moccasin" />
+  <COLOR Register="0" Spot="0" RGB="#ffdead" NAME="NavajoWhite" />
+  <COLOR Register="0" Spot="0" RGB="#ffdead" NAME="NavajoWhite1" />
+  <COLOR Register="0" Spot="0" RGB="#eecfa1" NAME="NavajoWhite2" />
+  <COLOR Register="0" Spot="0" RGB="#cdb38b" NAME="NavajoWhite3" />
+  <COLOR Register="0" Spot="0" RGB="#8b795e" NAME="NavajoWhite4" />
+  <COLOR Register="0" Spot="0" RGB="#000080" NAME="NavyBlue" />
+  <COLOR Register="0" Spot="0" RGB="#fdf5e6" NAME="OldLace" />
+  <COLOR Register="0" Spot="0" RGB="#6b8e23" NAME="OliveDrab" />
+  <COLOR Register="0" Spot="0" RGB="#c0ff3e" NAME="OliveDrab1" />
+  <COLOR Register="0" Spot="0" RGB="#b3ee3a" NAME="OliveDrab2" />
+  <COLOR Register="0" Spot="0" RGB="#9acd32" NAME="OliveDrab3" />
+  <COLOR Register="0" Spot="0" RGB="#698b22" NAME="OliveDrab4" />
+  <COLOR Register="0" Spot="0" RGB="#ffa500" NAME="Orange" />
+  <COLOR Register="0" Spot="0" RGB="#ffa500" NAME="Orange1" />
+  <COLOR Register="0" Spot="0" RGB="#ee9a00" NAME="Orange2" />
+  <COLOR Register="0" Spot="0" RGB="#cd8500" NAME="Orange3" />
+  <COLOR Register="0" Spot="0" RGB="#8b5a00" NAME="Orange4" />
+  <COLOR Register="0" Spot="0" RGB="#ff4500" NAME="OrangeRed" />
+  <COLOR Register="0" Spot="0" RGB="#ff4500" NAME="OrangeRed1" />
+  <COLOR Register="0" Spot="0" RGB="#ee4000" NAME="OrangeRed2" />
+  <COLOR Register="0" Spot="0" RGB="#cd3700" NAME="OrangeRed3" />
+  <COLOR Register="0" Spot="0" RGB="#8b2500" NAME="OrangeRed4" />
+  <COLOR Register="0" Spot="0" RGB="#da70d6" NAME="Orchid" />
+  <COLOR Register="0" Spot="0" RGB="#ff83fa" NAME="Orchid1" />
+  <COLOR Register="0" Spot="0" RGB="#ee7ae9" NAME="Orchid2" />
+  <COLOR Register="0" Spot="0" RGB="#cd69c9" NAME="Orchid3" />
+  <COLOR Register="0" Spot="0" RGB="#8b4789" NAME="Orchid4" />
+  <COLOR Register="0" Spot="0" RGB="#eee8aa" NAME="PaleGoldenrod" />
+  <COLOR Register="0" Spot="0" RGB="#98fb98" NAME="PaleGreen" />
+  <COLOR Register="0" Spot="0" RGB="#9aff9a" NAME="PaleGreen1" />
+  <COLOR Register="0" Spot="0" RGB="#90ee90" NAME="PaleGreen2" />
+  <COLOR Register="0" Spot="0" RGB="#7ccd7c" NAME="PaleGreen3" />
+  <COLOR Register="0" Spot="0" RGB="#548b54" NAME="PaleGreen4" />
+  <COLOR Register="0" Spot="0" RGB="#afeeee" NAME="PaleTurquoise" />
+  <COLOR Register="0" Spot="0" RGB="#bbffff" NAME="PaleTurquoise1" />
+  <COLOR Register="0" Spot="0" RGB="#aeeeee" NAME="PaleTurquoise2" />
+  <COLOR Register="0" Spot="0" RGB="#96cdcd" NAME="PaleTurquoise3" />
+  <COLOR Register="0" Spot="0" RGB="#668b8b" NAME="PaleTurquoise4" />
+  <COLOR Register="0" Spot="0" RGB="#db7093" NAME="PaleVioletRed" />
+  <COLOR Register="0" Spot="0" RGB="#ff82ab" NAME="PaleVioletRed1" />
+  <COLOR Register="0" Spot="0" RGB="#ee799f" NAME="PaleVioletRed2" />
+  <COLOR Register="0" Spot="0" RGB="#cd6889" NAME="PaleVioletRed3" />
+  <COLOR Register="0" Spot="0" RGB="#8b475d" NAME="PaleVioletRed4" />
+  <COLOR Register="0" Spot="0" RGB="#ffefd5" NAME="PapayaWhip" />
+  <COLOR Register="0" Spot="0" RGB="#ffdab9" NAME="PeachPuff" />
+  <COLOR Register="0" Spot="0" RGB="#ffdab9" NAME="PeachPuff1" />
+  <COLOR Register="0" Spot="0" RGB="#eecbad" NAME="PeachPuff2" />
+  <COLOR Register="0" Spot="0" RGB="#cdaf95" NAME="PeachPuff3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7765" NAME="PeachPuff4" />
+  <COLOR Register="0" Spot="0" RGB="#cd853f" NAME="Peru" />
+  <COLOR Register="0" Spot="0" RGB="#ffc0cb" NAME="Pink" />
+  <COLOR Register="0" Spot="0" RGB="#ffb5c5" NAME="Pink1" />
+  <COLOR Register="0" Spot="0" RGB="#eea9b8" NAME="Pink2" />
+  <COLOR Register="0" Spot="0" RGB="#cd919e" NAME="Pink3" />
+  <COLOR Register="0" Spot="0" RGB="#8b636c" NAME="Pink4" />
+  <COLOR Register="0" Spot="0" RGB="#dda0dd" NAME="Plum" />
+  <COLOR Register="0" Spot="0" RGB="#ffbbff" NAME="Plum1" />
+  <COLOR Register="0" Spot="0" RGB="#eeaeee" NAME="Plum2" />
+  <COLOR Register="0" Spot="0" RGB="#cd96cd" NAME="Plum3" />
+  <COLOR Register="0" Spot="0" RGB="#8b668b" NAME="Plum4" />
+  <COLOR Register="0" Spot="0" RGB="#b0e0e6" NAME="PowderBlue" />
+  <COLOR Register="0" Spot="0" RGB="#a020f0" NAME="Purple" />
+  <COLOR Register="0" Spot="0" RGB="#9b30ff" NAME="Purple1" />
+  <COLOR Register="0" Spot="0" RGB="#912cee" NAME="Purple2" />
+  <COLOR Register="0" Spot="0" RGB="#7d26cd" NAME="Purple3" />
+  <COLOR Register="0" Spot="0" RGB="#551a8b" NAME="Purple4" />
+  <COLOR Register="0" Spot="0" RGB="#ff0000" NAME="Red" />
+  <COLOR Register="0" Spot="0" RGB="#ff0000" NAME="Red1" />
+  <COLOR Register="0" Spot="0" RGB="#ee0000" NAME="Red2" />
+  <COLOR Register="0" Spot="0" RGB="#cd0000" NAME="Red3" />
+  <COLOR Register="0" Spot="0" RGB="#8b0000" NAME="Red4" />
+  <COLOR Register="0" Spot="0" RGB="#bc8f8f" NAME="RosyBrown" />
+  <COLOR Register="0" Spot="0" RGB="#ffc1c1" NAME="RosyBrown1" />
+  <COLOR Register="0" Spot="0" RGB="#eeb4b4" NAME="RosyBrown2" />
+  <COLOR Register="0" Spot="0" RGB="#cd9b9b" NAME="RosyBrown3" />
+  <COLOR Register="0" Spot="0" RGB="#8b6969" NAME="RosyBrown4" />
+  <COLOR Register="0" Spot="0" RGB="#4169e1" NAME="RoyalBlue" />
+  <COLOR Register="0" Spot="0" RGB="#4876ff" NAME="RoyalBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#436eee" NAME="RoyalBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#3a5fcd" NAME="RoyalBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#27408b" NAME="RoyalBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#8b4513" NAME="SaddleBrown" />
+  <COLOR Register="0" Spot="0" RGB="#fa8072" NAME="Salmon" />
+  <COLOR Register="0" Spot="0" RGB="#ff8c69" NAME="Salmon1" />
+  <COLOR Register="0" Spot="0" RGB="#ee8262" NAME="Salmon2" />
+  <COLOR Register="0" Spot="0" RGB="#cd7054" NAME="Salmon3" />
+  <COLOR Register="0" Spot="0" RGB="#8b4c39" NAME="Salmon4" />
+  <COLOR Register="0" Spot="0" RGB="#f4a460" NAME="SandyBrown" />
+  <COLOR Register="0" Spot="0" RGB="#2e8b57" NAME="SeaGreen" />
+  <COLOR Register="0" Spot="0" RGB="#54ff9f" NAME="SeaGreen1" />
+  <COLOR Register="0" Spot="0" RGB="#4eee94" NAME="SeaGreen2" />
+  <COLOR Register="0" Spot="0" RGB="#43cd80" NAME="SeaGreen3" />
+  <COLOR Register="0" Spot="0" RGB="#2e8b57" NAME="SeaGreen4" />
+  <COLOR Register="0" Spot="0" RGB="#fff5ee" NAME="Seashell" />
+  <COLOR Register="0" Spot="0" RGB="#fff5ee" NAME="Seashell1" />
+  <COLOR Register="0" Spot="0" RGB="#eee5de" NAME="Seashell2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc5bf" NAME="Seashell3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8682" NAME="Seashell4" />
+  <COLOR Register="0" Spot="0" RGB="#a0522d" NAME="Sienna" />
+  <COLOR Register="0" Spot="0" RGB="#ff8247" NAME="Sienna1" />
+  <COLOR Register="0" Spot="0" RGB="#ee7942" NAME="Sienna2" />
+  <COLOR Register="0" Spot="0" RGB="#cd6839" NAME="Sienna3" />
+  <COLOR Register="0" Spot="0" RGB="#8b4726" NAME="Sienna4" />
+  <COLOR Register="0" Spot="0" RGB="#87ceeb" NAME="SkyBlue" />
+  <COLOR Register="0" Spot="0" RGB="#87ceff" NAME="SkyBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#7ec0ee" NAME="SkyBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#6ca6cd" NAME="SkyBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#4a708b" NAME="SkyBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#6a5acd" NAME="SlateBlue" />
+  <COLOR Register="0" Spot="0" RGB="#836fff" NAME="SlateBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#7a67ee" NAME="SlateBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#6959cd" NAME="SlateBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#473c8b" NAME="SlateBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#708090" NAME="SlateGrey" />
+  <COLOR Register="0" Spot="0" RGB="#c6e2ff" NAME="SlateGrey1" />
+  <COLOR Register="0" Spot="0" RGB="#b9d3ee" NAME="SlateGrey2" />
+  <COLOR Register="0" Spot="0" RGB="#9fb6cd" NAME="SlateGrey3" />
+  <COLOR Register="0" Spot="0" RGB="#6c7b8b" NAME="SlateGrey4" />
+  <COLOR Register="0" Spot="0" RGB="#fffafa" NAME="Snow" />
+  <COLOR Register="0" Spot="0" RGB="#fffafa" NAME="Snow1" />
+  <COLOR Register="0" Spot="0" RGB="#eee9e9" NAME="Snow2" />
+  <COLOR Register="0" Spot="0" RGB="#cdc9c9" NAME="Snow3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8989" NAME="Snow4" />
+  <COLOR Register="0" Spot="0" RGB="#00ff7f" NAME="SpringGreen" />
+  <COLOR Register="0" Spot="0" RGB="#00ff7f" NAME="SpringGreen1" />
+  <COLOR Register="0" Spot="0" RGB="#00ee76" NAME="SpringGreen2" />
+  <COLOR Register="0" Spot="0" RGB="#00cd66" NAME="SpringGreen3" />
+  <COLOR Register="0" Spot="0" RGB="#008b45" NAME="SpringGreen4" />
+  <COLOR Register="0" Spot="0" RGB="#4682b4" NAME="SteelBlue" />
+  <COLOR Register="0" Spot="0" RGB="#63b8ff" NAME="SteelBlue1" />
+  <COLOR Register="0" Spot="0" RGB="#5cacee" NAME="SteelBlue2" />
+  <COLOR Register="0" Spot="0" RGB="#4f94cd" NAME="SteelBlue3" />
+  <COLOR Register="0" Spot="0" RGB="#36648b" NAME="SteelBlue4" />
+  <COLOR Register="0" Spot="0" RGB="#d2b48c" NAME="Tan" />
+  <COLOR Register="0" Spot="0" RGB="#ffa54f" NAME="Tan1" />
+  <COLOR Register="0" Spot="0" RGB="#ee9a49" NAME="Tan2" />
+  <COLOR Register="0" Spot="0" RGB="#cd853f" NAME="Tan3" />
+  <COLOR Register="0" Spot="0" RGB="#8b5a2b" NAME="Tan4" />
+  <COLOR Register="0" Spot="0" RGB="#d8bfd8" NAME="Thistle" />
+  <COLOR Register="0" Spot="0" RGB="#ffe1ff" NAME="Thistle1" />
+  <COLOR Register="0" Spot="0" RGB="#eed2ee" NAME="Thistle2" />
+  <COLOR Register="0" Spot="0" RGB="#cdb5cd" NAME="Thistle3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7b8b" NAME="Thistle4" />
+  <COLOR Register="0" Spot="0" RGB="#ff6347" NAME="Tomato" />
+  <COLOR Register="0" Spot="0" RGB="#ff6347" NAME="Tomato1" />
+  <COLOR Register="0" Spot="0" RGB="#ee5c42" NAME="Tomato2" />
+  <COLOR Register="0" Spot="0" RGB="#cd4f39" NAME="Tomato3" />
+  <COLOR Register="0" Spot="0" RGB="#8b3626" NAME="Tomato4" />
+  <COLOR Register="0" Spot="0" RGB="#40e0d0" NAME="Turquoise" />
+  <COLOR Register="0" Spot="0" RGB="#00f5ff" NAME="Turquoise1" />
+  <COLOR Register="0" Spot="0" RGB="#00e5ee" NAME="Turquoise2" />
+  <COLOR Register="0" Spot="0" RGB="#00c5cd" NAME="Turquoise3" />
+  <COLOR Register="0" Spot="0" RGB="#00868b" NAME="Turquoise4" />
+  <COLOR Register="0" Spot="0" RGB="#ee82ee" NAME="Violet" />
+  <COLOR Register="0" Spot="0" RGB="#d02090" NAME="VioletRed" />
+  <COLOR Register="0" Spot="0" RGB="#ff3e96" NAME="VioletRed1" />
+  <COLOR Register="0" Spot="0" RGB="#ee3a8c" NAME="VioletRed2" />
+  <COLOR Register="0" Spot="0" RGB="#cd3278" NAME="VioletRed3" />
+  <COLOR Register="0" Spot="0" RGB="#8b2252" NAME="VioletRed4" />
+  <COLOR Register="0" Spot="0" RGB="#f5deb3" NAME="Wheat" />
+  <COLOR Register="0" Spot="0" RGB="#ffe7ba" NAME="Wheat1" />
+  <COLOR Register="0" Spot="0" RGB="#eed8ae" NAME="Wheat2" />
+  <COLOR Register="0" Spot="0" RGB="#cdba96" NAME="Wheat3" />
+  <COLOR Register="0" Spot="0" RGB="#8b7e66" NAME="Wheat4" />
+  <COLOR Register="0" Spot="0" CMYK="#00000000" NAME="White" />
+  <COLOR Register="0" Spot="0" RGB="#f5f5f5" NAME="WhiteSmoke" />
+  <COLOR Register="0" Spot="0" RGB="#ffff00" NAME="Yellow" />
+  <COLOR Register="0" Spot="0" RGB="#ffff00" NAME="Yellow1" />
+  <COLOR Register="0" Spot="0" RGB="#eeee00" NAME="Yellow2" />
+  <COLOR Register="0" Spot="0" RGB="#cdcd00" NAME="Yellow3" />
+  <COLOR Register="0" Spot="0" RGB="#8b8b00" NAME="Yellow4" />
+  <COLOR Register="0" Spot="0" RGB="#9acd32" NAME="YellowGreen" />
+  <STYLE ALIGN="3" LINESP="15" VOR="0" DROPLIN="2" RMARGIN="0" PSHORTCUT="" LINESPMode="0" NACH="5.00031" SHORTCUT="" CNAME="" DROPDIST="0" FIRST="5.00031" INDENT="0" NAME="Default Paragraph Style" DROP="0" />
+  <STYLE ALIGN="0" VOR="7.50047" PSHORTCUT="" LINESPMode="0" NACH="5.00031" SHORTCUT="" CNAME="" FONTSIZE="14" NAME="H2" FONT="Arial Bold" />
+  <STYLE ALIGN="0" PSHORTCUT="" SHORTCUT="" CNAME="" FONTSIZE="18" NAME="H1" FONT="Arial Bold" />
+  <STYLE PSHORTCUT="" SHORTCUT="" CNAME="" FIRST="-9" INDENT="24.0009" NAME="li" />
+  <STYLE PSHORTCUT="" NACH="0" SHORTCUT="" CNAME="" FIRST="5.00031" PARENT="Default Paragraph Style" NAME="simple line" />
+  <STYLE SCOLOR="Black" ALIGN="3" TXTSHX="5" LINESP="15" TXTSHY="-5" VOR="0" TXTSTW="-0.1" DROPLIN="2" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" LINESPMode="0" BASEO="0" TXTULP="-0.1" NACH="5.00031" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" DROPDIST="0" FIRST="5.00031" INDENT="0" FONTSIZE="12" NAME="None" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" DROP="0" TXTSTP="-0.1" TXTULW="-0.1" />
+  <STYLE ALIGN="3" PSHORTCUT="" SHORTCUT="" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="TOC Entry" >
+   <Tabs Fill="." Type="1" Pos="282" />
+  </STYLE>
+  <STYLE PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="link" FCOLOR="Blue" />
+  <CHARSTYLE SCOLOR="Black" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="Default Character Style" FONTSIZE="12" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+  <CHARSTYLE SCOLOR="Black" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit " BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="Copy of Default Character Style (1)" FONTSIZE="12" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+  <LAYERS DRUCKEN="1" NUMMER="0" TRANS="1" LAYERC="#000000" EDIT="1" NAME="Background" FLOW="1" OUTL="0" BLEND="0" SICHTBAR="1" LEVEL="0" />
+  <Printer mirrorH="0" BleedBottom="0" colorMarks="0" cropMarks="0" doOverprint="0" useColor="0" firstUse="1" useICC="0" printerCommand="" BleedRight="0" useSpotColors="0" outputSeparations="0" toFile="0" doGCR="0" registrationMarks="0" doClip="0" markOffset="0" useAltPrintCommand="0" BleedTop="0" printer="" BleedLeft="0" bleedMarks="0" setDevParam="0" separationName="" PSLevel="0" filename="" mirrorV="0" />
+  <PDF displayThumbs="0" ImagePr="0" fitWindow="0" displayBookmarks="0" doOverprint="0" colorMarks="0" cropMarks="0" BTop="0" UseProfiles="0" BLeft="0" PrintP="Fogra27L CMYK Coated Press" RecalcPic="0" firstUse="0" UseSpotColors="1" ImageP="Adobe RGB (1998)" SolidP="Adobe RGB (1998)" PicRes="300" Thumbnails="0" hideToolBar="0" registrationMarks="0" CMethod="0" displayLayers="0" doMultiFile="0" UseLayers="0" Encrypt="0" markOffset="0" BRight="0" Binding="0" Articles="0" useDocBleeds="0" InfoString="" RGBMode="1" Grayscale="0" PresentMode="0" openAction="" displayFullscreen="0" Permissions="-4" bleedMarks="0" Intent="1" Compress="1" hideMenuBar="0" Version="14" Resolution="300" Bookmarks="1" docInfoMarks="0" UseProfiles2="0" RotateDeg="0" Clip="0" MirrorV="0" Quality="0" PageLayout="0" UseLpi="0" PassUser="" BBottom="0" Intent2="0" MirrorH="0" PassOwner="" >
+   <Fonts Name="Arial Bold" />
+   <Fonts Name="Arial Regular" />
+   <Fonts Name="Spumoni LP Regular" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <Effekte pageViewDuration="1" Di="0" pageEffectDuration="1" effectType="0" Dm="0" M="0" />
+   <LPI Angle="45" Frequency="75" SpotFunction="2" Color="" />
+   <LPI Angle="45" Frequency="75" SpotFunction="2" Color="Black" />
+   <LPI Angle="105" Frequency="75" SpotFunction="2" Color="Cyan" />
+   <LPI Angle="75" Frequency="75" SpotFunction="2" Color="Magenta" />
+   <LPI Angle="90" Frequency="75" SpotFunction="2" Color="Yellow" />
+   <LPI Angle="45" Frequency="75" SpotFunction="2" Color="" />
+  </PDF>
+  <DocItemAttributes>
+   <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="none" AutoAddTo="none" Name="TOC" Value="" />
+  </DocItemAttributes>
+  <TablesOfContents>
+   <TableOfContents NumberPlacement="End" FrameName="Text30" ListNonPrinting="1" Name="Table of Contents 1" Style="TOC Entry" ItemAttributeName="TOC" />
+  </TablesOfContents>
+  <PageSets>
+   <Set Columns="1" GapBelow="40" Rows="1" FirstPage="0" GapHorizontal="0" Name="Single Page" GapVertical="0" />
+   <Set Columns="2" GapBelow="2834.65" Rows="1" FirstPage="1" GapHorizontal="0" Name="Double Sided" GapVertical="0" >
+    <PageNames Name="Left Page" />
+    <PageNames Name="Right Page" />
+   </Set>
+   <Set Columns="3" GapBelow="40" Rows="1" FirstPage="0" GapHorizontal="0" Name="3-Fold" GapVertical="0" >
+    <PageNames Name="Left Page" />
+    <PageNames Name="Middle" />
+    <PageNames Name="Right Page" />
+   </Set>
+   <Set Columns="4" GapBelow="40" Rows="1" FirstPage="0" GapHorizontal="0" Name="4-Fold" GapVertical="0" >
+    <PageNames Name="Left Page" />
+    <PageNames Name="Middle Left" />
+    <PageNames Name="Middle Right" />
+    <PageNames Name="Right Page" />
+   </Set>
+  </PageSets>
+  <Sections>
+   <Section Active="1" Number="0" From="0" Type="Type_1_2_3" To="15" Name="0" Start="1" Reversed="0" />
+  </Sections>
+  <MASTERPAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="0" BORDERTOP="40" NAM="Normal Left" LEFT="1" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="2834.65" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <MASTERPAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="1" BORDERTOP="40" NAM="Normal Right" LEFT="0" BORDERBOTTOM="40" AGSelection="7.29685e-309 8.66504e-124 1.12735e-123 1.58101e-322" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="2834.65" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <MASTERPAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="2" BORDERTOP="40" NAM="Cover" LEFT="0" BORDERBOTTOM="40" AGSelection="6.06891e-312 6.81811e-322 6.30233e-312 0" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="2834.65" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="0" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="6.06891e-312 6.81811e-322 6.30233e-312 0" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="2834.65" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Cover" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="1" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="6264.57" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="2" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="6264.57" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="3" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="9694.49" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="4" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="9694.49" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="5" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="13124.4" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="6" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="13124.4" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="7" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="16554.3" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="8" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="16554.3" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="9" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="19984.3" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="10" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="19984.3" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="11" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="23414.2" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="12" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="23414.2" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="13" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="26844.1" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="14" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="0 -1.98494 1.40935e-123 1.41326e-123" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="26844.1" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Normal Left" PAGEXPOS="3254.17" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <PAGE AGhorizontalAutoCount="0" AGverticalAutoCount="0" AGhorizontalAutoGap="0" Size="A5" NUM="15" BORDERTOP="40" NAM="" LEFT="0" BORDERBOTTOM="40" AGSelection="6.06891e-312 6.81811e-322 6.30233e-312 0" Orientation="0" AGverticalAutoGap="0" BORDERRIGHT="40" PAGEHEIGHT="595.276" PAGEWIDTH="419.528" PAGEYPOS="30274" AGverticalAutoRefer="0" HorizontalGuides="" MNAM="Cover" PAGEXPOS="2834.65" AGhorizontalAutoRefer="0" VerticalGuides="" BORDERLEFT="40" />
+  <MASTEROBJECT OnMasterPage="Cover" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="0.328027" ROT="0" WIDTH="419.875" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="0.622249" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="0" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="2" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="597.359" DASHOFF="0" PFILE2="" PFILE="images/cover.png" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="0" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 419.875 0 419.875 0 419.875 0 419.875 0 419.875 597.359 419.875 597.359 419.875 597.359 419.875 597.359 0 597.359 0 597.359 0 597.359 0 597.359 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="2" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="0" TEXTFLOW="0" YPOS="2833.28" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2834.77" NUMCO="16" POCOOR="0 0 0 0 419.875 0 419.875 0 419.875 0 419.875 0 419.875 597.359 419.875 597.359 419.875 597.359 419.875 597.359 0 597.359 0 597.359 0 597.359 0 597.359 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="0" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </MASTEROBJECT>
+  <MASTEROBJECT OnMasterPage="Normal Left" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="0.521131" ROT="0" WIDTH="16.6762" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="0.521131" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="2" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="24" DASHOFF="0" PFILE2="" PFILE="images/amoebax.png" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="0" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 16.6762 0 16.6762 0 16.6762 0 16.6762 0 16.6762 24 16.6762 24 16.6762 24 16.6762 24 0 24 0 24 0 24 0 24 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="0" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="0" TEXTFLOW="0" YPOS="3390.65" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3036.65" NUMCO="16" POCOOR="0 0 0 0 16.6762 0 16.6762 0 16.6762 0 16.6762 0 16.6762 24 16.6762 24 16.6762 24 16.6762 24 0 24 0 24 0 24 0 24 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="0" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </MASTEROBJECT>
+  <MASTEROBJECT OnMasterPage="Normal Left" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="22.5625" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="20" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 22.5625 0 22.5625 0 22.5625 0 22.5625 0 22.5625 20 22.5625 20 22.5625 20 22.5625 20 0 20 0 20 0 20 0 20 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="0" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="3390.65" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3031.4" NUMCO="16" POCOOR="0 0 0 0 22.5625 0 22.5625 0 22.5625 0 22.5625 0 22.5625 20 22.5625 20 22.5625 20 22.5625 20 0 20 0 20 0 20 0 20 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <var name="pgno" />
+   <var name="pgno" />
+   <para ALIGN="1" PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </MASTEROBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="336.967" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="71.0882" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 336.967 0 336.967 0 336.967 0 336.967 0 336.967 71.0882 336.967 71.0882 336.967 71.0882 336.967 71.0882 0 71.0882 0 71.0882 0 71.0882 0 71.0882 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="0" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="2943.65" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3296.68" NUMCO="16" POCOOR="0 0 0 0 336.967 0 336.967 0 336.967 0 336.967 0 336.967 71.0882 336.967 71.0882 336.967 71.0882 336.967 71.0882 0 71.0882 0 71.0882 0 71.0882 0 71.0882 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Amoebax" SHORTCUT="" CNAME="" FONTSIZE="58" FCOLOR="Black" FONT="Spumoni LP Regular" />
+   <para ALIGN="1" OpticalMargins="0" PSHORTCUT="" SHORTCUT="" CNAME="" FONTSIZE="58" NAME="" FCOLOR="Black" FONT="Spumoni LP Regular" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340.08" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="48.7692" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340.08 0 340.08 0 340.08 0 340.08 0 340.08 48.7692 340.08 48.7692 340.08 48.7692 340.08 48.7692 0 48.7692 0 48.7692 0 48.7692 0 48.7692 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="0" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="3197.65" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3293.65" NUMCO="16" POCOOR="0 0 0 0 340.08 0 340.08 0 340.08 0 340.08 0 340.08 48.7692 340.08 48.7692 340.08 48.7692 340.08 48.7692 0 48.7692 0 48.7692 0 48.7692 0 48.7692 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="User's Manual" SHORTCUT="" CNAME="" FONTSIZE="38" FONT="Spumoni LP Regular" />
+   <para ALIGN="1" PSHORTCUT="" SHORTCUT="" CNAME="" FONTSIZE="38" NAME="" FONT="Spumoni LP Regular" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="38" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 38 339 38 339 38 339 38 0 38 0 38 0 38 0 38 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="11" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="23453.9" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.12" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 38 339 38 339 38 339 38 0 38 0 38 0 38 0 38 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Credits" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes>
+    <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="" AutoAddTo="none" Name="TOC" Value="Credits" />
+   </PageItemAttributes>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="185" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="249.1" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 185 0 185 0 185 0 185 0 185 249.1 185 249.1 185 249.1 185 249.1 0 249.1 0 249.1 0 249.1 0 249.1 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="11" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="23491.9" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.12" NUMCO="16" POCOOR="0 0 0 0 185 0 185 0 185 0 185 0 185 249.1 185 249.1 185 249.1 185 249.1 0 249.1 0 249.1 0 249.1 0 249.1 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Graphics" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Safareig Creatiu" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="http://www.safareigcreatiu.com/" FSHADE="100" FEATURES="inherit underline" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <para FSHADE="100" FEATURES="inherit underline" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" FCOLOR="Blue" />
+   <ITEXT CH="Music &amp; Sound" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Àlex Almarza" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Programming" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Jordi Fita" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="http://www.emma-soft.com/" FSHADE="100" FEATURES="inherit underline" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <para FSHADE="100" FEATURES="inherit underline" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" FCOLOR="Blue" />
+   <ITEXT CH="Web Page" FSHADE="100" FEATURES="inherit" SHORTCUT="" CNAME="" FCOLOR="Black" />
+   <para FSHADE="100" FEATURES="inherit" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" FCOLOR="Blue" />
+   <ITEXT CH="Ferran Brugat" FSHADE="100" FEATURES="inherit" SHORTCUT="" CNAME="" FCOLOR="Black" />
+   <para FSHADE="100" FEATURES="inherit" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" FCOLOR="Blue" />
+   <ITEXT CH="http://www.webcreatius.com/" FSHADE="100" FEATURES="inherit underline" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <para FSHADE="100" FEATURES="inherit underline" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" FCOLOR="Blue" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="154" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="169.62" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 154 0 154 0 154 0 154 0 154 169.62 154 169.62 154 169.62 154 169.62 0 169.62 0 169.62 0 169.62 0 169.62 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="11" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="23491.9" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3059.12" NUMCO="16" POCOOR="0 0 0 0 154 0 154 0 154 0 154 0 154 169.62 154 169.62 154 169.62 154 169.62 0 169.62 0 169.62 0 169.62 0 169.62 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Thanks To" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Albert Benzal" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="Carles Matabosch" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="Christian Mata" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="Joan Ramos" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="Natàlia Brugat" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="Peter Wintle" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <ITEXT CH="Xevir Roig" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="simple line" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="338" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="38" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 38 338 38 338 38 338 38 0 38 0 38 0 38 0 38 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="1" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="6305.28" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.65" NUMCO="16" POCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 38 338 38 338 38 338 38 0 38 0 38 0 38 0 38 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Contents" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="38" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 38 340 38 340 38 340 38 0 38 0 38 0 38 0 38 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="2" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="6305.28" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3295.65" NUMCO="16" POCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 38 340 38 340 38 340 38 0 38 0 38 0 38 0 38 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="System Requirements" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes>
+    <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="" AutoAddTo="none" Name="TOC" Value="System Requirements" />
+   </PageItemAttributes>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340.081" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="245.465" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340.081 0 340.081 0 340.081 0 340.081 0 340.081 245.465 340.081 245.465 340.081 245.465 340.081 245.465 0 245.465 0 245.465 0 245.465 0 245.465 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="2" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="6343.81" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3293.65" NUMCO="16" POCOOR="0 0 0 0 340.081 0 340.081 0 340.081 0 340.081 0 340.081 245.465 340.081 245.465 340.081 245.465 340.081 245.465 0 245.465 0 245.465 0 245.465 0 245.465 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Minimum Configuration" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="•  500 MHz CPU" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="•  128 MiB of RAM" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="•  Graphics card capable of 800x600 resolution" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="•  Microsoft Windows 98 / ME / 2000 / XP / Vista, Mac OS X 10.2 or Linux kernel 2.4 with glibc 2.3" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Recommended Configuration" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="•  1000 MHz CPU or better" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="•  256 MiB of RAM or better" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="•  Graphics card capable of 1024x768 resolution or better" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="341" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="39" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 341 0 341 0 341 0 341 0 341 39 341 39 341 39 341 39 0 39 0 39 0 39 0 39 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="3" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="9733.93" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2873.64" NUMCO="16" POCOOR="0 0 0 0 341 0 341 0 341 0 341 0 341 39 341 39 341 39 341 39 0 39 0 39 0 39 0 39 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Installing Amoebax" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes>
+    <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="" AutoAddTo="none" Name="TOC" Value="Installing Amoebax" />
+   </PageItemAttributes>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="410" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 410 339 410 339 410 339 410 0 410 0 410 0 410 0 410 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="3" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="9773.93" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.64" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 410 339 410 339 410 339 410 0 410 0 410 0 410 0 410 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Microsoft Window" SHORTCUT="" CNAME="" />
+   <para ALIGN="0" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Download the Windows Installer Package from " SHORTCUT="" CNAME="" />
+   <ITEXT CH="http://www.emma-soft.com/games/amoebax/" FSHADE="100" FEATURES="inherit underline" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <ITEXT CH=" and run it.  The installer will create an Amoebax entry in the start menu and place an icon on the desktop." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Apple Mac OS X" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Download the Mac OS X disk image from " SHORTCUT="" CNAME="" />
+   <ITEXT CH="http://www.emma-soft.com/games/amoebax/" FSHADE="100" FEATURES="inherit underline" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <ITEXT CH=".  When downloaded, double-click the image and a new window with the Amoebax icon will appear.  Drag this icon to the desktop or Applications folder." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="GNU/Linux" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="Download the GNU/Linux autopackage's package from " SHORTCUT="" CNAME="" />
+   <ITEXT CH="http://www.emma-soft.com/games/amoebax/" FSHADE="100" FEATURES="inherit underline" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <ITEXT CH=". " SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Click on the package with your right mouse button." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Then click on the Properties menu item.  Go to the Permission tab and check the Execute, Exec or Is Executable checkbox.  If there are more than one Execute/Exec checkboxes, check the top-most one." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Click Close or OK, depending on the dialog." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Open the package file.  If you are asked whether you want to display or run the package, click Run." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="The installation will now begin.  Follow further instructions that are displayed on the screen, if any." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="39" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 39 339 39 339 39 339 39 0 39 0 39 0 39 0 39 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="6" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="13164.9" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.65" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 39 339 39 339 39 339 39 0 39 0 39 0 39 0 39 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Getting Started" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes>
+    <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="" AutoAddTo="none" Name="TOC" Value="Getting Started" />
+   </PageItemAttributes>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="338" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="357.44" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 357.44 338 357.44 338 357.44 338 357.44 0 357.44 0 357.44 0 357.44 0 357.44 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="6" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="13203.9" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.65" NUMCO="16" POCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 357.44 338 357.44 338 357.44 338 357.44 0 357.44 0 357.44 0 357.44 0 357.44 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Main Menu" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="From the main menu, you can choose to access: Training, Normal, Tournament, High Scores, Options, Credits, or Exit.  Use the keyboard's arrow keys to make your selection, then press the Enter key to confirm." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Pressing the Escape key will move the selection to the Exit option.  Press Enter or Escape again to quit from the game." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Training" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="If you select the Training menu option you will be presented with an screen with a single grid." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="469.72" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 469.72 340 469.72 340 469.72 340 469.72 0 469.72 0 469.72 0 469.72 0 469.72 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="7" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="16594.5" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.64" NUMCO="16" POCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 469.72 340 469.72 340 469.72 340 469.72 0 469.72 0 469.72 0 469.72 0 469.72 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="The current training's levels is changed when you reach a determined amount of score points and not based on time.  That means that the better you perform, the faster you progress through the levels." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="The training mode is an endless mode.  Even though there is a limited number of levels, the game will only end when the your grid is filled up." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Normal" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="When selecting the Normal menu option you will be asked which player to follow: Kim or Tom.  Both players compete against the same opponents and there is no difference in controlling the amoebas.  Select your player by using the left and right arrow keys and confirm your selection by pressing the Enter key." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="In normal mode the you will have a two grid screen.  The left grid is controlled by your opponent and the right grid is controlled by you." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="516" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 516 339 516 339 516 339 516 0 516 0 516 0 516 0 516 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="8" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="16594.6" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.65" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 516 339 516 339 516 339 516 0 516 0 516 0 516 0 516 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Before each match the game will show the players that are going to play: at right you'll see the player you have selected at the beginning while at left there is your current opponent." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Tournament" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="The first thing the tournament mode is going to ask is how many players will participate in the tournament.  The number of players is 2 or 4, counting human and computer players." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Once the number of players is selected, the game will show a grid of possible players: 4 human controlled female players, 4 human controlled male players, and 6 computer controlled players." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="To select your player use the arrow keys.  A bigger image and the name of the currently selected player is shown at right." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="To confirm the selection of your player press the Enter key.  Then the next player can select.  Once all player have selected, the tournament will begin." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="The tournament follows a single elimination style in matches of two players.  Before each match, the current pair of players will blink and the versus screen will appear with the left player and the right player.  Then the match will start." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="The match's winner will be moved to the upper level and the next two players will start.  Once there is only one player left, this player is the tournament mode's winner and the game will end." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="High Scores" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="This option will lead you to the high scores table.  Here you will see your best score in all modes.  Currently there is no way to know which mode a particular score was made in." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Press any key to exit the High Scores screen and return to the main menu." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="515" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 515 340 515 340 515 340 515 0 515 0 515 0 515 0 515 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="9" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="20025.2" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.64" NUMCO="16" POCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 515 340 515 340 515 340 515 0 515 0 515 0 515 0 515 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Options" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="The Options menu item will let you change some Amoebax's settings.  The Options menu has the following entries:" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="• Screen Resolution: sets the screen resolution to use.  Available screen resolutions are 640x480, 800x600 (default), 1024x768, and 1280x960.  To select an screen resolution use your left and right arrow keys." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Screen Mode: selects if the game will run in full screen or windowed mode (default).  To make your selection use your left and right arrow keys." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Volume: selects the current music and sound volume.  Select the appropriate volume level by using your right and left arrow key." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Left Controls: decides which controls the player at the left grid uses.  Available controls are: keyboard, first joystick, second joystick, third joystick, and forth joystick.  To change the keys or joystick button go to Players Control Setup." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Right Controls.  The same as the Left Controls options but for the player at the right grid." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Players Control Setup: goes to the keyboard or joystick's buttons configuration screen.  Press the Enter key to select this option." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Apply: saves and applies all selected options. Press the Enter key to select this option." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <ITEXT CH="• Back: returns to the main menu.  If you do not select Apply before selecting this option, no change is made to the game's settings." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="li" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="515" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 515 339 515 339 515 339 515 0 515 0 515 0 515 0 515 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="10" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="20025.3" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.65" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 515 339 515 339 515 339 515 0 515 0 515 0 515 0 515 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Player Controls Setup" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="This option lets change the actual keys used by the players when playing a match.  The left controls are for the player at the left grid and the right controls for the player at the right grid." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Depending on the option selected in Left Controls and Right Controls in the previous screen, this mode will show either the keyboard controls or the joystick controls." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="To change a control, move the selection using the keyboard arrow keys and confirm the control you want to change by pressing Enter.  When a control is selected it will start to blink.  To change the control just press the key or joystick button you want to assign to the selected control." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="To cancel a selection just press the Escape key." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="When you are happy with the controls configuration just select the Accept option and press Enter." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="If you don't want to change any control, select Cancel instead and press Enter." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="To return all controls to their default value, select the Default Controls option and press Enter." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="338" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="37" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 37 338 37 338 37 338 37 0 37 0 37 0 37 0 37 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="4" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="9734.97" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.65" NUMCO="16" POCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 37 338 37 338 37 338 37 0 37 0 37 0 37 0 37 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Game Basics" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes>
+    <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="" AutoAddTo="none" Name="TOC" Value="Game Basics" />
+   </PageItemAttributes>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="242.158" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 242.158 340 242.158 340 242.158 340 242.158 0 242.158 0 242.158 0 242.158 0 242.158 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="4" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="9771.67" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3293.18" NUMCO="16" POCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 242.158 340 242.158 340 242.158 340 242.158 0 242.158 0 242.158 0 242.158 0 242.158 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Game Screen" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="The game consists in one or two grids, depending on the number of players, where the amoebas will fall in.  Each player has her own grid with its falling pair, pairs queue, playing amoebas, waiting ghosts amoebas." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="0.883957" ROT="0" WIDTH="249.188" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="0.883957" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="2" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="142.317" DASHOFF="0" PFILE2="" PFILE="images/grid.png" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="0" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 249.188 0 249.188 0 249.188 0 249.188 0 249.188 142.317 249.188 142.317 249.188 142.317 249.188 142.317 0 142.317 0 142.317 0 142.317 0 142.317 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="4" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="0" TEXTFLOW="0" YPOS="9862.67" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3336.18" NUMCO="16" POCOOR="0 0 0 0 249.188 0 249.188 0 249.188 0 249.188 0 249.188 142.317 249.188 142.317 249.188 142.317 249.188 142.317 0 142.317 0 142.317 0 142.317 0 142.317 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="0" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="230.173" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 230.173 339 230.173 339 230.173 339 230.173 0 230.173 0 230.173 0 230.173 0 230.173 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="4" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="10020.5" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.18" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 230.173 339 230.173 339 230.173 339 230.173 0 230.173 0 230.173 0 230.173 0 230.173 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="The objective of the game is to " SHORTCUT="" CNAME="" />
+   <ITEXT CH="fill up" SHORTCUT="" CNAME="" FONT="Arial Bold" />
+   <ITEXT CH=" your opponent's grid by sending " SHORTCUT="" CNAME="" />
+   <ITEXT CH="ghost amoebas" SHORTCUT="" CNAME="" FONT="Arial Bold" />
+   <ITEXT CH=" to her." SHORTCUT="" CNAME="" />
+   <para ALIGN="0" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="You send garbage to your opponent by joining four or more amoebas of the same color either horizontally, vertically, or a combination of them but never in diagonal.  This is called a " SHORTCUT="" CNAME="" />
+   <ITEXT CH="chain" SHORTCUT="" CNAME="" FONT="Arial Bold" />
+   <ITEXT CH="." SHORTCUT="" CNAME="" />
+   <para ALIGN="0" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="The number of ghost amoebas you send to your opponent depends on the number of amoebas of the chain and the number of " SHORTCUT="" CNAME="" />
+   <ITEXT CH="consecutive chains" SHORTCUT="" CNAME="" FONT="Arial Bold" />
+   <ITEXT CH=" you make.  The higher these number, the more ghost amoebas are sent." SHORTCUT="" CNAME="" />
+   <para ALIGN="0" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Of course, your opponent is also sending ghost amoebas to you.  The ghost amoebas sent by your opponent are keep in your " SHORTCUT="" CNAME="" />
+   <ITEXT CH="ghost waiting area" SHORTCUT="" CNAME="" FONT="Arial Bold" />
+   <ITEXT CH=" until your falling pair falls.  Then the ghost amoebas falls into your grid." SHORTCUT="" CNAME="" />
+   <para ALIGN="0" PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="338" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="301" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 301 338 301 338 301 338 301 0 301 0 301 0 301 0 301 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="5" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="13164.6" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.12" NUMCO="16" POCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 301 338 301 338 301 338 301 0 301 0 301 0 301 0 301 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="If you make a chain while there are ghost amoebas waiting in your grid, instead of sending ghost amoebas to your opponent, the number of ghost amoebas waiting in your grid is decreased.  The number of ghost amoebas removed depends also on the number of amoebas involved in the chain and the number of consecutive amoebas." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="Moving the Falling Pair" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H2" NAME="" />
+   <ITEXT CH="To move the falling pair use the left and right arrow keys (right player) or the A and D keys (left player).  This moves the falling pair horizontally." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <ITEXT CH="You also can rotate the falling pair either clockwise or counter-clockwise.  Use the up arrow key and right control key (right player) or W key and left control key to rotate the falling pair." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="0.96875" ROT="0" WIDTH="108" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="0.96875" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="2" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="62" DASHOFF="0" PFILE2="" PFILE="images/rotation.png" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="0" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 108 0 108 0 108 0 108 0 108 62 108 62 108 62 108 62 0 62 0 62 0 62 0 62 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="5" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="0" TEXTFLOW="0" YPOS="13394.6" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2997.12" NUMCO="16" POCOOR="0 0 0 0 108 0 108 0 108 0 108 0 108 62 108 62 108 62 108 62 0 62 0 62 0 62 0 62 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="0" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="211" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 211 339 211 339 211 339 211 0 211 0 211 0 211 0 211 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="5" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="13469.6" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.12" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 211 339 211 339 211 339 211 0 211 0 211 0 211 0 211 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="You can speed up the falling pair by holding the down arrow key (right player) or the S key (left player).  Speeding up the falling pair gives extra points, so it is a good idea to always make them fall as fast as you can." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="0.572581" ROT="0" WIDTH="213" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="0.572581" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="2" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="160" DASHOFF="0" PFILE2="" PFILE="images/training.png" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="0" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 213 0 213 0 213 0 213 0 213 160 213 160 213 160 213 160 0 160 0 160 0 160 0 160 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="6" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="0" TEXTFLOW="0" YPOS="13392.4" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3355.18" NUMCO="16" POCOOR="0 0 0 0 213 0 213 0 213 0 213 0 213 160 213 160 213 160 213 160 0 160 0 160 0 160 0 160 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="0" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="112" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 112 339 112 339 112 339 112 0 112 0 112 0 112 0 112 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="6" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="13568.4" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3294.18" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 112 339 112 339 112 339 112 0 112 0 112 0 112 0 112 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="The lack of opponent makes the training mode very useful in trying to learn how to make large steps.  At the beginning there are no ghost amoebas, but as you progress through the different levels, more ghost amoebas falls in order to make it harder to make steps and to simulate the stress created by an opponent." SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="Default Paragraph Style" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="0.685185" ROT="0" WIDTH="333" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="0.685185" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="2" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="182" DASHOFF="0" PFILE2="" PFILE="images/normal.png" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="0" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 333 0 333 0 333 0 333 0 333 182 333 182 333 182 333 182 0 182 0 182 0 182 0 182 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="7" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="0" TEXTFLOW="0" YPOS="16877.3" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2879.12" NUMCO="16" POCOOR="0 0 0 0 333 0 333 0 333 0 333 0 333 182 333 182 333 182 333 182 0 182 0 182 0 182 0 182 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="0" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="340" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="468.861" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 468.861 340 468.861 340 468.861 340 468.861 0 468.861 0 468.861 0 468.861 0 468.861 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="1" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="6351.34" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2874.18" NUMCO="16" POCOOR="0 0 0 0 340 0 340 0 340 0 340 0 340 468.861 340 468.861 340 468.861 340 468.861 0 468.861 0 468.861 0 468.861 0 468.861 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="System Requirements" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <tab/>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="3" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <para SCOLOR="Black" ALIGN="3" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" >
+    <Tabs Fill="." Type="1" Pos="282" />
+   </para>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="Installing Amoebax" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <tab/>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="4" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <para SCOLOR="Black" ALIGN="3" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" >
+    <Tabs Fill="." Type="1" Pos="282" />
+   </para>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="Game Basics" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <tab/>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <para SCOLOR="Black" ALIGN="3" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" >
+    <Tabs Fill="." Type="1" Pos="282" />
+   </para>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="Getting Started" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <tab/>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="7" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <para SCOLOR="Black" ALIGN="3" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" >
+    <Tabs Fill="." Type="1" Pos="282" />
+   </para>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="Credits" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <tab/>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="12" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <para SCOLOR="Black" ALIGN="3" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" >
+    <Tabs Fill="." Type="1" Pos="282" />
+   </para>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="Notes" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <tab/>
+   <ITEXT SCOLOR="Black" TXTSHX="5" TXTSHY="-5" CH="13" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FONTSIZE="14" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" />
+   <para SCOLOR="Black" ALIGN="3" TXTSHX="5" TXTSHY="-5" TXTSTW="-0.1" KERN="0" FSHADE="100" FEATURES="inherit" PSHORTCUT="" BASEO="0" TXTULP="-0.1" SSHADE="100" SHORTCUT="" SCALEV="100" CNAME="" FIRST="3.11811" INDENT="0" FONTSIZE="14" NAME="" FCOLOR="Black" SCALEH="100" TXTOUT="1" FONT="Arial Regular" TXTSTP="-0.1" TXTULW="-0.1" >
+    <Tabs Fill="." Type="1" Pos="282" />
+   </para>
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="38" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 38 339 38 339 38 339 38 0 38 0 38 0 38 0 38 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="12" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="23455.2" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3295" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 38 339 38 339 38 339 38 0 38 0 38 0 38 0 38 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Notes" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes>
+    <ItemAttribute RelationshipTo="" Parameter="" Relationship="none" Type="" AutoAddTo="none" Name="TOC" Value="Notes" />
+   </PageItemAttributes>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="339" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="50" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 50 339 50 339 50 339 50 0 50 0 50 0 50 0 50 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="13" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="26885.2" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="2875" NUMCO="16" POCOOR="0 0 0 0 339 0 339 0 339 0 339 0 339 50 339 50 339 50 339 50 0 50 0 50 0 50 0 50 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Notes" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="338" ImageRes="1" GROUPS="" LOCKR="0" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" SHADE2="100" PWIDTH="1" HEIGHT="48" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 48 338 48 338 48 338 48 0 48 0 48 0 48 0 48 0 0 0 0 " BASEOF="0" PICART="1" COLUMNS="1" OwnPage="14" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" YPOS="26885.2" TEXTFLOWMODE="0" ANNOTATION="0" LOCALX="0" GRTYP="0" XPOS="3295" NUMCO="16" POCOOR="0 0 0 0 338 0 338 0 338 0 338 0 338 48 338 48 338 48 338 48 0 48 0 48 0 48 0 48 0 0 0 0 " EXTRA="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" PLINEJOIN="0" >
+   <ITEXT CH="Notes" SHORTCUT="" CNAME="" />
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" PARENT="H1" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="105" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="3" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="15" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.emma-soft.com/games/amoebax/" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 105 0 105 0 105 0 105 0 105 15 105 15 105 15 105 15 0 15 0 15 0 15 0 15 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="3" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="9887.99" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="3112" NUMCO="16" POCOOR="0 0 0 0 105 0 105 0 105 0 105 0 105 15 105 15 105 15 105 15 0 15 0 15 0 15 0 15 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <ITEXT CH="-" FSHADE="100" SHORTCUT="" CNAME="" FCOLOR="Blue" />
+   <para FSHADE="100" PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" FCOLOR="Blue" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="146.5" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="3" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="14.5" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.emma-soft.com/games/amoebax/" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 146.5 0 146.5 0 146.5 0 146.5 0 146.5 14.5 146.5 14.5 146.5 14.5 146.5 14.5 0 14.5 0 14.5 0 14.5 0 14.5 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="3" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="9902.99" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="2870" NUMCO="16" POCOOR="0 0 0 0 146.5 0 146.5 0 146.5 0 146.5 0 146.5 14.5 146.5 14.5 146.5 14.5 146.5 14.5 0 14.5 0 14.5 0 14.5 0 14.5 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="243.5" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="3" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="15.5" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.emma-soft.com/games/amoebax/" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 243.5 0 243.5 0 243.5 0 243.5 0 243.5 15.5 243.5 15.5 243.5 15.5 243.5 15.5 0 15.5 0 15.5 0 15.5 0 15.5 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="3" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="9995.99" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="2870" NUMCO="16" POCOOR="0 0 0 0 243.5 0 243.5 0 243.5 0 243.5 0 243.5 15.5 243.5 15.5 243.5 15.5 243.5 15.5 0 15.5 0 15.5 0 15.5 0 15.5 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="245" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="3" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="15.5" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.emma-soft.com/games/amoebax/" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 245 0 245 0 245 0 245 0 245 15.5 245 15.5 245 15.5 245 15.5 0 15.5 0 15.5 0 15.5 0 15.5 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="3" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="9809.99" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="2870" NUMCO="16" POCOOR="0 0 0 0 245 0 245 0 245 0 245 0 245 15.5 245 15.5 245 15.5 245 15.5 0 15.5 0 15.5 0 15.5 0 15.5 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="175" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="11" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="15" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.safareigcreatiu.com/" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 175 0 175 0 175 0 175 0 175 15 175 15 175 15 175 15 0 15 0 15 0 15 0 15 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="11" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="23528" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="2874" NUMCO="16" POCOOR="0 0 0 0 175 0 175 0 175 0 175 0 175 15 175 15 175 15 175 15 0 15 0 15 0 15 0 15 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="158" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="11" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="15" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.emma-soft.com/" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 158 0 158 0 158 0 158 0 158 15 158 15 158 15 158 15 0 15 0 15 0 15 0 15 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="11" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="23638" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="2874" NUMCO="16" POCOOR="0 0 0 0 158 0 158 0 158 0 158 0 158 15 158 15 158 15 158 15 0 15 0 15 0 15 0 15 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+  <PAGEOBJECT OnMasterPage="" isGroupControl="0" BottomLine="0" REXTRA="0" ANACTYP="8" gHeight="0" gWidth="0" NUMPO="16" TransBlendS="0" ANBSTY="0" PLINEART="1" doOverprint="0" RightLine="0" LOCALSCX="1" ROT="0" WIDTH="161" ImageRes="1" GROUPS="" LOCKR="0" ANMC="-1" ANZIEL="11" ANKACT="" LOCALSCY="1" NAMEDLST="" isInline="0" AUTOTEXT="0" FLIPPEDV="0" PCOLOR="None" RADRECT="0" REVERS="0" ANTOOLTIP="" PRINTABLE="1" RATIO="1" FLIPPEDH="0" COLGAP="0" PCOLOR2="None" NEXTITEM="-1" NUMGROUP="0" TransValue="0" ANICON="0" ANCHK="0" textPathFlipped="0" PLINEEND="0" FRTYPE="0" PTYPE="4" ImageClip="" isTableItem="0" TEXTFLOW2="0" ANHTML="0" ANXACT="" ANTYPE="11" SHADE2="100" PWIDTH="1" HEIGHT="15" DASHOFF="0" PFILE2="" PFILE="" TEXTFLOW3="0" ANFLAG="0" ANEXTERN="http://www.webcreatius.com" ANFACT="" ANBLACT="" textPathType="0" PLTSHOW="0" CLIPEDIT="0" BACKITEM="-1" TransValueS="0" EMBEDDED="1" PFILE3="" ANNAME="" ANCHKS="0" ANVACT="" ANFOACT="" ANEACT="" SHADE="100" fillRule="1" COCOOR="0 0 0 0 161 0 161 0 161 0 161 0 161 15 161 15 161 15 161 15 0 15 0 15 0 15 0 15 0 0 0 0 " ANSCALE="0" ANROLL="" ANDACT="" BASEOF="0" PICART="1" COLUMNS="1" OwnPage="11" LAYER="0" BOOKMARK="0" gYpos="0" startArrowIndex="0" TopLine="0" LOCK="0" EPROF="" ANBCOL="Black" ANFONT="4" ANFEED="1" ANCACT="" gXpos="0" DASHS="" IRENDER="1" TEXTFLOW="0" ANBWID="1" YPOS="23700" TEXTFLOWMODE="0" ANAA="0" ANNOTATION="1" LOCALX="0" GRTYP="0" XPOS="2873" NUMCO="16" POCOOR="0 0 0 0 161 0 161 0 161 0 161 0 161 15 161 15 161 15 161 15 0 15 0 15 0 15 0 15 0 0 0 0 " EXTRA="0" ANFORMAT="0" LOCALY="0" NUMDASH="0" LeftLine="0" PRFILE="" TEXTRA="0" ANPLACE="1" ANVIS="0" ANDOWN="" SCALETYPE="1" endArrowIndex="0" TransBlend="0" BEXTRA="0" ANACTION="" PLINEJOIN="0" >
+   <para PSHORTCUT="" SHORTCUT="" CNAME="" NAME="" />
+   <PageItemAttributes/>
+  </PAGEOBJECT>
+ </DOCUMENT>
+</SCRIBUSUTF8NEW>

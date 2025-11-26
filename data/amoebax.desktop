@@ -1,0 +1,11 @@
+[Desktop Entry]
+Categories=Game;LogicGame;
+Comment=Defeat your opponent by filling up their grid up with garbage.
+Encoding=UTF-8
+Exec=amoebax
+GenericName=Computer Puzzle Game
+GenericName[tr]=Bulmaca Oyunu
+Icon=amoebax.svg
+Name=Amoebax
+Terminal=false
+Type=Application

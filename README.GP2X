@@ -1,0 +1,87 @@
+                                    Amoebax
+                                    =======
+
+Description
+-----------
+
+    Amoebax is a free multi-platform match-3 puzzle game where the objective
+is to beat your opponent in a battle by filling their grid up to the top with
+garbage.
+
+    You can play as Kim or Tom against six cute creatures controlled by the
+amoebas or you can play up to four players in a tournament to check out who is
+the amoebas' master.
+
+
+Installation
+------------
+
+    Copy the `Amoebax' directory to your SD card. To start the program, locate
+and execute a binary file called `amoebax.gpe' inside the `Amoebax' directory.
+
+
+How To Play
+-----------
+
+    To move in the menu screen use the stick direction or R and L keys.
+    To select a menu option use the stick click or B button.
+
+    In game, use the stick direction to move the falling pair.
+    Use B or R button to rotate the falling pair clockwise.
+    Use A or L button to rotate the falling pair anti-clockwise.
+    Use the Start or X button to pause the game.
+
+    When entering your name in the high scores, use stick up and stick down to
+select a character.
+    Use the stick right or B button to confirm the character and add a new new.
+    Use the stick left or X button to delete the previously entered character.
+    Use the Start button to finish entering the name.
+
+
+Two Players Mode
+----------------
+
+    While playing two players on the same console (only available in
+“Tournament”) the game controls change to accommodate the two players' controls:
+
+    Left player uses:
+        Stick right or stick click to rotate clockwise.
+        Stick left to move the pair down.
+        Stick up to move the pair left.
+        Stick down to move the pair right.
+
+    Right player uses:
+        Button A to rotate clockwise.
+        Button B to move the pair down.
+        Button X to move the pair left.
+        Button Y to move the pair right.
+
+    The Start button is still used to pause the game or to continue with
+the tournament when the match is over.
+
+
+License
+-------
+
+    This software is licensed under the GNU General Public License (GPL).
+    The sound effects, music, and graphics are licensed under the Free Art
+License (LAL).
+    For more details about the licenses, please read `COPYING.GPL' and
+`COPYING.LAL' files.
+
+
+Contact
+-------
+
+    Amoebax's home page, where the most recent stable version is released, is
+located at:
+
+                    http://www.emma-soft.com/games/amoebax/
+
+    If you are a developer and want access to the latest source code, please
+take a look at our development page at:
+
+                      http://trac.emma-soft.com/amoebax/
+
+    If you want to reach us by e-mail, you can use the addresses found at the
+`AUTHORS' file.

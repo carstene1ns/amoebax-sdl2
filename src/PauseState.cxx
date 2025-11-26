@@ -1,0 +1,256 @@
+//
+// Cross-platform free Puyo-Puyo clone.
+// Copyright (C) 2006, 2007 Emma's Software
+//
+// This program is free software; you can redistribute it and/or modify
+// it under the terms of the GNU General Public License as published by
+// the Free Software Foundation; either version 2 of the License, or
+// (at your option) any later version.
+//
+// This program is distributed in the hope that it will be useful,
+// but WITHOUT ANY WARRANTY; without even the implied warranty of
+// MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+// GNU General Public License for more details.
+//
+// You should have received a copy of the GNU General Public License
+// along with this program; if not, write to the Free Software
+// Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
+//
+#if defined (HAVE_CONFIG_H)
+#include <config.h>
+#endif // HAVE_CONFIG_H
+#include <SDL.h>
+#include "File.h"
+#include "Font.h"
+#include "Options.h"
+#include "PauseState.h"
+#include "System.h"
+
+using namespace Amoebax;
+
+///
+/// \brief Default constructor.
+///
+PauseState::PauseState (void):
+    IState ()
+{
+    loadGraphicResources ();
+
+    // Initialize menu options.
+    m_MenuOptions.push_back (new ContinueOption ("Continue Game"));
+    m_MenuOptions.push_back (new ExitOption ("Return to Main Menu"));
+    m_SelectedOption = m_MenuOptions.begin ();
+}
+
+void
+PauseState::activate (void)
+{
+    Music::pause ();
+}
+
+///
+/// \brief Activates the currently selected menu option.
+///
+void
+PauseState::activateMenuOption (void)
+{
+    (*(*m_SelectedOption)) ();
+}
+
+void
+PauseState::joyMotion (uint8_t joystick, uint8_t axis, int16_t value)
+{
+}
+
+void
+PauseState::joyDown (uint8_t joystick, uint8_t button)
+{
+#if defined (IS_GP2X_HOST)
+    switch (button)
+    {
+        case GP2X_BUTTON_A:
+        case GP2X_BUTTON_B:
+        case GP2X_BUTTON_CLICK:
+            activateMenuOption ();
+        break;
+
+        case GP2X_BUTTON_DOWN:
+            selectNextMenuOption ();
+        break;
+
+        case GP2X_BUTTON_UP:
+            selectPreviousMenuOption ();
+        break;
+
+        // The X button resumes the game.
+        case GP2X_BUTTON_X:
+            removeState ();
+        break;
+    }
+#endif // IS_GP2X_HOST
+}
+
+void
+PauseState::joyUp (uint8_t joystick, uint8_t button)
+{
+}
+
+#if !defined (IS_GP2X_HOST)
+void
+PauseState::keyDown (uint32_t key)
+{
+    switch (key)
+    {
+        case SDLK_DOWN:
+            selectNextMenuOption ();
+        break;
+
+        // The escape key resumes the game.
+        case SDLK_ESCAPE:
+            removeState ();
+        break;
+
+        case SDLK_RETURN:
+            activateMenuOption ();
+        break;
+
+        case SDLK_UP:
+            selectPreviousMenuOption ();
+        break;
+    }
+}
+
+void
+PauseState::keyUp (uint32_t key)
+{
+}
+#endif // !IS_GP2X_HOST
+
+///
+/// \brief Loads all graphic resources.
+///
+void
+PauseState::loadGraphicResources (void)
+{
+    // Capture the background from the screen, and blit an alpha blended
+    // black surface.
+    m_Background.reset (Surface::fromScreen ());
+    SDL_Surface *blackBox =
+        SDL_CreateRGBSurface (SDL_SWSURFACE | SDL_SRCALPHA,
+                              m_Background->getWidth (),
+                              m_Background->getHeight (),
+                              m_Background->toSDLSurface ()->format->BitsPerPixel,
+                              m_Background->toSDLSurface ()->format->Rmask,
+                              m_Background->toSDLSurface ()->format->Gmask,
+                              m_Background->toSDLSurface ()->format->Bmask,
+                              m_Background->toSDLSurface ()->format->Amask);
+    SDL_FillRect (blackBox, NULL, SDL_MapRGB (blackBox->format, 0, 0, 0));
+    SDL_SetAlpha (blackBox, SDL_SRCALPHA, 128);
+    SDL_BlitSurface (blackBox, NULL, m_Background->toSDLSurface (), NULL);
+
+    // Load fonts.
+    m_Font.reset (Font::fromFile (File::getFontFilePath ("fontMenu")));
+    m_FontSelected.reset (
+            Font::fromFile (File::getFontFilePath ("fontMenuSelected")));
+}
+
+///
+/// \brief Selected the next menu's option.
+///
+/// If the currently selected option is the last one, the next
+/// selected option will be the first.
+///
+void
+PauseState::selectNextMenuOption (void)
+{
+    ++m_SelectedOption;
+    if ( m_SelectedOption == m_MenuOptions.end () )
+    {
+        m_SelectedOption = m_MenuOptions.begin ();
+    }
+}
+
+///
+/// \brief Selects the previous menu's option.
+///
+/// If the currently selected option if the first option,
+/// the next selected option will be the last.
+///
+void
+PauseState::selectPreviousMenuOption (void)
+{
+    if ( m_SelectedOption == m_MenuOptions.begin () )
+    {
+        m_SelectedOption = m_MenuOptions.end () - 1;
+    }
+    else
+    {
+        --m_SelectedOption;
+    }
+}
+
+void
+PauseState::redrawBackground (SDL_Rect *region, SDL_Surface *screen)
+{
+    m_Background->blit (region->x, region->y, region->w, region->h,
+                        region->x, region->y, screen);
+}
+
+///
+/// \brief Removes the pause state without a fade off.
+///
+void
+PauseState::removeState (void)
+{
+    System::getInstance ().removeActiveState (false);
+}
+
+void
+PauseState::render (SDL_Surface *screen)
+{
+    const uint16_t fontHeight = m_Font->getHeight ();
+    const uint16_t initialY =
+        static_cast<uint16_t>(Options::getInstance ().getScreenHeight () / 2 -
+                              fontHeight * m_MenuOptions.size () / 2);
+
+    std::vector<IOption *>::iterator currentOption = m_MenuOptions.begin ();
+    for ( uint16_t y = initialY ;
+          currentOption != m_MenuOptions.end () ;
+          ++currentOption, y += fontHeight )
+    {
+        if ( currentOption == m_SelectedOption )
+        {
+            m_FontSelected->write ((*currentOption)->getTitle (), y, screen);
+        }
+        else
+        {
+            m_Font->write ((*currentOption)->getTitle (), y, screen);
+        }
+    }
+}
+
+void
+PauseState::update (uint32_t elapsedTime)
+{
+}
+
+void
+PauseState::videoModeChanged (void)
+{
+    loadGraphicResources ();
+}
+
+////////////////////////////////////////////////////////////////
+// Menu options.
+////////////////////////////////////////////////////////////////
+void
+PauseState::ContinueOption::operator() (void)
+{
+    removeState ();
+}
+
+void
+PauseState::ExitOption::operator() (void)
+{
+    System::getInstance ().returnToMainMenu ();
+}

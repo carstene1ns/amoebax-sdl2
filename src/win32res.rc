@@ -1,0 +1,28 @@
+#include <windows.h>
+A ICON MOVEABLE PURE LOADONCALL DISCARDABLE "amoebax.ico"
+1 VERSIONINFO
+FILEVERSION 0, 0, 2, 0
+PRODUCTVERSION 0, 0, 2, 0
+FILEFLAGSMASK 0
+FILEOS VOS__WINDOWS32
+FILETYPE VFT_APP
+{
+    BLOCK "StringFileInfo"
+    {
+        BLOCK "040904E4"
+        {
+            VALUE "CompanyName", "Emma's Software\0"
+            VALUE "FileDescription", "Cute and addictive action-puzzle game\0"
+            VALUE "FileVersion", "0.2.0\0"
+            VALUE "InternalName", "amoebax\0"
+            VALUE "LegalCopyright", "Copyright 2006, 2007 Emma's Software\0"
+            VALUE "OriginalFilename", "amoebax.exe\0"
+            VALUE "ProductName", "Amoebax\0"
+            VALUE "ProductVersion", "0.2.0\0"
+        }
+    }
+    BLOCK "VarFileInfo"
+    {
+        VALUE "Translation", 0x0409, 0x04E4
+    }
+}
