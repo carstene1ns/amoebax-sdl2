@@ -24,7 +24,7 @@ jobs:
           sudo apt-get install -yqq build-essential cmake ninja-build \
             libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Configure, Build, Package
         run: |
@@ -47,7 +47,7 @@ jobs:
         with:
           sdl2: latest
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Configure, Build, Package
         run: |
@@ -77,7 +77,7 @@ jobs:
           pacboy: |
             toolchain:p cmake:p ninja:p SDL2:p
 
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Configure, Build, Package
         run: |
