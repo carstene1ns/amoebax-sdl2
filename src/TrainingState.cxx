@@ -288,10 +288,6 @@ TrainingState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
             getPlayer ()->joyDown (joystick, button);
         break;
     }
-
-    // TODO
-    getPlayer ()->joyDown (joystick, button);
-
 }
 
 void

@@ -160,4 +160,4 @@ namespace Amoebax
     }
 }
 
-#endif // !AMEOBAX_CHAIN_LABEL_H
+#endif // !AMOEBAX_CHAIN_LABEL_H

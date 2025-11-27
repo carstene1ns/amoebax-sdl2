@@ -370,6 +370,9 @@ TournamentState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
         case SDL_CONTROLLER_BUTTON_B:
             System::getInstance ().pause ();
             break;
+
+        default:
+            break;
     }
 }
 

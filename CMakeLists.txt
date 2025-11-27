@@ -11,9 +11,10 @@ set(CMAKE_CXX_STANDARD 11)
 
 option(DEBUG "Turn on debugging (default is OFF)" OFF)
 if(DEBUG)
-	add_compile_definitions(-DDEBUG)
+	add_compile_definitions(DEBUG)
+	add_compile_options(-Wall)
 else()
-	add_compile_definitions(-DNDEBUG)
+	add_compile_definitions(NDEBUG)
 endif()
 
 add_subdirectory(src)

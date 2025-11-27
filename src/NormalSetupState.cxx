@@ -103,6 +103,9 @@ NormalSetupState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
         case SDL_CONTROLLER_BUTTON_B:
             removeState ();
             break;
+
+        default:
+            break;
     }
 }
 

@@ -17,7 +17,7 @@
 // Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301 USA.
 //
 #if !defined (AMOEBAX_TRAINING_STATE_H)
-#define AMOEBAX_TRAINING_STATE
+#define AMOEBAX_TRAINING_STATE_H
 
 #include "IPlayer.h"
 #include "IState.h"
@@ -139,4 +139,4 @@ namespace Amoebax
     };
 }
 
-#endif // !AMOEBAX_TRAINING_STATE
+#endif // !AMOEBAX_TRAINING_STATE_H

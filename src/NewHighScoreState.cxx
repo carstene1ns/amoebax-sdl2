@@ -180,6 +180,9 @@ NewHighScoreState::joyDown (uint8_t joystick, SDL_GameControllerButton button)
         case SDL_CONTROLLER_BUTTON_DPAD_UP:
             selectPreviousCursorValue ();
             break;
+
+        default:
+            break;
     }
 }
 

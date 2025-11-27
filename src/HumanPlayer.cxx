@@ -88,6 +88,9 @@ HumanPlayer::joyDown (uint8_t joystick, SDL_GameControllerButton button)
         case SDL_CONTROLLER_BUTTON_DPAD_RIGHT:
             getGrid ()->moveRight ();
         break;
+
+        default:
+            break;
     }
 
     // TODO:

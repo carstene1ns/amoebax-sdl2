@@ -82,7 +82,7 @@ namespace Amoebax
                         firstAmoeba = new Amoeba (firstAmoebaColour);
                         secondAmoeba = new Amoeba (secondAmoebaColour);
                     }
-                    catch (std::exception e)
+                    catch (std::exception &e)
                     {
                         delete firstAmoeba;
                         delete secondAmoeba;

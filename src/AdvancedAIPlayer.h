@@ -17,7 +17,7 @@
 // Foundation, Inc., 59 Temple Place, Suite 330, Boston, MA  02111-1307  USA
 //
 #if !defined (AMOEBAX_ADVANCED_AI_PLAYER_H)
-#define AMOEBAS_ADVANCED_AI_PLAYER_H
+#define AMOEBAX_ADVANCED_AI_PLAYER_H
 
 #include "AIPlayer.h"
 
@@ -41,4 +41,4 @@ namespace Amoebax
     };
 }
 
-#endif // !AMOEBAS_ADVANVED_AI_PLAYER_H
+#endif // !AMOEBAX_ADVANCED_AI_PLAYER_H
