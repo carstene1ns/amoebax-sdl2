@@ -513,7 +513,7 @@ TwoPlayersState::render (SDL_Surface *screen)
         SDL_Rect gridRectangle;
         gridRectangle.x = getRightGrid ()->getQueuePositionX ();
         gridRectangle.y = getRightGrid ()->getQueuePositionY ();
-        gridRectangle.w = getRightGrid ()->getGridPositionY () +
+        gridRectangle.w = getRightGrid ()->getGridPositionX () +
                           getAmoebasSize () * Grid::k_GridWidth - gridRectangle.x;
         gridRectangle.h = getAmoebasSize () * Grid::k_VisibleHeight;
         SDL_SetClipRect (screen, &gridRectangle);
