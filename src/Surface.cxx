@@ -19,8 +19,8 @@
 #include <assert.h>
 #include <math.h>
 #include <SDL.h>
-#include <SDL_image.h>
 #include <stdexcept>
+#include "cute_png.h"
 #include "Surface.h"
 #include "System.h"
 
@@ -230,12 +230,26 @@ Surface::getWidth (void) const
 Surface *
 Surface::fromFile (std::string fileName)
 {
-    SDL_Surface *loadedSurface = IMG_Load (fileName.c_str ());
+    cp_image_t img = cp_load_png (fileName.c_str ());
+    if ( 0 == img.pix )
+    {
+        throw std::runtime_error (cp_error_reason);
+    }
+
+    SDL_Surface *loadedSurface =
+        SDL_CreateRGBSurfaceWithFormatFrom (img.pix, img.w, img.h, 32,
+                                            img.w * 4, SDL_PIXELFORMAT_RGBA32);
     if ( NULL == loadedSurface )
     {
-        throw std::runtime_error (IMG_GetError ());
+        throw std::runtime_error (SDL_GetError ());
     }
-    // FIXME: hardcoding RGBA order
+
+    // HACK: allow SDL freeing the pixel data
+    loadedSurface->flags &= ~SDL_PREALLOC;
+
+    return new Surface (loadedSurface);
+/*
+    // FIXME: add back when different format needed
     SDL_Surface *convertedSurface =
         SDL_ConvertSurfaceFormat ( loadedSurface, SDL_PIXELFORMAT_RGBA32, 0 );
     SDL_FreeSurface ( loadedSurface );
@@ -244,6 +258,7 @@ Surface::fromFile (std::string fileName)
         throw std::runtime_error (SDL_GetError ());
     }
     return new Surface (convertedSurface);
+*/
 }
 
 ///

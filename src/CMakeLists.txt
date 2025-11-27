@@ -1,16 +1,13 @@
 
-include(FindPkgConfig)
 find_package(SDL2 CONFIG REQUIRED)
 find_package(SDL2_mixer CONFIG QUIET)
 if(NOT SDL2_mixer_FOUND)
+	include(FindPkgConfig)
 	pkg_search_module(SDL2_mixer SDL2_mixer REQUIRED IMPORTED_TARGET)
 	add_library(SDL2_mixer::SDL2_mixer ALIAS PkgConfig::SDL2_mixer)
 endif()
-find_package(SDL2_image CONFIG QUIET)
-if(NOT SDL2_image_FOUND)
-	pkg_search_module(SDL2_image SDL2_image REQUIRED IMPORTED_TARGET)
-	add_library(SDL2_image::SDL2_image ALIAS PkgConfig::SDL2_image)
-endif()
+
+add_subdirectory(ext)
 
 add_executable(amoebax
 	AdvancedAIPlayer.cxx AdvancedAIPlayer.h
@@ -77,7 +74,7 @@ target_compile_definitions(amoebax PRIVATE
 	PACKAGE_BUGREPORT="https://github.com/carstene1ns/amoebax-sdl2/issues")
 
 target_link_libraries(amoebax PRIVATE
-	SDL2::SDL2 SDL2_image::SDL2_image SDL2_mixer::SDL2_mixer)
+	SDL2::SDL2 cute_png SDL2_mixer::SDL2_mixer)
 
 # installation
 
