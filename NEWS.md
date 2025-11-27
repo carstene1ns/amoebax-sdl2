@@ -1,3 +1,10 @@
+Amoebax 0.2.2
+=============
+
+- Dropped GP2X and WinCE support.
+- Ported to SDL2/C++11
+- Small bugfixes.
+
 Amoebax 0.2.1
 =============
 
