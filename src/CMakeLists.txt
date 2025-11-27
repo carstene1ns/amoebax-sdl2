@@ -3,7 +3,7 @@ find_package(SDL2 REQUIRED)
 find_package(SDL2_mixer REQUIRED)
 find_package(SDL2_image REQUIRED)
 
-add_executable(amoebax
+add_executable(amoebax WIN32 MACOSX_BUNDLE
 	AdvancedAIPlayer.cxx AdvancedAIPlayer.h
 	AIPlayer.cxx AIPlayer.h
 	AIPlayerFactory.cxx AIPlayerFactory.h
@@ -54,21 +54,9 @@ add_executable(amoebax
 	VideoErrorState.cxx VideoErrorState.h)
 target_include_directories(amoebax PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
-if(WIN32)
-	target_sources(amoebax PRIVATE
-		win32/Win32Options.cxx win32/Win32Options.h
-		win32/win32res.rc)
-	target_compile_definitions(amoebax PRIVATE WIN32_LEAN_AND_MEAN IS_WIN32_HOST)
-elseif(MACOS)
-	target_sources(amoebax PRIVATE
-		macos/OSXOptions.cxx macos/OSXOptions.h)
-	target_compile_definitions(amoebax PRIVATE IS_OSX_HOST)
-elseif(UNIX)
-	target_sources(amoebax PRIVATE
-		unix/UnixOptions.cxx unix/UnixOptions.h)
-	set(DATADIR "${CMAKE_INSTALL_FULL_DATADIR}/amoebax" CACHE PATH "Path to gamedata")
-	target_compile_definitions(amoebax PRIVATE DATADIR="${DATADIR}")
-endif()
+add_subdirectory(win32)
+add_subdirectory(macos)
+add_subdirectory(unix)
 
 target_compile_definitions(amoebax PRIVATE 
 	PACKAGE_NAME="${CMAKE_PROJECT_NAME}"
@@ -81,5 +69,7 @@ target_link_libraries(amoebax PRIVATE
 # installation
 
 if(UNIX)
-	install(TARGETS amoebax DESTINATION ${CMAKE_INSTALL_BINDIR})
+	install(TARGETS amoebax
+		BUNDLE DESTINATION .
+		RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
 endif()
