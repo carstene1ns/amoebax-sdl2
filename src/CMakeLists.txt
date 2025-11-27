@@ -3,8 +3,10 @@ find_package(SDL2 CONFIG REQUIRED)
 find_package(SDL2_mixer CONFIG QUIET)
 if(NOT SDL2_mixer_FOUND)
 	include(FindPkgConfig)
-	pkg_search_module(SDL2_mixer SDL2_mixer REQUIRED IMPORTED_TARGET)
-	add_library(SDL2_mixer::SDL2_mixer ALIAS PkgConfig::SDL2_mixer)
+	pkg_search_module(SDL2_mixer SDL2_mixer QUIET IMPORTED_TARGET)
+	if(SDL2_mixer_FOUND)
+		add_library(SDL2_mixer::SDL2_mixer ALIAS PkgConfig::SDL2_mixer)
+	endif()
 endif()
 
 add_subdirectory(ext)
@@ -74,7 +76,7 @@ target_compile_definitions(amoebax PRIVATE
 	PACKAGE_BUGREPORT="https://github.com/carstene1ns/amoebax-sdl2/issues")
 
 target_link_libraries(amoebax PRIVATE
-	SDL2::SDL2 cute_png SDL2_mixer::SDL2_mixer)
+	SDL2::SDL2 SDL2_mixer::SDL2_mixer cute_png)
 
 # installation
 

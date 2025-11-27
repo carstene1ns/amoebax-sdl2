@@ -7,14 +7,14 @@ target_link_libraries(amoebax PRIVATE "-framework CoreFoundation")
 # Add SDL2 Frameworks
 add_custom_command(TARGET amoebax POST_BUILD
 	COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:SDL2::SDL2>
-		$<TARGET_FILE_DIR:amoebax>/../Frameworks/$<TARGET_FILE_NAME:SDL2::SDL2>)
-	#COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:SDL2_mixer::SDL2_mixer>
-	#	$<TARGET_FILE_DIR:amoebax>/../Frameworks/$<TARGET_FILE_NAME:SDL2_mixer::SDL2_mixer>)
+		$<TARGET_FILE_DIR:amoebax>/../Frameworks/$<TARGET_FILE_NAME:SDL2::SDL2>
+	COMMAND ${CMAKE_COMMAND} -E copy_if_different $<TARGET_FILE:SDL2_mixer::SDL2_mixer>
+		$<TARGET_FILE_DIR:amoebax>/../Frameworks/$<TARGET_FILE_NAME:SDL2_mixer::SDL2_mixer>)
 if(NOT "${CMAKE_GENERATOR}" STREQUAL "Xcode")
 	install(FILES $<TARGET_FILE:SDL2::SDL2>
 		DESTINATION $<TARGET_FILE_DIR:amoebax>/../Frameworks/)
-	#install(FILES $<TARGET_FILE:SDL2_mixer::SDL2_mixer>
-	#	DESTINATION $<TARGET_FILE_DIR:amoebax>/../Frameworks/)
+	install(FILES $<TARGET_FILE:SDL2_mixer::SDL2_mixer>
+		DESTINATION $<TARGET_FILE_DIR:amoebax>/../Frameworks/)
 endif()
 
 # Set runtime library path

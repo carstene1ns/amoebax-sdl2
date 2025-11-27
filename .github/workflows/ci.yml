@@ -28,7 +28,7 @@ jobs:
 
       - name: Configure, Build, Package
         run: |
-          cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+          cmake -G Ninja -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
           cmake --build build
           mkdir -p dest && cmake --install build --prefix $PWD/dest
           cmake --build build --target package
@@ -46,8 +46,6 @@ jobs:
         uses: BrettDong/setup-sdl2-frameworks@main
         with:
           sdl2: latest
-          sdl2-image: latest
-          sdl2-mixer: latest
 
       - uses: actions/checkout@v5
 
@@ -77,13 +75,13 @@ jobs:
           install: |
             base-devel
           pacboy: |
-            toolchain:p cmake:p ninja:p SDL2:p SDL2_mixer:p SDL2_image:p
+            toolchain:p cmake:p ninja:p SDL2:p
 
       - uses: actions/checkout@v5
 
       - name: Configure, Build, Package
         run: |
-          cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+          cmake -G Ninja -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
           cmake --build build
           mkdir -p dest && cmake --install build --prefix $PWD/dest
           cmake --build build --target package || cat build/distribution/_CPack_Packages/win64/WIX/wix.log
