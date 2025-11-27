@@ -1,0 +1,96 @@
+name: CI
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+env:
+  BUILD_TYPE: Release
+
+jobs:
+  build-lin:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -yqq
+          sudo apt-get install -yqq build-essential cmake ninja-build \
+            libsdl2-dev libsdl2-image-dev libsdl2-mixer-dev
+
+      - uses: actions/checkout@v5
+
+      - name: Configure, Build, Package
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+          cmake --build build
+          cmake --build build --target package -v
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: lin
+          path: build/distribution/*.tar.gz
+
+  build-mac:
+    runs-on: macos-15-intel
+    steps:
+      - name: Setup SDL2 frameworks
+        uses: BrettDong/setup-sdl2-frameworks@main
+        with:
+          sdl2: latest
+          sdl2-image: latest
+          sdl2-mixer: latest
+
+      - uses: actions/checkout@v5
+
+      - name: Configure, Build, Package
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+          cmake --build build
+          cmake --build build --target package
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mac
+          path: |
+            build/distribution/*.tar.gz
+            build/distribution/*.dmg
+
+  build-win:
+    runs-on: windows-2022
+    defaults:
+      run:
+        shell: msys2 {0}
+    steps:
+      - uses: msys2/setup-msys2@v2
+        with:
+          update: true
+          install: |
+            base-devel
+          pacboy: |
+            toolchain:p cmake:p ninja:p SDL2:p SDL2_mixer:p SDL2_image:p
+
+      - uses: actions/checkout@v5
+
+      - name: Configure, Build, Package
+        run: |
+          cmake -B build -DCMAKE_BUILD_TYPE=${{env.BUILD_TYPE}}
+          cmake --build build
+          mkdir -p dest && cmake --install build --prefix $PWD/dest
+          cmake --build build --target package || cat build/distribution/_CPack_Packages/win64/WIX/wix.log
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: win
+          path: |
+            build/distribution/*.zip
+            build/distribution/*.msi

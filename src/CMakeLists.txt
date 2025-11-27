@@ -1,9 +1,18 @@
 
-find_package(SDL2 REQUIRED)
-find_package(SDL2_mixer REQUIRED)
-find_package(SDL2_image REQUIRED)
+include(FindPkgConfig)
+find_package(SDL2 CONFIG REQUIRED)
+find_package(SDL2_mixer CONFIG QUIET)
+if(NOT SDL2_mixer_FOUND)
+	pkg_search_module(SDL2_mixer SDL2_mixer REQUIRED IMPORTED_TARGET)
+	add_library(SDL2_mixer::SDL2_mixer ALIAS PkgConfig::SDL2_mixer)
+endif()
+find_package(SDL2_image CONFIG QUIET)
+if(NOT SDL2_image_FOUND)
+	pkg_search_module(SDL2_image SDL2_image REQUIRED IMPORTED_TARGET)
+	add_library(SDL2_image::SDL2_image ALIAS PkgConfig::SDL2_image)
+endif()
 
-add_executable(amoebax WIN32 MACOSX_BUNDLE
+add_executable(amoebax
 	AdvancedAIPlayer.cxx AdvancedAIPlayer.h
 	AIPlayer.cxx AIPlayer.h
 	AIPlayerFactory.cxx AIPlayerFactory.h
@@ -54,9 +63,13 @@ add_executable(amoebax WIN32 MACOSX_BUNDLE
 	VideoErrorState.cxx VideoErrorState.h)
 target_include_directories(amoebax PRIVATE ${CMAKE_CURRENT_SOURCE_DIR})
 
-add_subdirectory(win32)
-add_subdirectory(macos)
-add_subdirectory(unix)
+if(WIN32)
+	include(win32/win32.cmake)
+elseif(APPLE)
+	include(macos/macos.cmake)
+elseif(UNIX)
+	include(unix/unix.cmake)
+endif()
 
 target_compile_definitions(amoebax PRIVATE 
 	PACKAGE_NAME="${CMAKE_PROJECT_NAME}"
@@ -68,8 +81,6 @@ target_link_libraries(amoebax PRIVATE
 
 # installation
 
-if(UNIX)
-	install(TARGETS amoebax
-		BUNDLE DESTINATION .
-		RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})
-endif()
+install(TARGETS amoebax
+	BUNDLE DESTINATION .
+	RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR})

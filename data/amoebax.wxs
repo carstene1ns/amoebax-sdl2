@@ -3,10 +3,9 @@
     <Product Id='55e7c65a-c44d-11db-8314-0800200c9a66' Name='Amoebax' Language='1033' Version='0.0.1.2' Manufacturer='Emma&apos;s Software' UpgradeCode='f8184fb6-0011-44e6-b764-4b2505cc2e1a'>
         <Package Description='Installs Amoebax.' Comments='Installation of Amoebax' InstallerVersion='200' Compressed='yes' />
 
-	<Property Id='ALLUSERS'><![CDATA[2]]></Property>
-        <WixVariable Id='WixUILicenseRtf' Value='$(var.SourceDir)/data/License.rtf' />
-        <WixVariable Id='WixUIDialogBmp' Value='$(var.SourceDir)/data/dlgbmp.bmp' />
-        <WixVariable Id='WixUIBannerBmp' Value='$(var.SourceDir)/data/bannrbmp.bmp' />
+        <WixVariable Id='WixUILicenseRtf' Value='$(var.SourceDir)/License.rtf' />
+        <WixVariable Id='WixUIDialogBmp' Value='$(var.SourceDir)/dlgbmp.bmp' />
+        <WixVariable Id='WixUIBannerBmp' Value='$(var.SourceDir)/bannrbmp.bmp' />
         <CustomAction Id='LaunchAmoebax' BinaryKey='WixCA' DllEntry='WixShellExec' Execute='immediate' Return='check' Impersonate='yes' />
         <Property Id='WIXUI_EXITDIALOGOPTIONALCHECKBOXTEXT' Value='Launch Amoebax' />
         <Property Id='WIXUI_EXITDIALOGOPTIONALCHECKBOX' Value='1' />
@@ -20,11 +19,11 @@
         <Media Id='1' Cabinet='Amoebax.cab' EmbedCab='yes' />
 
         <Directory Id='TARGETDIR' Name='SourceDir'>
-            <Directory Id='ProgramFilesFolder' Name='PFiles'>
+            <Directory Id='ProgramFiles64Folder' Name='PFiles'>
                 <Directory Id='EMMASOFTWAREFOLDER' Name='Emma&apos;s Software'>
                     <Directory Id='AMOEBAXFOLDER' Name='Amoebax' FileSource='SourceDir'>
 
-                        <Directory Id='FONTS' Name='fonts' FileSource='$(var.SourceDir)/data/fonts'>
+                        <Directory Id='FONTS' Name='fonts' FileSource='$(var.SourceDir)/fonts'>
                             <Component Id='FontComponents' Guid='0a7a357e-c44e-11db-8314-0800200c9a66' DiskId='1'>
                                 <File Id='FontMenu480' Name='fontMenu480.png' />
                                 <File Id='FontMenu600' Name='fontMenu600.png' />
@@ -41,7 +40,7 @@
                             </Component>
                         </Directory>
 
-                        <Directory Id='GRAPHICS' Name='graphics' FileSource='$(var.SourceDir)/data/graphics'>
+                        <Directory Id='GRAPHICS' Name='graphics' FileSource='$(var.SourceDir)/graphics'>
                             <Component Id='GraphicComponents' Guid='339d6b56-c44e-11db-8314-0800200c9a66' DiskId='1'>
                                 <File Id='Amoebas' Name='amoebas.png' />
                                 <File Id='Amoebax' Name='amoebax.png' />
@@ -99,7 +98,7 @@
                             </Component>
                         </Directory>
 
-                        <Directory Id='MUSIC' Name='music' FileSource='$(var.SourceDir)/data/music'>
+                        <Directory Id='MUSIC' Name='music' FileSource='$(var.SourceDir)/music'>
                             <Component Id='MusicComponents' Guid='425aa8fc-c44e-11db-8314-0800200c9a66' DiskId='1'>
                                 <File Id='AngusMusic' Name='AngusBackground.ogg' />
                                 <File Id='CongratulationsMusic' Name='Congratulations.ogg' />
@@ -113,7 +112,7 @@
                             </Component>
                         </Directory>
 
-                        <Directory Id='SFX' Name='sfx' FileSource='$(var.SourceDir)/data/sfx'>
+                        <Directory Id='SFX' Name='sfx' FileSource='$(var.SourceDir)/sfx'>
                             <Component Id='SfxComponents' Guid='55dacaec-c44e-11db-8314-0800200c9a66' DiskId='1'>
                                 <File Id='Die' Name='die.wav' />
                                 <File Id='LevelupSfx' Name='levelup.wav' />
@@ -126,8 +125,8 @@
                             <Directory Id='AmoebaxProgramMenuFolder' Name='Amoebax'>
                                 <Component Id='AmoebaxProgramMenuComponent' Guid='2b4e5bfc-418e-11dc-8314-0800200c9a66' DiskId='1'>
                                     <RegistryValue Root='HKCU' Key='Software\Emma&apos;s Software\Shortcut' Name='Installed' Type='integer' Value='1' />
-                                    <File Id='Amoebax.url' Name='Amoebax Web Site.url' Source='$(var.SourceDir)/data/Amoebax.url' />
-                                    <File Id='manual.pdf' Name='manual.pdf' Source='$(var.SourceDir)/doc/manual.pdf' />
+                                    <File Id='Amoebax.url' Name='Amoebax Web Site.url' Source='$(var.SourceDir)/Amoebax.url' />
+                                    <File Id='manual.pdf' Name='manual.pdf' Source='$(var.SourceDir)/../doc/manual.pdf' />
                                     <RemoveFolder Id='RemoveAmoebaxProgramMenuFolder' On='uninstall'/>
                                 </Component>
                             </Directory>
@@ -135,24 +134,25 @@
                         <Directory Id='DesktopFolder' Name='Desktop'/>
 
                         <Component Id='AmoebaxComponents' Guid='644cb504-c44e-11db-8314-0800200c9a66' DiskId='1'>
-                            <RemoveRegistryKey Action='removeOnUninstall' Root='HKU' Key='Software\Emma&apos;s Software' />
                             <RemoveRegistryKey Action='removeOnUninstall' Root='HKCU' Key='Software\Emma&apos;s Software' />
                             <File Id='AmoebaxBinary' Name='amoebax.exe' Source='$(var.BuildDir)/src/amoebax.exe'>
-                                <Shortcut Id='AmoebaxShortcut' Advertise='yes' Directory='AmoebaxProgramMenuFolder' Name='Amoebax' Icon='AmoebaxIcon.exe' IconIndex='0' Description='Cute and addictive action-puzzle game'>
-                                    <Icon Id='AmoebaxIcon.exe' SourceFile='$(var.SourceDir)/data/amoebax.ico'/>
+                                <Shortcut Id='AmoebaxShortcut' Directory='AmoebaxProgramMenuFolder' Name='Amoebax' Icon='AmoebaxIcon.exe' IconIndex='0' Description='Cute and addictive action-puzzle game'>
+                                    <Icon Id='AmoebaxIcon.exe' SourceFile='$(var.SourceDir)/amoebax.ico'/>
                                 </Shortcut>
-                                <Shortcut Id='AmoebaxShortcut2' Advertise='yes' Directory='DesktopFolder' Name='Amoebax' Icon='AmoebaxIcon2.exe' IconIndex='0' Description='Cute and addictive action-puzzle game'>
-                                    <Icon Id='AmoebaxIcon2.exe' SourceFile='$(var.SourceDir)/data/amoebax.ico'/>
+                                <Shortcut Id='AmoebaxShortcut2' Directory='DesktopFolder' Name='Amoebax' Icon='AmoebaxIcon2.exe' IconIndex='0' Description='Cute and addictive action-puzzle game'>
+                                    <Icon Id='AmoebaxIcon2.exe' SourceFile='$(var.SourceDir)/amoebax.ico'/>
                                 </Shortcut>
                             </File>
-                            <File Id='SDLLibrary' Name='SDL.dll' Source='$(var.SourceDir)/data/dlls/SDL.dll'/>
-                            <File Id='SDMixerLLibrary' Name='SDL_mixer.dll' Source='$(var.SourceDir)/data/dlls/SDL_mixer.dll' />
-                            <File Id='SDLImageLibrary' Name='SDL_image.dll' Source='$(var.SourceDir)/data/dlls/SDL_image.dll' />
-                            <File Id='OGGLibrary' Name='ogg.dll' Source='$(var.SourceDir)/data/dlls/ogg.dll'/>
-                            <File Id='PNGLibrary' Name='libpng12.dll' Source='$(var.SourceDir)/data/dlls/libpng12.dll'/>
-                            <File Id='ZLibrary' Name='zlib1.dll' Source='$(var.SourceDir)/data/dlls/zlib1.dll'/>
-                            <File Id='VorbisLibrary' Name='vorbis.dll' Source='$(var.SourceDir)/data/dlls/vorbis.dll'/>
-                            <File Id='VorbisFileLibrary' Name='vorbisfile.dll' Source='$(var.SourceDir)/data/dlls/vorbisfile.dll'/>
+                            <File Id='SDL2Library' Name='SDL2.dll' Source='$(var.BuildDir)/src/SDL2.dll'/>
+                            <File Id='SDL2MixerLibrary' Name='SDL2_mixer.dll' Source='$(var.BuildDir)/src/SDL2_mixer.dll' />
+                            <File Id='SDL2ImageLibrary' Name='SDL2_image.dll' Source='$(var.BuildDir)/src/SDL2_image.dll' />
+                            <!--<File Id='OGGLibrary' Name='ogg.dll' Source='$(var.SourceDir)/dlls/ogg.dll'/>
+                            <File Id='PNGLibrary' Name='libpng12.dll' Source='$(var.SourceDir)/dlls/libpng12.dll'/>
+                            <File Id='ZLibrary' Name='zlib1.dll' Source='$(var.SourceDir)/dlls/zlib1.dll'/>
+                            <File Id='VorbisLibrary' Name='vorbis.dll' Source='$(var.SourceDir)/dlls/vorbis.dll'/>
+                            <File Id='VorbisFileLibrary' Name='vorbisfile.dll' Source='$(var.SourceDir)/dlls/vorbisfile.dll'/>-->
+                            <File Id='GCCLibrary' Name='libgcc_s_seh-1.dll' Source='$(var.BuildDir)/src/libgcc_s_seh-1.dll'/>
+                            <File Id='STDCLibrary' Name='libstdc++-6.dll' Source='$(var.BuildDir)/src/libstdc++-6.dll'/>
                         </Component>
                     </Directory>
                 </Directory>
