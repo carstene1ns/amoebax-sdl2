@@ -96,7 +96,6 @@ namespace Amoebax
             static Options &getInstance (void);
             static unsigned int getMaxVolumeLevel (void);
             PlayerControls getPlayerControls (IPlayer::PlayerSide player);
-            unsigned int getScreenDepth (void);
             unsigned int getScreenHeight (void);
             unsigned int getScreenWidth (void);
             unsigned int getVolumeLevel (void);
@@ -111,7 +110,6 @@ namespace Amoebax
             void setHighScore (uint32_t score, const std::string &name);
             void setPlayerControls (IPlayer::PlayerSide player,
                                     const PlayerControls &controls);
-            void setScreenDepth (unsigned int depth);
             void setScreenHeight (unsigned int height);
             void setScreenWidth (unsigned int width);
             void setSoundEnabled (bool enabled);

@@ -57,8 +57,6 @@ static std::string k_PlayersName[2] =
     std::string ("leftPlayer"),
     std::string ("rightPlayer")
 };
-// Default screen's bits per pixel.
-static const unsigned int k_ScreenDepth = 0;
 // Default screen's height.
 static const unsigned int k_ScreenHeight = 600;
 // Default screen's width.
@@ -217,17 +215,6 @@ Options::getPlayerControls (IPlayer::PlayerSide player)
 }
 
 ///
-/// \brief Gets the screen depth to use.
-///
-/// \return The depth to use when setting the screen resolution.
-///
-unsigned int
-Options::getScreenDepth (void)
-{
-    return getIntegerValue ("screen", "depth", k_ScreenDepth);
-}
-
-///
 /// \brief Gets the screen height to use.
 ///
 /// \return The height to use when setting the screen resolution.
@@ -314,14 +301,13 @@ Options::isSoundEnabled (void)
 ///
 /// \brief Tells if all video options are at they default value.
 ///
-/// \return \a true if all video options (width, height, and depth) are
+/// \return \a true if all video options (width and height) are
 ///         at their default values.  \a false otherwise.
 ///
 bool
 Options::isVideoOptionsAtDefault (void)
 {
     return !isFullScreen () &&
-           k_ScreenDepth == getScreenDepth () &&
            k_ScreenHeight == getScreenHeight () &&
            k_ScreenWidth == getScreenWidth ();
 }
@@ -393,7 +379,6 @@ void
 Options::setDefaultVideoOptions (void)
 {
     setFullScreen (false);
-    setScreenDepth (k_ScreenDepth);
     setScreenHeight (k_ScreenHeight);
     setScreenWidth (k_ScreenWidth);
 }
@@ -489,18 +474,6 @@ Options::setPlayerControls (IPlayer::PlayerSide player,
     setIntegerValue (sectionName, "JoyPushDown", controls.joystick.pushDown);
     setIntegerValue (sectionName, "JoyRotateCW", controls.joystick.rotateClockwise);
     setIntegerValue (sectionName, "JoyRotateCCW", controls.joystick.rotateCounterClockwise);
-}
-
-
-///
-/// \brief Sets the screen depth to use.
-///
-/// \param depth The depth to use when setting the screen resolution.
-///
-void
-Options::setScreenDepth (unsigned int depth)
-{
-    setIntegerValue ("screen", "depth", depth);
 }
 
 ///

@@ -159,8 +159,19 @@ System::applyVolumeLevel (void)
 void
 System::changeVideoMode (void)
 {
+    int w = Options::getInstance ().getScreenWidth ();
+    int h = Options::getInstance ().getScreenHeight ();
     // Sets the new video mode from the options.
-    setVideoMode ();
+    SDL_SetWindowSize ( m_Window, w, h );
+    // Toggles fullscreen if needed
+    bool windowFullscreen = SDL_GetWindowFlags( m_Window ) & SDL_WINDOW_FULLSCREEN_DESKTOP;
+    if ( windowFullscreen != Options::getInstance ().isFullScreen () )
+    {
+        toggleFullScreen ();
+    }
+    // Rescales
+    m_ScreenScaleFactor = std::max (w / k_ScreenMaxWidth,
+                                    h / k_ScreenMaxHeight);
     // Notifies all states.
     for ( std::vector<IState *>::iterator currentState = m_States.begin () ;
           currentState < m_States.end () ; ++currentState )
@@ -218,7 +229,7 @@ System::init (void)
     // Sets the video mode from the configuration parameters.
     setVideoMode ();
     // Set the window's title for windowed modes.
-     SDL_SetWindowTitle(m_Window, PACKAGE_NAME);
+    SDL_SetWindowTitle (m_Window, PACKAGE_NAME);
     // Set the maximum frame rate.
     FrameManager::init (k_FrameRate);
     // Open the audio device, if enabled.
@@ -544,15 +555,14 @@ void
 System::setVideoMode (void)
 {
     // Check if we should go to full screen.
-    uint32_t videoFlags = SDL_SWSURFACE;
+    uint32_t videoFlags = 0;
     if ( Options::getInstance ().isFullScreen () )
     {
-        videoFlags |= SDL_WINDOW_FULLSCREEN_DESKTOP;
+        videoFlags = SDL_WINDOW_FULLSCREEN_DESKTOP;
     }
     // Sets the video mode.
     m_Window = SDL_CreateWindow (PACKAGE_NAME, SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED,
         Options::getInstance ().getScreenWidth (), Options::getInstance ().getScreenHeight (), videoFlags);
-    //FIXME: Options::getInstance ().getScreenDepth (), is gone
     if ( 0 == m_Window )
     {
         // First check if the video settings are the defaults (which should
@@ -576,22 +586,11 @@ System::setVideoMode (void)
         }
     }
     // Get the current screen's scale factor.
-#if 0 //?? TODO
-    // Take into consideration the "odd" factor we need to have when
-    // using a 1024x768 screen resolution.
-    if ( 1024 == m_Screen->w )
-    {
-        m_ScreenScaleFactor = 0.75f;
-    }
-    else
-#endif
-    {
-        int w = 0;
-        int h = 0;
-        SDL_GetWindowSize ( m_Window, &w, &h);
-        m_ScreenScaleFactor = std::max (w / k_ScreenMaxWidth,
-                                        h / k_ScreenMaxHeight);
-    }
+    int w = 0;
+    int h = 0;
+    SDL_GetWindowSize ( m_Window, &w, &h);
+    m_ScreenScaleFactor = std::max (w / k_ScreenMaxWidth,
+                                    h / k_ScreenMaxHeight);
     // Hide the cursor on the screen. Do only if the video mode is set
     // to full screen, otherwise it feels awkward to make the cursor desappear
     // when it passes over the window...
@@ -630,6 +629,13 @@ System::showFatalError (const std::string &error)
 void
 System::toggleFullScreen (void)
 {
-    Options::getInstance ().setFullScreen (!Options::getInstance ().isFullScreen ());
-    changeVideoMode ();
+    bool newState = !Options::getInstance ().isFullScreen ();
+    Options::getInstance ().setFullScreen ( newState );
+
+    SDL_SetWindowFullscreen( m_Window, newState ? SDL_WINDOW_FULLSCREEN_DESKTOP : 0 );
+
+    // Hide the cursor on the screen. Do only if the video mode is set
+    // to full screen, otherwise it feels awkward to make the cursor desappear
+    // when it passes over the window...
+    SDL_ShowCursor (newState ? SDL_DISABLE : SDL_ENABLE);
 }
