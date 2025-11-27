@@ -21,11 +21,11 @@
 #include "Options.h"
 
 #if defined (IS_OSX_HOST)
-#include "OSXOptions.h"
+#include "macos/OSXOptions.h"
 #elif defined (IS_WIN32_HOST)
-#include "Win32Options.h"
+#include "win32/Win32Options.h"
 #else // IS_OSX_HOST
-#include "UnixOptions.h"
+#include "unix/UnixOptions.h"
 #endif // !IS_OSX_PATH
 
 using namespace Amoebax;
