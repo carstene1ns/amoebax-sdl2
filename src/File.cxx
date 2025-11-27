@@ -36,8 +36,7 @@ static const char *k_DirectorySeparator = "/";
 #if defined (IS_WIN32_HOST) || defined (IS_OSX_HOST)
 static const char *k_DataDirectory = ".";
 #else // !IS_WIN32_HOST && !IS_OSX_HOST
-//static const char *k_DataDirectory = DATADIR;
-static const char *k_DataDirectory = "data"; //ct
+static const char *k_DataDirectory = DATADIR;
 #endif // IS_WIN32_HOST || IS_OSX_HOST
 
 
