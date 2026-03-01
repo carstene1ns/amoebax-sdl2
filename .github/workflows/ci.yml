@@ -34,7 +34,7 @@ jobs:
           cmake --build build --target package
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: lin
           path: build/distribution/*.tar.gz
@@ -56,7 +56,7 @@ jobs:
           cmake --build build --target package
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: mac
           path: |
@@ -87,7 +87,7 @@ jobs:
           cmake --build build --target package || cat build/distribution/_CPack_Packages/win64/WIX/wix.log
 
       - name: Upload artifact
-        uses: actions/upload-artifact@v6
+        uses: actions/upload-artifact@v7
         with:
           name: win
           path: |
